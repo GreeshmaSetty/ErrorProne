@@ -19,8 +19,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import jdk.internal.jline.WindowsTerminal.KEY_EVENT_RECORD;
 import utilities.DataGeneration;
 import utilities.DataProperty;
 import utilities.Excel;
@@ -712,6 +710,15 @@ public class Keywords extends BrowserConfig {
 	  
 	public Set<String> getWindowHandles() {
 		return webDriver.getWindowHandles();
+	}
+	
+	public void setValue(String sLocator, String sValue) {
+		try {
+			WebElement locator = getWebElement(sLocator);
+			locator.sendKeys(sValue);
+		}catch(Exception e) {
+			logger.logFail("Failed to set value due to exception "+e.getMessage());
+		}
 	}
 	
 	public String getWindowHandle() {
