@@ -1,40 +1,100 @@
 package configuration;
 
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.JOptionPane;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class BrowserConfig {
 
 	public static WebDriver webDriver;
 	public static long startTime;
 	public static long endTime;
-    public static int Failedflag = 0;
+	public static int Failedflag = 0;
+
+	static ReadPropertiesFile read = new ReadPropertiesFile();
+	public static String Mode = read.readRunProperties("Mode");
 
 	public int getFailedFlagCount() {
 		return Failedflag;
 	}
-	
+
 	public void setFailedFlagToZero() {
-		 Failedflag = 0;
+		Failedflag = 0;
 	}
-	
-	public void Launch(String BrowserOrMobile, String URLKey) {
+
+	public void Launch(String Browser, String URLKey) {
 		try {
 			startTime = System.currentTimeMillis();
-			BrowserOrMobile = BrowserOrMobile.toUpperCase();
-			switch (BrowserOrMobile) {
+			Mode = Mode.toUpperCase();
+			switch (Mode) {
+			case "UI" : {
+				browserExecution(Browser,URLKey);
+			}
+			case "MOBILE" : {
+				mobileExecution(Browser,URLKey);
+			}
+			}
+		} catch (Exception e) {
+			System.out.println("Failed to launch application due to exception " + e.getMessage());
+		}
+
+	}
+	
+	private void mobileExecution(String BrowserName, String URLKey) {
+		try {
+			/*
+			 * DesiredCapabilities caps = new DesiredCapabilities();
+			 * caps.setCapability("deviceName", "Android SDK built for x86");
+			 * caps.setCapability("udid", "emulator-5554"); //Give Device ID of your mobile
+			 * phone caps.setCapability("platformName", "Android");
+			 * caps.setCapability("platformVersion", "10");
+			 * caps.setCapability("browserName", "Chrome"); caps.setCapability("noReset",
+			 * true);
+			 */
+			
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+	        capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.13.0");
+	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+	        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+	        capabilities.setCapability("browserName", "Chrome");
+	        capabilities.setCapability("autoAcceptAlerts", true);
+			
+			//Set ChromeDriver location
+			//System.setProperty("webdriver.chrome.driver",("user.dir") + "\\Utils\\Drivers\\chromedriver.exe");	
+	        webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	        webDriver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+	        webDriver.get("http://www.google.com");
+			// mobDriver.quit();
+		}catch(Exception e) {
+			System.out.println("Failed to launch mobile "+e.getMessage());
+		}
+	}
+
+	private void browserExecution(String BrowserName, String URLKey) {
+		BrowserName = BrowserName.toUpperCase();
+		try {
+			switch (BrowserName) {
 			case "CHROME": {
 				try {
 					webDriver = getChromeDriver();
@@ -100,7 +160,6 @@ public class BrowserConfig {
 		} catch (Exception e) {
 			System.out.println("Failed to launch application due to exception " + e.getMessage());
 		}
-
 	}
 
 	private WebDriver getSafari() {
@@ -151,7 +210,7 @@ public class BrowserConfig {
 
 		WebDriver driver = null;
 		try {
-			driver = new HtmlUnitDriver();
+			//driver = new HtmlUnitDriver();
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("HtmlUnitDriver Failed during driver initialization " + e.getMessage());
@@ -211,7 +270,7 @@ public class BrowserConfig {
 					JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 					null, browsers, browsers[0]);
 			/*
-			
+
 			new Thread(new Runnable() {
 			      @Override
 			      public void run() {
@@ -222,7 +281,7 @@ public class BrowserConfig {
 			        }
 			      }
 			    }).start();  
-			*/
+			 */
 		}catch(Exception e) {
 			System.err.println("Failed to display Dilog box due to exception "+e.getMessage());
 		}

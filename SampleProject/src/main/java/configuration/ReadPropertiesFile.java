@@ -8,7 +8,7 @@ import java.util.Properties;
 import utilities.Reporting;
 
 public class ReadPropertiesFile {
-	/*private Reporting logger = new Reporting();
+	private Reporting logger = new Reporting();
 	//public static LinkedHashMap<String, String> readMap= new LinkedHashMap<String, String>();
 
 	public LinkedHashMap<String, String> getRunPropertiesFile() {
@@ -107,5 +107,5 @@ public class ReadPropertiesFile {
 			keyValue = "{{notpresent}}";
 		}
 		return keyValue;
-	}*/
+	}
 }

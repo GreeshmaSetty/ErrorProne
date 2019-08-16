@@ -11,7 +11,7 @@ import utilities.Reporting;
 public class Global {
 	protected Keywords actions = new Keywords();
 	protected Reporting logger = new Reporting();
-	protected BrowserConfig config = new BrowserConfig();
+	//protected BrowserConfig config = new BrowserConfig();
 
 	@BeforeTest
 	public void beforeTest() {
