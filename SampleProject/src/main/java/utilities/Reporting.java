@@ -216,6 +216,8 @@ public class Reporting extends BrowserConfig {
 		str += "h4 {text-align=right;font-family: Candara, Calibri; font-size: 18px; }";
 		str += "div#EnvironmentDetails{ border: 2px solid black; padding: 10px; width : 30%; float:left;}";
 		str += "div#ExecutionSummary{ border: 2px solid black; padding: 10px; width : 30%; float:right;}";
+		str += "tr.tc0 { text-align: center;}";
+		str += "td { text-align: center; height:80px;}";
 		return str;
 	}
 
@@ -242,9 +244,10 @@ public class Reporting extends BrowserConfig {
 	 */
 	public void writeBatchTemplate(String MethodName) {
 		try {
+			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
 			writer.write(
-					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Value</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td></tr></tr>\r\n");
+					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Values</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td></tr></tr>\r\n");
 		} catch (IOException e) {
 			System.out.println("Failed due to " + e.getMessage());
 			// TODO Auto-generated catch block
@@ -294,7 +297,8 @@ public class Reporting extends BrowserConfig {
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
 			startTime = endTime;
 			String time = "<td><p>" + timeInSecs + "</p></td>";
-			String step = "<td><p><a href=" + userDirector1 + ImageFileName + ">" + stepName + "</p></td>";
+			String step = "<td><a href=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\Capture.png\"><img src=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\Capture.png\" height=\"80\"></img></a></td>";
+			//String step = "<td><p><a href=" + userDirector1 + ImageFileName + ">" + stepName + "</p></td>";
 			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
 			String logs = "<tr>" + time + step + result + "</tr>";
 			writer.write(logs);
@@ -324,17 +328,11 @@ public class Reporting extends BrowserConfig {
 			if (Screenshot.contains("Y")) {
 				String ImageFileName1 = takeScreenshot();
 				step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName + "</p></td>";
-			}
-			String result = "<td bgcolor=#00cc00>" + "Fail" + "</a></td>";
+				String screensht =  "<td><p>" + ImageFileName1 + "</p></td>";
+			}	
+			String result = "<td bgcolor=#FF0000>" + "Fail" + "</a></td>";
 			String logs = "<tr>" + time + step + result + "</tr>";
 			writer.write(logs);
-			// Extent
-			if (Screenshot.contains("Y")) {
-				String ImageFileName = takeScreenshot();
-				test.log(Status.FAIL, stepName,
-						MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName).build());
-			} else
-				test.log(Status.FAIL, stepName);
 			// Assert.assertTrue(true);
 			// log4j
 			l4jlogger.error(stepName);
