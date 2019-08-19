@@ -42,11 +42,8 @@
 			<artifactId>poi-scratchpad</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>3.12.0</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-server</artifactId> 
+			<version>3.12.0</version> </dependency> -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -78,11 +75,8 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.14.0</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-java</artifactId> 
+			<version>3.14.0</version> </dependency> -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -153,6 +147,17 @@
 				<version>2.21.0</version>
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
+					<properties>
+						<systemProperties>
+							<systemProperty>
+								<key>Mode</key>
+								<value>${Mode}</value>
+							</systemProperty>
+						</systemProperties>
+					</properties>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 		</plugins>

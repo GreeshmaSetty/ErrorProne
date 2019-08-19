@@ -1,0 +1,15 @@
+pages\LoginPage.class
+utilities\Reporting.class
+utilities\Excel.class
+utilities\Email.class
+configuration\ReadPropertiesFile.class
+configuration\Global.class
+configuration\Keywords$1.class
+utilities\DataGeneration.class
+pages\CommonMethods.class
+utilities\DataProperty.class
+utilities\ReRunTest.class
+utilities\Locators.class
+configuration\BrowserConfig.class
+api\DBConfiguration.class
+configuration\Keywords.class

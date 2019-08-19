@@ -1,6 +1,7 @@
 package configuration;
 
 import java.net.URL;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
@@ -31,9 +32,9 @@ public class BrowserConfig {
 	public static long startTime;
 	public static long endTime;
 	public static int Failedflag = 0;
-
 	static ReadPropertiesFile read = new ReadPropertiesFile();
-	public static String Mode = read.readRunProperties("Mode");
+	
+public static String Mode = System.getProperty("Mode");
 
 	public int getFailedFlagCount() {
 		return Failedflag;
@@ -44,48 +45,40 @@ public class BrowserConfig {
 	}
 
 	public void Launch(String Browser, String URLKey) {
-		try {
+		try { 
 			startTime = System.currentTimeMillis();
 			Mode = Mode.toUpperCase();
-			switch (Mode) {
-			case "UI" : {
+			System.out.println(Mode);
+			if(Mode.equalsIgnoreCase("UI")) {
 				browserExecution(Browser,URLKey);
 			}
-			case "MOBILE" : {
+			else if(Mode.equalsIgnoreCase("MOBILE")){
 				mobileExecution(Browser,URLKey);
-			}
 			}
 		} catch (Exception e) {
 			System.out.println("Failed to launch application due to exception " + e.getMessage());
 		}
 
 	}
-	
+
 	private void mobileExecution(String BrowserName, String URLKey) {
-		try {
-			/*
-			 * DesiredCapabilities caps = new DesiredCapabilities();
-			 * caps.setCapability("deviceName", "Android SDK built for x86");
-			 * caps.setCapability("udid", "emulator-5554"); //Give Device ID of your mobile
-			 * phone caps.setCapability("platformName", "Android");
-			 * caps.setCapability("platformVersion", "10");
-			 * caps.setCapability("browserName", "Chrome"); caps.setCapability("noReset",
-			 * true);
-			 */
-			
+		try {	
+
+			try {
+				String[] command = {"cmd.exe", "/C", "Start", System.getProperty("user.dir")+"/openDevice.bat"};
+				Process process =  Runtime.getRuntime().exec(command);           
+			} catch (Exception ex) {
+			} 
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-	        capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.13.0");
-	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-	        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
-	        capabilities.setCapability("browserName", "Chrome");
-	        capabilities.setCapability("autoAcceptAlerts", true);
-			
-			//Set ChromeDriver location
-			//System.setProperty("webdriver.chrome.driver",("user.dir") + "\\Utils\\Drivers\\chromedriver.exe");	
-	        webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-	        webDriver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-	        webDriver.get("http://www.google.com");
-			// mobDriver.quit();
+			capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.13.0");
+			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+			capabilities.setCapability("browserName", BrowserName);
+			capabilities.setCapability("autoAcceptAlerts", true);
+
+			webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			webDriver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+			new Keywords().getURL(URLKey);
 		}catch(Exception e) {
 			System.out.println("Failed to launch mobile "+e.getMessage());
 		}
