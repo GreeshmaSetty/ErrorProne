@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import jdk.internal.jline.WindowsTerminal.KEY_EVENT_RECORD;
+//import jdk.internal.jline.WindowsTerminal.KEY_EVENT_RECORD;
 import utilities.DataGeneration;
 import utilities.DataProperty;
 import utilities.Excel;
@@ -33,23 +33,25 @@ public class Keywords extends BrowserConfig {
 	public DataProperty dataProp = new DataProperty();
 
 	public void quitBrowser() {
-		if(webDriver!=null) {
+		if (webDriver != null) {
 			webDriver.close();
 		}
 	}
 
 	/**
-	 *This method is used to clear the text entered or displayed in the text fields.
-	 *@sLocator - Locator of the element
+	 * This method is used to clear the text entered or displayed in the text
+	 * fields.
+	 * 
+	 * @sLocator - Locator of the element
 	 */
 	public void clear(String sLocator) {
 		WebElement actualLocator = getWebElement(sLocator);
 		actualLocator.clear();
 	}
-	
+
 	/**
 	 * 
-	 *This method gives WebElement of input locator.
+	 * This method gives WebElement of input locator.
 	 */
 	public WebElement getWebElement(String sLocator) {
 		String actualLocator = sLocator;
@@ -71,7 +73,7 @@ public class Keywords extends BrowserConfig {
 								element = webDriver.findElement(By.className(actualLocator));
 
 							} catch (Exception e5) {
-								//logger.logFail("Failed since the locator given was not found");
+								// logger.logFail("Failed since the locator given was not found");
 							}
 						}
 					}
@@ -79,12 +81,14 @@ public class Keywords extends BrowserConfig {
 			}
 
 		} catch (Exception e) {
-			//logger.logFail("Error while finding the Element. Exception: " + e.getMessage());
+			// logger.logFail("Error while finding the Element. Exception: " +
+			// e.getMessage());
 		}
 		return element;
 	}
+
 	/**
-	 *This method gives List of WebElement of input locator.
+	 * This method gives List of WebElement of input locator.
 	 */
 	public List<WebElement> getWebElementList(String sLocator) {
 		String actualLocator = sLocator;
@@ -110,7 +114,8 @@ public class Keywords extends BrowserConfig {
 					if (element.size() != 0)
 						return element;
 				} catch (Exception e) {
-					//logger.logFail("Error while finding the Element list due to exception " + e.getMessage());
+					// logger.logFail("Error while finding the Element list due to exception " +
+					// e.getMessage());
 				}
 			}
 		} catch (Exception e) {
@@ -118,8 +123,10 @@ public class Keywords extends BrowserConfig {
 		}
 		return element;
 	}
+
 	/**
-	 *This method gives List of WebElement for input locator (without excel's locator sheet).
+	 * This method gives List of WebElement for input locator (without excel's
+	 * locator sheet).
 	 */
 	public List<WebElement> getWebElementListWithoutExcel(String actualLocator) {
 		List<WebElement> element = null;
@@ -173,7 +180,8 @@ public class Keywords extends BrowserConfig {
 								element = webDriver.findElement(By.className(actualLocator));
 
 							} catch (Exception e5) {
-								//logger.logFail("Failed since the locator '"+actualLocator+"' given was not found");
+								// logger.logFail("Failed since the locator '"+actualLocator+"' given was not
+								// found");
 							}
 						}
 					}
@@ -181,25 +189,41 @@ public class Keywords extends BrowserConfig {
 			}
 
 		} catch (Exception e) {
-			////logger.logFail("Error while finding the Element. Exception: " + e.getMessage());
+			//// logger.logFail("Error while finding the Element. Exception: " +
+			//// e.getMessage());
 		}
 		return element;
 	}
-	
+
 	public void getURL(String url) {
 		webDriver.get(url);
 	}
-	
-	public void click(String sLocator) {
-		WebElement actualLocator = getWebElement(sLocator);
-		//jsScrollToElement(sLocator);
-		actualLocator.click();
+
+	public String getTitle() {
+		String tittle = webDriver.getTitle();
+		return tittle;
+	}
+
+	public void navigate_Back() {
+		webDriver.navigate().back();
+
 	}
 	
+	public String get_CurrentUrl() {
+		String URL=webDriver.getCurrentUrl();
+        return URL;
+	}
+
+	public void click(String sLocator) {
+		WebElement actualLocator = getWebElement(sLocator);
+		// jsScrollToElement(sLocator);
+		actualLocator.click();
+	}
+
 	public void click(WebElement actualLocator) {
 		actualLocator.click();
 	}
-	
+
 	public void selectDropdownByLi(String sLocator, String Data) {
 		try {
 			WebElement Dd_locator = getWebElement(sLocator);
@@ -209,14 +233,17 @@ public class Keywords extends BrowserConfig {
 					"//*[contains(@aria-owns,'" + getId + "')]//ancestor::div[@class='row']");
 			String locatorAttributeRole = Dd_locator.getAttribute("role");
 			if (locatorAttributeRole.contains("listbox")) {
-				jsScrollToElement(Field_locator_ToScroll);//scrollToView(Field_locator_ToScroll);
+				jsScrollToElement(Field_locator_ToScroll);// scrollToView(Field_locator_ToScroll);
 				scroll(0, 50);
 				Field_locator.click();
 				Thread.sleep(1000);
-				WebElement inputField_locator = getWebElementWithoutExcel("//div[@class='k-animation-container']//input[@aria-owns='"+getId+"']");
-				if(inputField_locator!=null) {
+				WebElement inputField_locator = getWebElementWithoutExcel(
+						"//div[@class='k-animation-container']//input[@aria-owns='" + getId + "']");
+				if (inputField_locator != null) {
 					inputField_locator.sendKeys(Data);
-					WebElement inputField_search = getWebElementWithoutExcel("//div[@class='k-animation-container']//input[@aria-owns='"+getId+"']//following-sibling::span[text()='select']");
+					WebElement inputField_search = getWebElementWithoutExcel(
+							"//div[@class='k-animation-container']//input[@aria-owns='" + getId
+									+ "']//following-sibling::span[text()='select']");
 					inputField_search.click();
 					Thread.sleep(1000);
 					Robot robot = new Robot();
@@ -224,30 +251,30 @@ public class Keywords extends BrowserConfig {
 					robot.keyRelease(KeyEvent.VK_DOWN);
 					robot.keyPress(KeyEvent.VK_ENTER);
 					robot.keyRelease(KeyEvent.VK_ENTER);
-				}else {
+				} else {
 					List<WebElement> liList = Dd_locator.findElements(By.tagName("li"));
-				for (WebElement li : liList) {
-					if (li.getText().equals(Data)) {
-						//jsScrollToElement(li);
-						Thread.sleep(1000);
-						//javaScriptClick(li);
-						li.click();
-						Thread.sleep(1000);
-						waitForPageToLoad(60);
-						break;
+					for (WebElement li : liList) {
+						if (li.getText().equals(Data)) {
+							// jsScrollToElement(li);
+							Thread.sleep(1000);
+							// javaScriptClick(li);
+							li.click();
+							Thread.sleep(1000);
+							waitForPageToLoad(60);
+							break;
+						}
 					}
-				}
 				}
 				try {
 					String verifyDD = getWebElementWithoutExcel("[aria-owns*='" + getId + "'] span[class='k-input']")
 							.getText();
 					if (!verifyDD.contains(Data.trim())) {
-						logger.logWarning("The data " + Data
-								+ " provided in the data sheet is not available in application");
+						logger.logWarning(
+								"The data " + Data + " provided in the data sheet is not available in application");
 						// Assert.fail();
 					}
-				}catch(Exception e) {
-					//Empty catch block to handle different dropdown
+				} catch (Exception e) {
+					// Empty catch block to handle different dropdown
 				}
 
 			}
@@ -255,7 +282,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to select Dropdown due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void waitForPageToLoad(int timeInSec) {
 		try {
 			int iterator = 0;
@@ -290,21 +317,21 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to load page in " + timeInSec + " due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void waitForLoadingToDisappear() {
 		try {
-			new WebDriverWait(webDriver, 30).until(
-					ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(("Page_Loading"))));
+			new WebDriverWait(webDriver, 30)
+					.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(("Page_Loading"))));
 		} catch (Exception e) {
 			logger.logFail("Failed to wait for Loading to disappear from page due to exception " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
-	
+
 	public boolean isElementPresent(String sLocator) {
 		WebElement locator = getWebElement(sLocator);
 		boolean elementPresent = false;
-		if(locator!=null) {
+		if (locator != null) {
 			try {
 				if (locator.isDisplayed()) {
 					elementPresent = true;
@@ -316,10 +343,10 @@ public class Keywords extends BrowserConfig {
 		}
 		return elementPresent;
 	}
-	
+
 	public boolean isElementPresent(WebElement element) {
 		boolean elementPresent = false;
-		if(element!=null) {
+		if (element != null) {
 			try {
 				if (element.isDisplayed()) {
 					elementPresent = true;
@@ -335,7 +362,7 @@ public class Keywords extends BrowserConfig {
 	public boolean isElementEnabled(String sLocator) {
 		WebElement locator = getWebElement(sLocator);
 		boolean elementPresent = false;
-		if(locator!=null) {
+		if (locator != null) {
 			try {
 				if (locator.isEnabled()) {
 					elementPresent = true;
@@ -348,7 +375,6 @@ public class Keywords extends BrowserConfig {
 		return elementPresent;
 	}
 
-	
 	public void scrollToView(String sLocator) {
 		try {
 			WebElement locator = getWebElement(sLocator);
@@ -363,7 +389,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void scrollToView(WebElement element) {
 
 		try {
@@ -378,8 +404,6 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
-
 	public void jsScrollToElement(String sLocator) {
 
 		try {
@@ -393,13 +417,13 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
-	public void jsScrollToElement(String sLocator,int Xaxis, int Yaxis) {
+
+	public void jsScrollToElement(String sLocator, int Xaxis, int Yaxis) {
 		try {
 			WebElement locator = getWebElement(sLocator);
 			if (locator != null) {
-				((JavascriptExecutor) webDriver).executeScript("window.scroll(" + (locator.getLocation().getX() - 20)
-						+ ", " + (Yaxis - Xaxis) + ");");
+				((JavascriptExecutor) webDriver).executeScript(
+						"window.scroll(" + (locator.getLocation().getX() - 20) + ", " + (Yaxis - Xaxis) + ");");
 
 			}
 		} catch (Exception e) {
@@ -407,11 +431,11 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	public void jsScrollToElement(WebElement element,int Xaxis, int Yaxis) {
+	public void jsScrollToElement(WebElement element, int Xaxis, int Yaxis) {
 		try {
 			if (element != null) {
-				((JavascriptExecutor) webDriver).executeScript("window.scroll(" + (element.getLocation().getX() - 20)
-						+ ", " + (Yaxis - Xaxis) + ");");
+				((JavascriptExecutor) webDriver).executeScript(
+						"window.scroll(" + (element.getLocation().getX() - 20) + ", " + (Yaxis - Xaxis) + ");");
 
 			}
 		} catch (Exception e) {
@@ -431,7 +455,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void javaScriptClick(String sLocator) {
 
 		try {
@@ -493,7 +517,6 @@ public class Keywords extends BrowserConfig {
 		return arrayString;
 	}
 
-	
 	public void waitExplicit(String sLocator, int seconds) {
 		try {
 			if (sLocator == null) {
@@ -515,7 +538,6 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
 	public boolean waitForElementPresent(String sLocator, int TimeInSeconds) {
 		try {
 			ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
@@ -543,8 +565,10 @@ public class Keywords extends BrowserConfig {
 		}
 		return false;
 	}
+
 	/**
-	 * It will select the value from the drop down on the basis of there li tag if thats available.
+	 * It will select the value from the drop down on the basis of there li tag if
+	 * thats available.
 	 */
 	public void SetselectDropdownByLi(String sLocator, String Data) {
 		try {
@@ -571,8 +595,10 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to select Dropdown due to exception " + e.getStackTrace());
 		}
 	}
+
 	/**
 	 * It will perform drag and drop operation.
+	 * 
 	 * @String From - is the string which we need to drag
 	 * @String To - is the string on which we need to drop the first element
 	 */
@@ -590,8 +616,10 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Drag and Drop failed due to exception :" + e.getMessage());
 		}
 	}
+
 	/**
 	 * It will perform drag and drop operation.
+	 * 
 	 * @WebElement From - is the element which we need to drag
 	 * @WebElement To - is the element on which we need to drop the first element
 	 */
@@ -637,7 +665,6 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
 	public String getTextNode(WebElement e) {
 		String text = e.getText().trim();
 		List<WebElement> children = e.findElements(By.xpath("./*"));
@@ -646,7 +673,7 @@ public class Keywords extends BrowserConfig {
 		}
 		return text;
 	}
-	
+
 	public String getMethodName() {
 		return Thread.currentThread().getStackTrace()[2].getMethodName();
 	}
@@ -658,7 +685,7 @@ public class Keywords extends BrowserConfig {
 			System.out.println("No such file/directory exists");
 		}
 	}
-	
+
 	public void select(String sLocator, String VisibleText) {
 		WebElement ele = getWebElement(sLocator);
 		Select sel = new Select(ele);
@@ -667,61 +694,61 @@ public class Keywords extends BrowserConfig {
 	}
 
 	public void assertTrue(boolean condition, String assertStatement, String Screenshot) {
-		if(condition) {
-			logger.logPass("Assert Passed for '"+assertStatement+"'", Screenshot);
-		}else {
-			logger.logFail("Assert Failed for '"+assertStatement+"'");
+		if (condition) {
+			logger.logPass("Assert Passed for '" + assertStatement + "'", Screenshot);
+		} else {
+			logger.logFail("Assert Failed for '" + assertStatement + "'");
 			Assert.fail();
 		}
 	}
 
 	public void assertFalse(boolean condition, String assertStatement, String Screenshot) {
-		if(!condition) {
-			logger.logPass("Assert Passed for '"+assertStatement+"'", Screenshot);
-		}else {
-			logger.logFail("Assert Failed for '"+assertStatement+"'");
+		if (!condition) {
+			logger.logPass("Assert Passed for '" + assertStatement + "'", Screenshot);
+		} else {
+			logger.logFail("Assert Failed for '" + assertStatement + "'");
 			webDriver.quit();
 			Assert.fail();
 		}
 	}
-	
-	public void switchToWindow(Object sValue){
-		try{
+
+	public void switchToWindow(Object sValue) {
+		try {
 			String title = sValue.toString();
 			Set<String> availableWindows = webDriver.getWindowHandles();
 			if (!availableWindows.isEmpty()) {
 				for (String windowId : availableWindows) {
 					if (webDriver.switchTo().window(windowId).getTitle().contains(title)) {
-						logger.logPass("Window is switched to "+title , "N");
+						logger.logPass("Window is switched to " + title, "N");
 						break;
 					}
 				}
 			}
 		} catch (Exception e) {
-			logger.logFail("Failed to switch due to exception "+e.getMessage());
+			logger.logFail("Failed to switch due to exception " + e.getMessage());
 		}
 	}
-	
-	public void switchToWindowHandle(String windowHandler){
-		try{
+
+	public void switchToWindowHandle(String windowHandler) {
+		try {
 			webDriver.switchTo().window(windowHandler);
-		}catch(Exception e){
-			logger.logFail("Failed to switch due to exception "+e.getMessage());
+		} catch (Exception e) {
+			logger.logFail("Failed to switch due to exception " + e.getMessage());
 		}
 	}
-	  
+
 	public Set<String> getWindowHandles() {
 		return webDriver.getWindowHandles();
 	}
-	
+
 	public String getWindowHandle() {
 		return webDriver.getWindowHandle();
 	}
-	
+
 	public void closeWindow() {
 		webDriver.close();
 	}
-	
+
 	public Object[] removeNullValues(Object[] arrayString) {
 		try {
 			ArrayList<Object> list = new ArrayList<Object>();
@@ -737,6 +764,5 @@ public class Keywords extends BrowserConfig {
 		}
 		return arrayString;
 	}
-
 
 }

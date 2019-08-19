@@ -11,9 +11,9 @@ import pages.CommonMethods;
 
 public class DataGeneration{
 
-	private DBConfiguration db = new DBConfiguration();
+	
 	private Reporting logger = new Reporting();
-	DataProperty dataProp = new DataProperty();
+	
 
 	public String generateRandomNumber(String numberSize) {
 		String MinSize = "1";
@@ -165,7 +165,7 @@ public class DataGeneration{
 					returnData += concatData;
 			}
 			String dataToBeSaved = (methodName+"."+"concat").toLowerCase();
-			dataProp.writeData(dataToBeSaved , returnData);
+			//dataProp.writeData(dataToBeSaved , returnData);
 		}catch(Exception e) {
 			logger.logFail("Failed to concat the data due to exception "+e.getMessage());
 		}
@@ -277,7 +277,7 @@ public class DataGeneration{
 					n=n+1;
 				}
 			}*/
-			dataProp.writeData(dataToBeSaved, returnData);
+			//dataProp.writeData(dataToBeSaved, returnData);
 		}catch(Exception e) {
 			logger.logFail("Failed to create data due to exception "+e.getMessage());
 		}

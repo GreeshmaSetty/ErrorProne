@@ -33,6 +33,7 @@ public class Global {
 
 	@AfterTest
 	public void afterTest() {
+		
 		logger.closeReporting();
 		logger.afterTestExtentReport();
 	}
