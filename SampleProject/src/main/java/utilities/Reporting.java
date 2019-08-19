@@ -246,7 +246,7 @@ public class Reporting extends BrowserConfig {
 			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
 			writer.write(
-					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Values</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td></tr></tr>\r\n");
+					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Values</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td><td><b>ScreenShots</b></td></tr></tr>\r\n");
 		} catch (IOException e) {
 			System.out.println("Failed due to " + e.getMessage());
 			// TODO Auto-generated catch block
@@ -296,9 +296,10 @@ public class Reporting extends BrowserConfig {
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
 			startTime = endTime;
 			String time = "<td><p>" + timeInSecs + "</p></td>";
-			String step = "<td><a href=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\Capture.png\"><img src=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\Capture.png\" height=\"80\"></img></a></td>";
+			//String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
 			//String step = "<td><p><a href=" + userDirector1 + ImageFileName + ">" + stepName + "</p></td>";
 			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
+			String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
 			String logs = "<tr>" + time + step + result + "</tr>";
 			writer.write(logs);
 			// Extent
@@ -382,6 +383,7 @@ public class Reporting extends BrowserConfig {
 			NumberFormat formatter = new DecimalFormat("#0.0");
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
 			startTime = endTime;
+			String ImageFileName = takeScreenshot();
 			String time = "<td><p>" + timeInSecs + "</p></td>";
 			String step1 = "<td><p>" + stepName1 + "</p></td>";
 			String step2 = "<td><p>" + stepName2 + "</p></td>";
@@ -392,7 +394,9 @@ public class Reporting extends BrowserConfig {
 			 * "</p></td>"; }
 			 */
 			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
-			String logs = "<tr>" + time + step1 +step2+step3+ result + "</tr>";
+			String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
+			//String step = "<td><p>" + "Here We Are" + "</p></td>";
+			String logs = "<tr>" + time + step1 +step2+step3+ result + step +"</tr>";
 			writer.write(logs);
 			l4jlogger.info(stepName1);
 		} catch (IOException e1) {

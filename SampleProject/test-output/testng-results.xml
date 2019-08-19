@@ -2,20 +2,16 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-14T11:48:49Z" name="Default suite" finished-at="2019-08-14T11:48:55Z" duration-ms="6255">
+  <suite started-at="2019-08-19T12:27:27Z" name="Default suite" finished-at="2019-08-19T12:27:33Z" duration-ms="6192">
     <groups>
     </groups>
-    <test started-at="2019-08-14T11:48:49Z" name="Default test" finished-at="2019-08-14T11:48:55Z" duration-ms="6255">
+    <test started-at="2019-08-19T12:27:27Z" name="Default test" finished-at="2019-08-19T12:27:33Z" duration-ms="6192">
       <class name="testCases.TestCase">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.TestCase@350aac89]" started-at="2019-08-14T17:18:49Z" name="beforeTest" finished-at="2019-08-14T17:18:49Z" duration-ms="338" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.TestCase@7d8995e]" started-at="2019-08-19T05:27:27Z" name="beforeTest" finished-at="2019-08-19T05:27:27Z" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TC_01_AddProfile_ValidData()[pri:0, instance:testCases.TestCase@350aac89]" started-at="2019-08-14T17:18:49Z" name="TC_01_AddProfile_ValidData" finished-at="2019-08-14T17:18:55Z" duration-ms="5288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_AddProfile_ValidData -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.TestCase@350aac89]" started-at="2019-08-14T17:18:49Z" name="beforeMethod" finished-at="2019-08-14T17:18:49Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.TestCase@7d8995e]" started-at="2019-08-19T05:27:27Z" name="beforeMethod" finished-at="2019-08-19T05:27:27Z" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.TestCase@350aac89]" started-at="2019-08-14T17:18:55Z" name="afterMethod" finished-at="2019-08-14T17:18:55Z" duration-ms="486" status="PASS">
+        <test-method signature="TC_01_AddProfile_ValidData()[pri:0, instance:testCases.TestCase@7d8995e]" started-at="2019-08-19T05:27:27Z" name="TC_01_AddProfile_ValidData" finished-at="2019-08-19T05:27:32Z" duration-ms="5319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_AddProfile_ValidData -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.TestCase@7d8995e]" started-at="2019-08-19T05:27:32Z" name="afterMethod" finished-at="2019-08-19T05:27:33Z" duration-ms="418" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_01_AddProfile_ValidData status=SUCCESS method=TestCase.TC_01_AddProfile_ValidData()[pri:0, instance:testCases.TestCase@350aac89] output={null}]]]>
+                <![CDATA[[TestResult name=TC_01_AddProfile_ValidData status=SUCCESS method=TestCase.TC_01_AddProfile_ValidData()[pri:0, instance:testCases.TestCase@7d8995e] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.TestCase@350aac89]" started-at="2019-08-14T17:18:55Z" name="afterTest" finished-at="2019-08-14T17:18:55Z" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.TestCase@7d8995e]" started-at="2019-08-19T05:27:33Z" name="afterTest" finished-at="2019-08-19T05:27:33Z" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
