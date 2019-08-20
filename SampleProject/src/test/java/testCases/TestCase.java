@@ -29,9 +29,10 @@ public class TestCase extends Global {
 	public static HashMap<String, String> hashMap = new HashMap();
 
 	@Test(priority = 0)
-	public void TC_01_AddProfile_ValidData() {
+	public void TC_01_Fetch_Movieand_Wikipedialink() {
 
 		common.Launch("Chrome", "https://www.google.co.in/");
+		logger.logPass("Chrome lauched sucessfully", "Y");
 		String[] movie = common
 				.csv_FileRead("C:/Users/epsilon/Documents/GitHub/ErrorProne/SampleProject/Testdata/Movielist.csv");
 		for (int i = 1; i < movie.length; i += 2) {
@@ -49,7 +50,7 @@ public class TestCase extends Global {
 	}
 
 	@Test(priority = 1)
-	public void TC_02_AddProfile_ValidData() {
+	public void TC_02_ExtractDirName_and_Compare() {
 		try {
 			for (String movie : hashMap.keySet()) {
 				Thread t = new Thread(movie);
