@@ -57,7 +57,7 @@ public class CommonMethods {
 		try {
 			br = new BufferedReader(new FileReader(Fileloc));
 			while ((line = br.readLine()) != null) {
-				data = line.split(",");
+				data = line.split("\\|");
 			}
 
 		} catch (Exception e) {
