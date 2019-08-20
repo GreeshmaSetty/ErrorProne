@@ -18,6 +18,7 @@ import configuration.BrowserConfig;
 import configuration.Global;
 import configuration.Keywords;
 import pages.CommonMethods;
+import utilities.MyThread;
 import utilities.UI_Locators;
 
 public class TestCase extends Global {
@@ -34,8 +35,8 @@ public class TestCase extends Global {
 		common.Launch("Chrome", "https://www.google.co.in/");
 		logger.logPass("Chrome lauched sucessfully", "Y");
 		String[] movie = common
-				.csv_FileRead("C:/Users/epsilon/Documents/GitHub/ErrorProne/SampleProject/Testdata/Movielist.csv");
-		for (int i = 1; i < movie.length; i += 2) {
+				.csv_FileRead(System.getProperty("user.dir")+"/Testdata/Movielist.csv");
+		for (int i = 1; i <= movie.length; i += 2) {
 			try {
 				actions.getWebElement(locator.search).sendKeys(movie[i] + Keys.ENTER);
 				List<WebElement> links = actions.getWebElementList(locator.wikipedia_Link);
@@ -53,11 +54,9 @@ public class TestCase extends Global {
 	public void TC_02_ExtractDirName_and_Compare() {
 		try {
 			for (String movie : hashMap.keySet()) {
-				Thread t = new Thread(movie);
-				t.start();
-				t.join(10);
+				MyThread temp = new MyThread("Thread"+movie);
+				temp.start();
 				common.get_DirectorandCompare(movie, hashMap.get(movie).toString());
-				System.out.println(t.currentThread().getId());
 			}
 		} catch (Exception e) {
 
