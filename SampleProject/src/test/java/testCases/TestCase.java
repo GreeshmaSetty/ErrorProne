@@ -9,9 +9,9 @@ public class TestCase extends Global{
 	@Test(priority = 0)
 	public void TC_01_AddProfile_ValidData() {
 		common.Launch("Chrome", "www.google.com");
-		logger.logPass("1", "Name", "ABC", "XYZ");
+		logger.logPass("1", "Name", "ABC");
 		logger.logFail("Test1");
-		logger.logPass("2", "Name2", "ABCD", "XYZW");
+		logger.logPass("2", "Name2", "ABCD");
 		
 		
 	}

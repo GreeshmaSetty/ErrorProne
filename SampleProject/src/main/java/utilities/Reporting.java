@@ -207,16 +207,16 @@ public class Reporting extends BrowserConfig {
 		str += "table {background-color: #d9d9d9; text-align: center;}";
 		str += "th { background-color: #19b9e5;text-align: center;  color: #000000; font-family: Candara, Calibri;font-size: 20px;}";
 		str += "th#Scenario { background-color: #cceeff;text-align: center;  color: #000000; font-family: Candara, Calibri;font-size: 20px;}";
-		str += "tr { background-color: #E6E6E6; color: #1F1F7A;  font-family:Calibri; font-size: 15px;}";
-		str += "p {background-color: #ffffff ; color: #000000 ;}";
+		str += "tr { background-color: #E6E6E6; color: #000000;  font-family:Calibri; font-size: 15px;}";
+		str += "p {background-color: #E6E6E6 ; color: #000000 ;}";
 		str += "h1 { align=center; text-align: center;color: #000000; font-family:  Candara,Calibri;font-size: 28px; }";
 		str += "h2 { align=center; text-align: center;background-color: #004994; color: #000000; font-family:  Candara,Calibri;font-size: 28px; }";
 		str += "h3 {text-align=right;font-family: Candara, Calibri; font-size: 20px; }";
 		str += "h4 {text-align=right;font-family: Candara, Calibri; font-size: 18px; }";
 		str += "div#EnvironmentDetails{ border: 2px solid black; padding: 10px; width : 30%; float:left;}";
 		str += "div#ExecutionSummary{ border: 2px solid black; padding: 10px; width : 30%; float:right;}";
-		str += "tr.tc0 { text-align: center;}";
-		str += "td { text-align: center; height:80px;}";
+		str += "td { text-align: center; height:40px;}";
+		str += "tr.tc0 { text-align: center; background-color: #de1b6a; height:40px !important;}";
 		return str;
 	}
 
@@ -243,7 +243,7 @@ public class Reporting extends BrowserConfig {
 	 */
 	public void writeBatchTemplate(String MethodName) {
 		try {
-			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\TestAutothon\\TestAutothon\\src\\main\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
+			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\GitHub\\ErrorProne\\SampleProject\\src\\test\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
 			writer.write(
 					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Values</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td><td><b>ScreenShots</b></td></tr></tr>\r\n");
@@ -284,62 +284,34 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 
-	public void logFail(String stepName) {
-		System.setProperty("org.uncommons.reportng.escape-output", "false");
-		try {
-			String userDirector1 = "..\\screenshots\\";
-			// String userDirector = System.getProperty("user.dir") +
-			// "/test-output/screenshots/";
-			String ImageFileName = takeScreenshot();
-			endTime = System.currentTimeMillis();
-			NumberFormat formatter = new DecimalFormat("#0.0");
-			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
-			startTime = endTime;
-			String time = "<td><p>" + timeInSecs + "</p></td>";
-			//String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
-			//String step = "<td><p><a href=" + userDirector1 + ImageFileName + ">" + stepName + "</p></td>";
-			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
-			String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
-			String logs = "<tr>" + time + step + result + "</tr>";
-			writer.write(logs);
-			// Extent
-			test.log(Status.FAIL, stepName,
-					MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName).build());
-			// Assert.assertTrue(false);
-			// log4j
-			l4jlogger.info(stepName);
-		} catch (IOException e) {
-			l4jlogger.error("Failed due log in report due to exception " + e.getMessage());
-			e.printStackTrace();
-		}
-	}
+
 	
-	public void logFail(String stepName, String Screenshot) {
-		System.setProperty("org.uncommons.reportng.escape-output", "false");
-		try {
-			String userDirector1 = "..\\screenshots\\";
-			// Time calculation
-			endTime = System.currentTimeMillis();
-			NumberFormat formatter = new DecimalFormat("#0.0");
-			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
-			startTime = endTime;
-			String time = "<td><p>" + timeInSecs + "</p></td>";
-			String step = "<td><p>" + stepName + "</p></td>";
-			if (Screenshot.contains("Y")) {
-				String ImageFileName1 = takeScreenshot();
-				step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName + "</p></td>";
-				String screensht =  "<td><p>" + ImageFileName1 + "</p></td>";
-			}	
-			String result = "<td bgcolor=#FF0000>" + "Fail" + "</a></td>";
-			String logs = "<tr>" + time + step + result + "</tr>";
-			writer.write(logs);
-			// Assert.assertTrue(true);
-			// log4j
-			l4jlogger.error(stepName);
-		} catch (Exception e1) {
-			l4jlogger.error("Failed to log fail in report" + e1.getMessage());
-		}
-	}
+//	public void logFail(String stepName, String Screenshot) {
+//		System.setProperty("org.uncommons.reportng.escape-output", "false");
+//		try {
+//			String userDirector1 = "..\\screenshots\\";
+//			// Time calculation
+//			endTime = System.currentTimeMillis();
+//			NumberFormat formatter = new DecimalFormat("#0.0");
+//			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+//			startTime = endTime;
+//			String time = "<td><p>" + timeInSecs + "</p></td>";
+//			String step = "<td><p>" + stepName + "</p></td>";
+//			if (Screenshot.contains("Y")) {
+//				String ImageFileName1 = takeScreenshot();
+//				step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName + "</p></td>";
+//				String screensht =  "<td><p>" + ImageFileName1 + "</p></td>";
+//			}	
+//			String result = "<td bgcolor=#FF0000>" + "Fail" + "</a></td>";
+//			String logs = "<tr>" + time + step + result + "</tr>";
+//			writer.write(logs);
+//			// Assert.assertTrue(true);
+//			// log4j
+//			l4jlogger.error(stepName);
+//		} catch (Exception e1) {
+//			l4jlogger.error("Failed to log fail in report" + e1.getMessage());
+//		}
+//	}   
 
 	public void logPass(String stepName, String Screenshot) {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
@@ -374,7 +346,35 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 	
-	public void logPass(String stepName1,String stepName2,String stepName3,String stepName4) {
+	public void logFail(String stepName) {
+		System.setProperty("org.uncommons.reportng.escape-output", "false");
+		try {
+			String userDirector1 = "..\\screenshots\\";
+			// String userDirector = System.getProperty("user.dir") +
+			// "/test-output/screenshots/";
+			String ImageFileName = takeScreenshot();
+			endTime = System.currentTimeMillis();
+			NumberFormat formatter = new DecimalFormat("#0.0");
+			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+			startTime = endTime;
+			String time = "<td><p>" + timeInSecs + "</p></td>";
+			String step = "<td><p>" + stepName + "</p></td>";
+			String step1 = "<td><p>" + "" + "</p></td>";
+			String step2 = "<td><p>" + "" + "</p></td>";
+			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
+			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
+			String logs = "<tr>" + time + step + step1 + step2 + result + scrshot + "</tr>";
+			writer.write(logs);
+			// Assert.assertTrue(false);
+			// log4j
+			l4jlogger.info(stepName);
+		} catch (IOException e) {
+			l4jlogger.error("Failed due log in report due to exception " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	public void logPass(String stepName1,String stepName2,String stepName3) {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
@@ -394,9 +394,9 @@ public class Reporting extends BrowserConfig {
 			 * "</p></td>"; }
 			 */
 			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
-			String step = "<td><a href= href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
+			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
 			//String step = "<td><p>" + "Here We Are" + "</p></td>";
-			String logs = "<tr>" + time + step1 +step2+step3+ result + step +"</tr>";
+			String logs = "<tr>" + time + step1 +step2+step3+ result + scrshot +"</tr>";
 			writer.write(logs);
 			l4jlogger.info(stepName1);
 		} catch (IOException e1) {
