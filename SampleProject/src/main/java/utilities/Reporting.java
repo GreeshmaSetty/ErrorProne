@@ -30,6 +30,7 @@ public class Reporting extends BrowserConfig {
 	static Timestamp ts = new Timestamp(System.currentTimeMillis());
 	private static String Reporttimestamp = "_" + ts.getTime();
 	public static Logger l4jlogger = Logger.getLogger("AgilityLoyalty");
+	private static File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/ExecutionReport"+Reporttimestamp+".html");
 
 	public Reporting() {
 		PropertyConfigurator.configure("Log4j.properties");
@@ -170,20 +171,21 @@ public class Reporting extends BrowserConfig {
 	public void CreateHtmlReportFile() {
 		try {
 			String name = "ExecutionReport";
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+		//	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			HtmlDirectory = new File(String.valueOf("./test-output/HtmlReport"));
 			if (!HtmlDirectory.exists())
 				HtmlDirectory.mkdir();
-			createHtmlFile(name + timestamp.getTime());
+			createHtmlFile();
+			System.out.println("Created html reports");
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create a HTML report due to exception " + e.getMessage());
 		}
 	}
 
-	public void createHtmlFile(String fileName) {
+	public void createHtmlFile() {
 		try {
-			File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/" + fileName + ".html");
-			writer = new FileWriter(file);
+		//	File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/" + fileName + ".html");
+			writer = new FileWriter(file,true);
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create testcase file due to exception " + e.getMessage());
 		}
@@ -375,15 +377,19 @@ public class Reporting extends BrowserConfig {
 	}
 	
 	public void logPass(String stepName1,String stepName2,String stepName3) {
+		beforeTestReporting();
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
 			// Time calculation
 			endTime = System.currentTimeMillis();
+			System.out.println(endTime);
 			NumberFormat formatter = new DecimalFormat("#0.0");
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+			System.out.println(timeInSecs);
 			startTime = endTime;
 			String ImageFileName = takeScreenshot();
+System.out.println(ImageFileName);
 			String time = "<td><p>" + timeInSecs + "</p></td>";
 			String step1 = "<td><p>" + stepName1 + "</p></td>";
 			String step2 = "<td><p>" + stepName2 + "</p></td>";
@@ -397,9 +403,12 @@ public class Reporting extends BrowserConfig {
 			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
 			//String step = "<td><p>" + "Here We Are" + "</p></td>";
 			String logs = "<tr>" + time + step1 +step2+step3+ result + scrshot +"</tr>";
+			System.out.println(logs);
 			writer.write(logs);
 			l4jlogger.info(stepName1);
-		} catch (IOException e1) {
+			closeReporting();
+		} catch (Exception e1) {
+			System.out.println("Failed log"+e1.getMessage());
 			l4jlogger.error("Failed to log in report" + e1.getMessage());
 		}
 	}
@@ -516,4 +525,5 @@ public class Reporting extends BrowserConfig {
 		}
 		return ImageFileName;
 	}
+
 }
