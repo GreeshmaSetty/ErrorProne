@@ -79,7 +79,7 @@ public class CommonMethods {
 			if(Wiki_Directorname.equals(Imdb_Directorname))
 			{
 				System.out.println(moviename+"Pass");
-				logger.logPass(moviename, Wiki_Directorname, Imdb_link, Imdb_Directorname);
+				//logger.logPass(moviename, Wiki_Directorname, Imdb_link, Imdb_Directorname);
 			}
 			//Assert.assertEquals(Wiki_Directorname, Imdb_Directorname);
 		} 
