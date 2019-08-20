@@ -137,7 +137,7 @@ public class APICommon {
 			}else if(ExpectedStatusCode.equals(ActualStatusCode)) {
 				logger.logPass("Status Code : "+ActualStatusCode +" and Obtained response : <br>"+ responseString, "N");
 			}else if(ExpectedStatusCode.equals("N")||ExpectedStatusCode.equals("Y")){
-				logger.logFail("Expected Status : 200/201 Actual Status : "+ActualStatusCode +" <br> Obtained response : "+ responseString, "N");
+				//logger.logFail("Expected Status : 200/201 Actual Status : "+ActualStatusCode +" <br> Obtained response : "+ responseString, "N");
 			}
 		}catch(Exception e) {
 			logger.logFail("Failed to verify Status Code due tp exception "+e.getMessage());

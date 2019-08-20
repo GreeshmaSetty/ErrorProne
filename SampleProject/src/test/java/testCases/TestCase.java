@@ -64,7 +64,7 @@ public class TestCase extends Global {
 					if(Wiki_Directorname.equals(Imdb_Directorname))
 					{
 						System.out.println(movie+" Passed");
-						//logger.logPass(movie, Wiki_Directorname, Imdb_link, Imdb_Directorname);
+						logger.logPass(movie, Wiki_Directorname, Imdb_link);
 					}
 					//Assert.assertEquals(Wiki_Directorname, Imdb_Directorname);
 				} 

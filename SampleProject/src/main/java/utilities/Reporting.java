@@ -31,7 +31,9 @@ public class Reporting extends BrowserConfig {
 	private static String Reporttimestamp = "_" + ts.getTime();
 	public static Logger l4jlogger = Logger.getLogger("AgilityLoyalty");
 	private static File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/ExecutionReport"+Reporttimestamp+".html");
-
+	private static String preReq = beforeTestReporting();
+	
+	
 	public Reporting() {
 		PropertyConfigurator.configure("Log4j.properties");
 	}
@@ -41,9 +43,13 @@ public class Reporting extends BrowserConfig {
 	public ExtentReports extent;
 	public static ExtentTest test;
 
-	public void beforeTestReporting() {
+	public static String beforeTestReporting() {
+		System.out.println("Before TEst Reporting");
 		CreateHtmlReportFile();
-		writeBasicTemplate();
+		writeBasicTemplate(); 
+		writeBatchTemplate("");
+		closeReporting();
+		return Reporttimestamp;
 	}
 
 	public void beforeTestExtentReport() {
@@ -147,9 +153,9 @@ public class Reporting extends BrowserConfig {
 
 	public void methodLevelReporting(Method methodName) {
 		try {
-			System.out.println("Method name : " + methodName.getName());
+			//System.out.println("Method name : " + methodName.getName());
 			// writeMethodLevelTemplate(methodName.getName());
-			writeBatchTemplate(methodName.getName());
+			//writeBatchTemplate(methodName.getName());
 		} catch (Exception e) {
 			l4jlogger.error("Failed while reporting due to exception " + e.getMessage());
 		}
@@ -159,7 +165,7 @@ public class Reporting extends BrowserConfig {
 		test = extent.createTest(methodName.getName(), "Sample execution");
 	}
 
-	public void closeReporting() {
+	public static void closeReporting() {
 		try {
 			writer.close();
 		} catch (IOException e) {
@@ -168,21 +174,21 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 
-	public void CreateHtmlReportFile() {
+	public static void CreateHtmlReportFile() {
 		try {
 			String name = "ExecutionReport";
 		//	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			HtmlDirectory = new File(String.valueOf("./test-output/HtmlReport"));
 			if (!HtmlDirectory.exists())
 				HtmlDirectory.mkdir();
-			createHtmlFile();
+			fileWriter();
 			System.out.println("Created html reports");
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create a HTML report due to exception " + e.getMessage());
 		}
 	}
 
-	public void createHtmlFile() {
+	public static void fileWriter() {
 		try {
 		//	File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/" + fileName + ".html");
 			writer = new FileWriter(file,true);
@@ -191,7 +197,7 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 
-	public void writeBasicTemplate() {
+	public static String writeBasicTemplate() {
 		try {
 			writer.write("<html><head><style>\n");
 			writer.write(styleCssTemplate());
@@ -201,9 +207,10 @@ public class Reporting extends BrowserConfig {
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
 		}
+		return Reporttimestamp;
 	}
 
-	public String styleCssTemplate() {
+	public static String styleCssTemplate() {
 		String str = "body {background-color: #ffffff;  border: 2px solid grey; border-radius: 5px}";
 		str = str + "background-color: #ffffff;  border: 2px solid grey; border-radius: 5px}";
 		str += "table {background-color: #d9d9d9; text-align: center;}";
@@ -243,7 +250,7 @@ public class Reporting extends BrowserConfig {
 	 * e.getMessage()); // TODO Auto-generated catch block
 	 * l4jlogger.error(e.getMessage()); } }
 	 */
-	public void writeBatchTemplate(String MethodName) {
+	public static String writeBatchTemplate(String MethodName) {
 		try {
 			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\GitHub\\ErrorProne\\SampleProject\\src\\test\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
@@ -254,6 +261,7 @@ public class Reporting extends BrowserConfig {
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
 		}
+		return MethodName;
 	}
 
 	public void writeMethodName(String MethodName) {
@@ -377,7 +385,7 @@ public class Reporting extends BrowserConfig {
 	}
 	
 	public void logPass(String stepName1,String stepName2,String stepName3) {
-		beforeTestReporting();
+		fileWriter();
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
@@ -389,7 +397,6 @@ public class Reporting extends BrowserConfig {
 			System.out.println(timeInSecs);
 			startTime = endTime;
 			String ImageFileName = takeScreenshot();
-System.out.println(ImageFileName);
 			String time = "<td><p>" + timeInSecs + "</p></td>";
 			String step1 = "<td><p>" + stepName1 + "</p></td>";
 			String step2 = "<td><p>" + stepName2 + "</p></td>";
@@ -525,5 +532,4 @@ System.out.println(ImageFileName);
 		}
 		return ImageFileName;
 	}
-
 }
