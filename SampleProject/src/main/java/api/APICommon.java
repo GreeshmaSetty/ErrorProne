@@ -1,6 +1,6 @@
 package api;
 
-/*
+
 import static com.jayway.restassured.RestAssured.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -23,9 +23,9 @@ import configuration.Keywords;
 import utilities.DataGeneration;
 import utilities.Excel;
 import utilities.Reporting;
-*/
 
-/*public class APICommon {
+
+public class APICommon {
 
 	public static DataGeneration dataGenerate = new DataGeneration();
 	public Reporting logger = new Reporting();
@@ -58,13 +58,13 @@ import utilities.Reporting;
 		Map<String, String> apiHeaders = new HashMap<String, String>() ;
 		String accessToken = getAccessToken();
 		Headers header = new Headers();
-		String ContentType = "Content-Type";
-		String AcceptLanguage = "Accept-Language";
-		String ProgramCode = "Program-Code";
+		String ContentType = "application/json; utf-8";
+		String Accept = "application/json";
+		//String ProgramCode = "Program-Code";
 		try {
 			apiHeaders.put("Content-Type", ContentType);
-			apiHeaders.put("Accept-Language", AcceptLanguage);
-			apiHeaders.put("Program-Code", ProgramCode);
+			apiHeaders.put("Accept", Accept);
+			//apiHeaders.put("Program-Code", ProgramCode);
 
 			List<Header> headerList = new ArrayList<Header>();
 			for(String key : apiHeaders.keySet()) {
@@ -115,29 +115,16 @@ import utilities.Reporting;
 		return json;
 	}
 
-	public void API_Post(String dataKey, String statusCode) {
-		String jsonBody = "";
-		// Data key 
-		String Key = dataKey;
-		if(dataKey.contains(".")) {
-			Key = dataKey.split("\\.")[1];
-		}
-		logger.logInfo("API Post"+ " "+Key+ " "+"Method");
+	public void API_Post(String Url, String jsonBody) {
 		Headers apiheader =  getHeaders();
-		String sURL = refactorWithRandomizedValues(Excel.getApiHeaderData(dataKey,"URL"));
-		String jsonBodyGiven = Excel.getApiHeaderData(dataKey, "JsonBody").trim();
+		String sURL = refactorWithRandomizedValues(Url);
+		String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
 		try {
-			if(jsonBodyGiven!=null&&(!jsonBodyGiven.equals(""))) {
-				jsonBody = refactorWithRandomizedValues(jsonBodyGiven);
-			}else {
-				logger.logFail("Empty value in Json Body. Please verify");
-			}
-			logger.logPass("Created Json Body is : '"+jsonBody+"'", "N");
-			Response response = (Response) given().headers(apiheader).body(jsonBody).when().post(new URL(API_Url+"/"+sURL));
+			Response response = (Response) given().headers(apiheader).body(jsonBodyGiven).when().post(new URL(sURL));
 			String getStatusCode = String.valueOf(response.getStatusCode());
-			verifyStatusCode(statusCode, getStatusCode, response.asString());
+			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
-			writeResponseToData(response, Key);
+			writeResponseToData(response, "Post");
 		} catch (Exception e) {
 			logger.logFail("Failed to Post due to exception " + e.getMessage());
 		}
@@ -157,7 +144,7 @@ import utilities.Reporting;
 		}
 	}
 
-	public void API_Put(String dataKey, String statusCode) {
+	/*public void API_Put(String dataKey, String statusCode) {
 		String jsonBody = "";
 		// Data key 
 		String Key = dataKey;
@@ -277,7 +264,7 @@ import utilities.Reporting;
 			logger.logFail("API_Verify failed due to exception : " + e.getMessage(),"N");;
 		}
 	}
-
+*/
 	public Map<Object,Object> convertSimpleJsonToMap(String jsonStr) {
 		String[] temp = new String[2];
 		Map<Object,Object> resultMap = new HashMap<Object,Object>();
@@ -392,7 +379,7 @@ import utilities.Reporting;
 			logger.logFail("Failed to verify value due to exception "+e.getMessage());
 		}
 	}
-
+}
 
 	/*
 	 * public void verifyAttributes(String dataKey, String methodName) { XSSFSheet

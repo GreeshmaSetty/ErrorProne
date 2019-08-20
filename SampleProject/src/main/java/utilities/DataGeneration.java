@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 import api.DBConfiguration;
+import configuration.ReadPropertiesFile;
 import pages.CommonMethods;
 
 public class DataGeneration{
@@ -14,6 +15,7 @@ public class DataGeneration{
 	private DBConfiguration db = new DBConfiguration();
 	private Reporting logger = new Reporting();
 	DataProperty dataProp = new DataProperty();
+	ReadPropertiesFile read = new ReadPropertiesFile();
 
 	public String generateRandomNumber(String numberSize) {
 		String MinSize = "1";
@@ -297,25 +299,25 @@ public class DataGeneration{
 		}
 		return returnData;
 	}
-}
 
 	
-	/*public void writeApiData(String uniqueIdentifier,String keyName, String valueToWrite) {
+	public void writeApiData(String uniqueIdentifier,String keyName, String valueToWrite) {
 		int n = 1;
 		String dataToBeSaved = (uniqueIdentifier+"."+keyName).toLowerCase();
-		//String duplicateData = read.readDataProperties(dataToBeSaved);
+		String duplicateData = read.readDataProperties(dataToBeSaved);
 
 		if(!duplicateData.equalsIgnoreCase("{{notpresent}}") && !duplicateData.equals(valueToWrite)) {
 			while(!duplicateData.equals("{{notpresent}}")) {
 				dataToBeSaved = (uniqueIdentifier+"."+keyName+n).toLowerCase();
-				//duplicateData = read.readDataProperties(dataToBeSaved);
+				duplicateData = read.readDataProperties(dataToBeSaved);
 				n=n+1;
 			}
 		}
 		if(!duplicateData.equals("{{notpresent}}") || !duplicateData.equals(valueToWrite)) {
 			dataProp.writeData(dataToBeSaved, valueToWrite);
 		}
-	}*/
+	}
+}
 	
 	/*public void writeResponse(String methodName, String response) {
 		int n = 1;
