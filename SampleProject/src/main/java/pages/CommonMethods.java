@@ -31,7 +31,7 @@ public class CommonMethods {
 				config.Launch(browserName, Url);
 			else
 				actions.getURL(Url);
-			logger.logPass("Launched", "N");
+			//logger.logPass("Launched", "N");
 		} catch (Exception e) {
 			System.out.println("Failed to Launch due to exception " + e.getMessage());
 		}

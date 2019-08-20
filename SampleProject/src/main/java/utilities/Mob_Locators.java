@@ -1,12 +1,12 @@
 package utilities;
 
-public class UI_Locators {
+public class Mob_Locators {
 	
 	public  String search = "//input[@aria-label='Search']";
 	
 	//public static String wiki = "//a[@href='https://en.wikipedia.org/wiki/";
 	
-	public  String wikipedia_Link = "//a[starts-with(@href,'https://en.wikipedia.org/wiki')]";
+	public  String wikipedia_Link = "//a[starts-with(@href,'https://en.m.wikipedia.org/wiki')]";
 	
 	public  String directed_By="//th[contains(text(),'Directed by')]/../td/a";
 	

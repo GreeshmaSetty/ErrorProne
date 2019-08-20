@@ -1,8 +1,18 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
- <suite name="TestAutothon" >
-<test name="TestCases">
- <classes>
- <class name="testCases.TestCase"/>
- </classes>
-</test>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestAutothon">
+	<test name="TestCases">
+		<method-selectors>
+			<method-selector>
+				<script language="beanshell">
+				<!-- groupToRun is a VM argument. -->
+				<![CDATA[groupNames = System.getProperty("Mode");
+				groups.containsKey(groupNames);
+				]]>
+				</script>
+			</method-selector>
+		</method-selectors>
+		<classes>
+			<class name="testCases.TestCase" />
+		</classes>
+	</test>
 </suite>

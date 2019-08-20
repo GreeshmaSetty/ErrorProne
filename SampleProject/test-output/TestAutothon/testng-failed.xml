@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestAutothon]">
+  <test name="TestCases(failed)">
+    <groups>
+      <run>
+        <include name="UI"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.TestCase">
+        <methods>
+          <include name="TC_UI_Fetch_Movieand_Wikipedialink"/>
+        </methods>
+      </class> <!-- testCases.TestCase -->
+    </classes>
+  </test> <!-- TestCases(failed) -->
+</suite> <!-- Failed suite [TestAutothon] -->

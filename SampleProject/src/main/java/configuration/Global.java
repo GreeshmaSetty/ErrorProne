@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import utilities.Reporting;
+import utilities.UI_Locators;
 
 public class Global {
 	protected Keywords actions = new Keywords();
@@ -35,6 +36,7 @@ public class Global {
 	public void afterTest() {
 		logger.closeReporting();
 		logger.afterTestExtentReport();
+		actions.quitBrowser();
 	}
 
 }
