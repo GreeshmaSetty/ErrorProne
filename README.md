@@ -3,7 +3,7 @@
 # Testautothon 2019 (STeP-IN Summit 2019)
 
 
-This repo contains the testautothon step-in 2018 summit challenge solution.
+This repository contains the testautothon step-in 2019 summit challenge solution.
 
 
 ## Team Members:
