@@ -51,3 +51,6 @@
 2019-08-21 13:55:35,170 [main] INFO AgilityLoyalty - Failed to write response to data properties due to exception Failed to parse the JSON document
 2019-08-21 13:55:35,938 [main] INFO AgilityLoyalty - API uploaded response
 2019-08-21 13:55:36,847 [main] INFO AgilityLoyalty - API Get response
+2019-08-21 14:00:14,334 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 14:00:18,917 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 14:00:19,278 [pool-1-thread-2] INFO AgilityLoyalty - Step In Forum Launched
