@@ -157,7 +157,7 @@ public class CommonMethods {
 		File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody.json");
 		try {
 			Writer writer;
-			writer = new FileWriter(file);
+			writer = new FileWriter(file,true);
 			writer.write(jsonValue);
 			writer.close();
 		} catch (IOException e) {
