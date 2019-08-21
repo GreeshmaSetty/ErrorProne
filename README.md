@@ -27,3 +27,18 @@ This repository contains the testautothon step-in 2019 summit challenge solution
 8. Click on the video
 9. Change the video quality to 360p
 10. Get and list the names of all upcoming videos under ("Up Next") section (right side of the screen) 
+11. Write the names of the video fetched from step 10 to a JSON file in te following template:
+    ```bash
+    {
+      "team" : "team-name",
+      "video": "search-video-name",
+      "upcoming-videos": [
+             "sample 1",
+             "sample 2",
+             "sample 3"
+         ]
+    }
+    ```
+12. Post/upload file to the server [http://<LAB IP>/upload]
+13. validate the file upload [http://<LAB IP>results/<responce recieved from upload>
+14. Generate the test excecution report
