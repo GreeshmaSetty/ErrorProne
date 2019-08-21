@@ -67,24 +67,20 @@ public class CommonMethods {
 
 	}
 
-	public void get_DirectorandCompare(String moviename, String Wikipedialink) {
-		try {
-			Launch("Chrome", Wikipedialink);
-			String Wiki_Directorname = actions.getWebElement(locator.directed_By).getText();
-			String Imdb_link = actions.getWebElement(locator.wiki_imdblink).getAttribute("href");
-			Launch("Chrome", Imdb_link);
-			actions.waitExplicit(locator.imdblink_directed_By, 30);
-			String Imdb_Directorname = actions.getWebElement(locator.imdblink_directed_By).getText();
-			System.out.println(moviename+"Dir1:" + Wiki_Directorname + "Dir2:" + Imdb_Directorname);
-			if(Wiki_Directorname.equals(Imdb_Directorname))
-			{
-				System.out.println(moviename+"Pass");
-				//logger.logPass(moviename, Wiki_Directorname, Imdb_link, Imdb_Directorname);
-			}
-			//Assert.assertEquals(Wiki_Directorname, Imdb_Directorname);
-		} 
-		catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
+	/*
+	 * public void get_DirectorandCompare(String moviename, String Wikipedialink) {
+	 * try { Launch("Chrome", Wikipedialink); String Wiki_Directorname =
+	 * actions.getWebElement(locator.directed_By).getText(); String Imdb_link =
+	 * actions.getWebElement(locator.wiki_imdblink).getAttribute("href");
+	 * Launch("Chrome", Imdb_link);
+	 * actions.waitExplicit(locator.imdblink_directed_By, 30); String
+	 * Imdb_Directorname =
+	 * actions.getWebElement(locator.imdblink_directed_By).getText();
+	 * System.out.println(moviename+"Dir1:" + Wiki_Directorname + "Dir2:" +
+	 * Imdb_Directorname); if(Wiki_Directorname.equals(Imdb_Directorname)) {
+	 * System.out.println(moviename+"Pass"); //logger.logPass(moviename,
+	 * Wiki_Directorname, Imdb_link, Imdb_Directorname); }
+	 * //Assert.assertEquals(Wiki_Directorname, Imdb_Directorname); } catch
+	 * (Exception e) { System.out.println(e.getMessage()); } }
+	 */
 }

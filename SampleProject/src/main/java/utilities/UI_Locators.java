@@ -2,17 +2,12 @@ package utilities;
 
 public class UI_Locators {
 	
-	public  String search = "//input[@aria-label='Search']";
+	public  String search = "//input[@id='search']";
 	
-	//public static String wiki = "//a[@href='https://en.wikipedia.org/wiki/";
+	public  String step_in_channel = "//div[@id='avatar']/yt-img-shadow//img[@id='img']";
 	
-	public  String wikipedia_Link = "//a[starts-with(@href,'https://en.wikipedia.org/wiki')]";
-	
-	public  String directed_By="//th[contains(text(),'Directed by')]/../td/a";
-	
-	public  String wiki_imdblink="//span[@id='External_links']/../following-sibling::ul/li/a[@title='IMDb']//preceding-sibling::a[@href]";
-	
-	public  String imdblink_directed_By="//div[@class='credit_summary_item']//h4[contains(text(),'Director')]//following-sibling::a";
+	public String Video="//div[@id='tabsContainer']/div/paper-tab[2]/div";
+			//+ "//paper-tab[@role='tab']/div[contains(text(),'Videos')]";
 	
 
 }
