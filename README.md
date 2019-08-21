@@ -15,7 +15,7 @@ This repository contains the testautothon step-in 2019 summit challenge solution
 
 <u><b>Scenario to be automated</b></u>
 
-###Steps:
+<b>Steps:</b>
 
 1. Open [https://www.youtube.com]
 2. Search for "step-inforum"
