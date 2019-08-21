@@ -19,6 +19,8 @@ import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Headers;
 import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ResponseBodyData;
+
 import configuration.Keywords;
 import utilities.DataGeneration;
 import utilities.Excel;
@@ -127,12 +129,13 @@ public class APICommon {
 		}
 	}
 	
-	public void API_Get(String Url) {
+	public String API_Get(String Url) {
 		Headers apiheader =  getHeaders();
+		Response response = null;
 		String sURL = refactorWithRandomizedValues(Url);
 		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
 		try {
-			Response response = (Response) given().headers(apiheader).when().get(new URL(sURL));
+			 response = (Response) given().headers(apiheader).when().get(new URL(sURL));
 			String getStatusCode = String.valueOf(response.getStatusCode());
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
@@ -140,6 +143,7 @@ public class APICommon {
 		} catch (Exception e) {
 			logger.logFail("Failed to Post due to exception " + e.getMessage());
 		}
+		return response.asString();
 	}
 
 	public void verifyStatusCode(String ExpectedStatusCode, String ActualStatusCode, String responseString) {

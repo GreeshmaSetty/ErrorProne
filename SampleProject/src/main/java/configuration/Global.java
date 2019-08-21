@@ -12,7 +12,7 @@ import utilities.UI_Locators;
 public class Global {
 	protected Keywords actions = new Keywords();
 	protected Reporting logger = new Reporting();
-	//protected BrowserConfig config = new BrowserConfig();
+	protected BrowserConfig config = new BrowserConfig();
 
 	@BeforeTest
 	public void beforeTest() {
@@ -36,7 +36,7 @@ public class Global {
 	public void afterTest() {
 		logger.closeReporting();
 		logger.afterTestExtentReport();
-		actions.quitBrowser();
+		//actions.quitBrowser();
 	}
 
 }

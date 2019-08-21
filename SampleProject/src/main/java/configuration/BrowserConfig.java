@@ -34,7 +34,7 @@ public class BrowserConfig {
 	public static int Failedflag = 0;
 	static ReadPropertiesFile read = new ReadPropertiesFile();
 	
-public static String Mode = System.getProperty("Mode");
+public static String Mode = "UI";
 
 	public int getFailedFlagCount() {
 		return Failedflag;

@@ -1,13 +1,17 @@
 package configuration;
 
+import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import org.testng.Assert;
+import org.json.simple.JSONArray;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -278,7 +282,7 @@ public class Keywords extends BrowserConfig {
 				if (!blnrtrn && blnajaxIsComplete) {
 					System.out.println("Failed to load page in " + timeInSec + " seconds");
 				}
-				waitForLoadingToDisappear();
+				//waitForLoadingToDisappear();
 
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -348,6 +352,21 @@ public class Keywords extends BrowserConfig {
 
 	
 	public void scrollToView(String sLocator) {
+		try {
+			WebElement locator = getWebElement(sLocator);
+			if (locator != null) {
+				Actions actions = new Actions(webDriver);
+				actions.moveToElement(locator);
+				actions.perform();
+				Thread.sleep(500);
+
+			}
+		} catch (Exception e) {
+			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
+		}
+	}
+	
+	public void mouseHover(String sLocator) {
 		try {
 			WebElement locator = getWebElement(sLocator);
 			if (locator != null) {
@@ -492,7 +511,7 @@ public class Keywords extends BrowserConfig {
 	}
 
 	
-	public void waitExplicit(String sLocator, int seconds) {
+	public void waitImplicit(String sLocator, int seconds) {
 		try {
 			if (sLocator == null) {
 				Thread.sleep((seconds * 1000));
@@ -745,5 +764,56 @@ public class Keywords extends BrowserConfig {
 		return arrayString;
 	}
 
+	public void select(String selection) {
+		waitImplicit(null, 1);
+		Robot robot;
+		Map<String,String> keyMap = new HashMap<String,String>();
+		keyMap.put("144", "1");
+		keyMap.put("240", "2");
+		keyMap.put("360", "3");
+		keyMap.put("480", "4");
+		keyMap.put("720", "5");
+		keyMap.put("1080", "6");
+		try {
+			robot = new Robot();
+			int count = Integer.parseInt(keyMap.get(selection));
+			for(int i = 0; i <count; i++) {
+			robot.keyPress(KeyEvent.VK_UP);
+			waitImplicit(null, 1);
+			}
+			robot.keyPress(KeyEvent.VK_ENTER);
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
+	public String jsonCreate(String[] list) {
+		JSONArray allDataArray = new JSONArray();
+		String[] sList = list;
+		String json = "{\"team\":\"team-name\","
+				+ "\"video\":\"search-video-name\","
+				+ "\"upcoming-videos\":[";
+		   //if List not empty
+		   if (!(sList.length ==0)) {
+		       //Loop index size()
+		       for(int index = 0; index < sList.length; index++) {
+		           try {
+		              json +="\""+ sList[index]+"\"";
+		              if(index!=sList.length-1) {
+		            	  json +=",";
+		              }else {
+		            	  json+="]}";
+		              }
+		           } catch (Exception e) {
+		               e.printStackTrace();
+		           }
+		       }
+		       System.out.println(json);
+		   } else {
+		       //Do something when sList is empty
+		   }
+		return json;
+	}
 }
