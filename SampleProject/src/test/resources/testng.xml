@@ -2,8 +2,8 @@
 <suite name="TestAutothon">
 	<test name="TestCases" parallel="classes" thread-count="2">
 		<classes>
-			<class name="testCases.TestCase.Step_IN_Mob" />
-			<class name="testCases.TestCase.Step_IN_UI" />
+			<class name="testCases.Step_IN_Mob" />
+			<class name="testCases.Step_IN_UI" />
 		</classes>
 	</test>
 </suite>

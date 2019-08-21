@@ -1,1 +1,3 @@
-testCases\TestCase.class
+testCases\Step_IN_Mob.class
+testCases\ApiTest.class
+testCases\Step_IN_UI.class
