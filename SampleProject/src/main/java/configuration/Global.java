@@ -23,8 +23,8 @@ public class Global {
 	@BeforeMethod
 	public void beforeMethod(Method methodName) {
 		logger.methodLevelReporting(methodName);
-		logger.beforeMethodExtentReport(methodName);
-		actions.deleteDataPropFile();
+		//logger.beforeMethodExtentReport(methodName);
+	//	actions.deleteDataPropFile();
 	}
 
 	@AfterMethod

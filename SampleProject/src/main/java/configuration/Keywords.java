@@ -48,7 +48,7 @@ public class Keywords extends BrowserConfig {
 		WebElement actualLocator = getWebElement(sLocator);
 		actualLocator.clear();
 	}
-	
+
 	/**
 	 * 
 	 *This method gives WebElement of input locator.
@@ -187,21 +187,21 @@ public class Keywords extends BrowserConfig {
 		}
 		return element;
 	}
-	
+
 	public void getURL(String url) {
 		webDriver.get(url);
 	}
-	
+
 	public void click(String sLocator) {
 		WebElement actualLocator = getWebElement(sLocator);
 		//jsScrollToElement(sLocator);
 		actualLocator.click();
 	}
-	
+
 	public void click(WebElement actualLocator) {
 		actualLocator.click();
 	}
-	
+
 	public void selectDropdownByLi(String sLocator, String Data) {
 		try {
 			WebElement Dd_locator = getWebElement(sLocator);
@@ -228,17 +228,17 @@ public class Keywords extends BrowserConfig {
 					robot.keyRelease(KeyEvent.VK_ENTER);
 				}else {
 					List<WebElement> liList = Dd_locator.findElements(By.tagName("li"));
-				for (WebElement li : liList) {
-					if (li.getText().equals(Data)) {
-						//jsScrollToElement(li);
-						Thread.sleep(1000);
-						//javaScriptClick(li);
-						li.click();
-						Thread.sleep(1000);
-						waitForPageToLoad(60);
-						break;
+					for (WebElement li : liList) {
+						if (li.getText().equals(Data)) {
+							//jsScrollToElement(li);
+							Thread.sleep(1000);
+							//javaScriptClick(li);
+							li.click();
+							Thread.sleep(1000);
+							waitForPageToLoad(60);
+							break;
+						}
 					}
-				}
 				}
 				try {
 					String verifyDD = getWebElementWithoutExcel("[aria-owns*='" + getId + "'] span[class='k-input']")
@@ -257,7 +257,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to select Dropdown due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void waitForPageToLoad(int timeInSec) {
 		try {
 			int iterator = 0;
@@ -292,7 +292,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to load page in " + timeInSec + " due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void waitForLoadingToDisappear() {
 		try {
 			new WebDriverWait(webDriver, 30).until(
@@ -302,7 +302,7 @@ public class Keywords extends BrowserConfig {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public boolean isElementPresent(String sLocator) {
 		WebElement locator = getWebElement(sLocator);
 		boolean elementPresent = false;
@@ -318,7 +318,7 @@ public class Keywords extends BrowserConfig {
 		}
 		return elementPresent;
 	}
-	
+
 	public boolean isElementPresent(WebElement element) {
 		boolean elementPresent = false;
 		if(element!=null) {
@@ -350,7 +350,7 @@ public class Keywords extends BrowserConfig {
 		return elementPresent;
 	}
 
-	
+
 	public void scrollToView(String sLocator) {
 		try {
 			WebElement locator = getWebElement(sLocator);
@@ -365,7 +365,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void mouseHover(String sLocator) {
 		try {
 			WebElement locator = getWebElement(sLocator);
@@ -380,7 +380,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void scrollToView(WebElement element) {
 
 		try {
@@ -395,7 +395,7 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
+
 
 	public void jsScrollToElement(String sLocator) {
 
@@ -410,7 +410,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void jsScrollToElement(String sLocator,int Xaxis, int Yaxis) {
 		try {
 			WebElement locator = getWebElement(sLocator);
@@ -448,7 +448,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 		}
 	}
-	
+
 	public void javaScriptClick(String sLocator) {
 
 		try {
@@ -510,7 +510,7 @@ public class Keywords extends BrowserConfig {
 		return arrayString;
 	}
 
-	
+
 	public void waitImplicit(String sLocator, int seconds) {
 		try {
 			if (sLocator == null) {
@@ -532,7 +532,7 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
+
 	public boolean waitForElementPresent(String sLocator, int TimeInSeconds) {
 		try {
 			ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
@@ -654,7 +654,7 @@ public class Keywords extends BrowserConfig {
 		}
 	}
 
-	
+
 	public String getTextNode(WebElement e) {
 		String text = e.getText().trim();
 		List<WebElement> children = e.findElements(By.xpath("./*"));
@@ -663,7 +663,7 @@ public class Keywords extends BrowserConfig {
 		}
 		return text;
 	}
-	
+
 	public String getMethodName() {
 		return Thread.currentThread().getStackTrace()[2].getMethodName();
 	}
@@ -675,7 +675,7 @@ public class Keywords extends BrowserConfig {
 			System.out.println("No such file/directory exists");
 		}
 	}
-	
+
 	public void select(String sLocator, String VisibleText) {
 		WebElement ele = getWebElement(sLocator);
 		Select sel = new Select(ele);
@@ -701,7 +701,7 @@ public class Keywords extends BrowserConfig {
 			Assert.fail();
 		}
 	}
-	
+
 	public void switchToWindow(Object sValue){
 		try{
 			String title = sValue.toString();
@@ -718,7 +718,7 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to switch due to exception "+e.getMessage());
 		}
 	}
-	
+
 	public void switchToWindowHandle(String windowHandler){
 		try{
 			webDriver.switchTo().window(windowHandler);
@@ -726,11 +726,11 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to switch due to exception "+e.getMessage());
 		}
 	}
-	  
+
 	public Set<String> getWindowHandles() {
 		return webDriver.getWindowHandles();
 	}
-	
+
 	public void setValue(String sLocator, String sValue) {
 		try {
 			WebElement locator = getWebElement(sLocator);
@@ -739,15 +739,15 @@ public class Keywords extends BrowserConfig {
 			logger.logFail("Failed to set value due to exception "+e.getMessage());
 		}
 	}
-	
+
 	public String getWindowHandle() {
 		return webDriver.getWindowHandle();
 	}
-	
+
 	public void closeWindow() {
 		webDriver.close();
 	}
-	
+
 	public Object[] removeNullValues(Object[] arrayString) {
 		try {
 			ArrayList<Object> list = new ArrayList<Object>();
@@ -778,15 +778,21 @@ public class Keywords extends BrowserConfig {
 			robot = new Robot();
 			int count = Integer.parseInt(keyMap.get(selection));
 			for(int i = 0; i <count; i++) {
-			robot.keyPress(KeyEvent.VK_UP);
-			waitImplicit(null, 1);
+				robot.keyPress(KeyEvent.VK_UP);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
+			logger.logPass("Selecting", "Select "+selection+"p from Quality Option");
 			robot.keyPress(KeyEvent.VK_ENTER);
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	public String jsonCreate(String[] list) {
@@ -795,25 +801,26 @@ public class Keywords extends BrowserConfig {
 		String json = "{\"team\":\"team-name\","
 				+ "\"video\":\"search-video-name\","
 				+ "\"upcoming-videos\":[";
-		   //if List not empty
-		   if (!(sList.length ==0)) {
-		       //Loop index size()
-		       for(int index = 0; index < sList.length; index++) {
-		           try {
-		              json +="\""+ sList[index]+"\"";
-		              if(index!=sList.length-1) {
-		            	  json +=",";
-		              }else {
-		            	  json+="]}";
-		              }
-		           } catch (Exception e) {
-		               e.printStackTrace();
-		           }
-		       }
-		       System.out.println(json);
-		   } else {
-		       //Do something when sList is empty
-		   }
+		//if List not empty
+		sList = removeNullValues(sList);
+		if (!(sList.length ==0)) {
+			//Loop index size()
+			for(int index = 0; index < sList.length; index++) {
+				try {
+					json +="\""+ sList[index]+"\"";
+					if(index!=sList.length-1) {
+						json +=",";
+					}else {
+						json+="]}";
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			System.out.println(json);
+		} else {
+			//Do something when sList is empty
+		}
 		return json;
 	}
 }

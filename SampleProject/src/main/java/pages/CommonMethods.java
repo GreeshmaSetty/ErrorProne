@@ -1,18 +1,31 @@
 package pages;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import configuration.BrowserConfig;
 import configuration.Keywords;
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidElement;
 import utilities.DataGeneration;
+import utilities.Mob_Locators;
 import utilities.Reporting;
 import utilities.UI_Locators;
 
@@ -65,6 +78,92 @@ public class CommonMethods {
 		}
 		return data;
 
+	}
+
+	public void SelectVideoFromList(String Locator,String videoName) {
+		try {
+			WebElement findVideo = null;
+			int flag = 0;
+			do{
+				try {
+					findVideo = actions.getWebElement("//a[@id='video-title'][@title='"+videoName+"']");
+				}catch(Exception e) {
+
+				}
+				actions.scroll(0, 100);
+				Thread.sleep(300);
+				flag++;
+				if(flag>221)
+					break;
+				//actions.waitForPageToLoad(30);
+			}while(findVideo== null);
+			logger.logPass("Screenshot Of Video", "Located video");
+			if(findVideo==null) {
+				logger.logFail("Video Not Found in list");
+			}
+			actions.jsScrollToElement(findVideo);
+			actions.click(findVideo);
+			actions.waitForPageToLoad(10);
+		}catch(Exception e) {
+			logger.logFail("Failed to select video from list due to exception "+e.getMessage());
+		}
+	}
+	
+	public void SelectVideoFromList_Mob(String Locator,String videoName) {
+		try {
+			WebElement findVideo = null;
+			int flag = 0;
+			do{
+				try {
+					findVideo = actions.getWebElement(Locator.replace("##", videoName));
+				}catch(Exception e) {
+
+				}
+				//Robot robot = new Robot();
+				//robot.keyPress(KeyEvent.VK_DOWN);
+
+				actions.scroll(0, 100);
+				Thread.sleep(100);
+				flag++;
+				if(actions.getWebElement(new Mob_Locators().ShowMore).isDisplayed())
+					actions.click(new Mob_Locators().ShowMore);
+				if(flag>500)
+					break;
+				//actions.waitForPageToLoad(30);
+			}while(findVideo== null);
+			logger.logPass("Screenshot Of Video", "Located video");
+			if(findVideo==null) {
+				logger.logFail("Video Not Found in list");
+			}
+			actions.jsScrollToElement(findVideo);
+			actions.click(findVideo);
+			actions.waitForPageToLoad(10);
+		}catch(Exception e) {
+			logger.logFail("Failed to select video from list due to exception "+e.getMessage());
+		}
+	}
+
+	public String[] GetUpNextVideo(List<WebElement> videolist) {
+		String[] upNextList = new String[videolist.size()];
+		for(int j=0; j<videolist.size();j++)
+		{
+			upNextList[j]=videolist.get(j).getAttribute("title");
+			System.out.println(upNextList[j]);
+		}
+		return upNextList;
+	}
+
+	public File WriteToJsonFile(String jsonValue) {
+		File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody.json");
+		try {
+			Writer writer;
+			writer = new FileWriter(file);
+			writer.write(jsonValue);
+			writer.close();
+		} catch (IOException e) {
+			logger.logFail("Failed to write to json file due to exception "+e.getMessage());
+		}
+		return file;
 	}
 
 	/*

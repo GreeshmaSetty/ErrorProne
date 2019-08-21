@@ -2,17 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestAutothon]">
   <test name="TestCases(failed)">
-    <groups>
-      <run>
-        <include name="UI"/>
-      </run>
-    </groups>
     <classes>
-      <class name="testCases.TestCase">
+      <class name="testCases.Step_IN_Mob">
         <methods>
-          <include name="TC_UI_Fetch_Movieand_Wikipedialink"/>
+          <include name="beforeMethod"/>
+          <include name="TC_Mob_SelectQuality"/>
+          <include name="TC_Mob_VideoLink"/>
+          <include name="afterTest"/>
+          <include name="TC_Mob_Search_StepInForum"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- testCases.TestCase -->
+      </class> <!-- testCases.Step_IN_Mob -->
     </classes>
   </test> <!-- TestCases(failed) -->
 </suite> <!-- Failed suite [TestAutothon] -->

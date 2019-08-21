@@ -77,7 +77,7 @@ public static String Mode = "UI";
 			capabilities.setCapability("autoAcceptAlerts", true);
 
 			webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			webDriver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+			//webDriver.manage().timeouts().implicitlyWait(, TimeUnit.SECONDS);
 			new Keywords().getURL(URLKey);
 		}catch(Exception e) {
 			System.out.println("Failed to launch mobile "+e.getMessage());

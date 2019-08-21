@@ -54,3 +54,170 @@
 2019-08-21 14:00:14,334 - AgilityLoyalty -INFO - Launch
 2019-08-21 14:00:18,917 - AgilityLoyalty -INFO - Enter
 2019-08-21 14:00:19,278 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:50:03,912 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:51:10,597 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:51:15,249 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:51:15,725 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:52:18,887 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:52:20,377 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:52:20,798 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:52:27,630 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 14:52:28,215 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 14:53:01,147 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:53:05,456 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:53:05,799 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:54:58,946 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:55:00,129 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:55:00,575 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:55:08,103 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 14:55:17,554 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 14:55:18,029 - AgilityLoyalty -INFO - Video Not Found in list
+2019-08-21 14:56:50,255 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:56:55,013 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:56:55,421 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:57:31,263 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:57:32,546 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:57:32,964 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:57:40,647 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 14:57:41,198 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 14:58:25,241 - AgilityLoyalty -INFO - Launch
+2019-08-21 14:58:26,705 - AgilityLoyalty -INFO - Enter
+2019-08-21 14:58:27,169 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 14:58:33,822 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 14:58:39,127 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 14:58:56,755 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 14:58:57,754 - AgilityLoyalty -INFO - API Get response
+2019-08-21 15:15:51,774 - AgilityLoyalty -INFO - Launch
+2019-08-21 15:21:20,495 - AgilityLoyalty -INFO - Launch
+2019-08-21 15:40:30,677 - AgilityLoyalty -INFO - Launch
+2019-08-21 15:41:22,668 - AgilityLoyalty -INFO - Enter
+2019-08-21 15:41:24,217 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 15:41:34,792 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 15:55:48,958 - AgilityLoyalty -INFO - Launch
+2019-08-21 15:55:58,895 - AgilityLoyalty -INFO - Enter
+2019-08-21 15:56:00,483 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 15:56:11,109 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 16:19:19,394 - AgilityLoyalty -INFO - Launch
+2019-08-21 16:19:22,072 - AgilityLoyalty -INFO - Enter
+2019-08-21 16:19:22,631 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 16:19:31,168 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 16:19:39,414 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 16:19:58,707 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 16:19:59,573 - AgilityLoyalty -INFO - API Get response
+2019-08-21 19:51:33,591 - AgilityLoyalty -INFO - Launch
+2019-08-21 19:51:42,377 - AgilityLoyalty -INFO - Enter
+2019-08-21 20:57:29,814 - AgilityLoyalty -INFO - Launch
+2019-08-21 20:57:31,653 - AgilityLoyalty -INFO - Enter
+2019-08-21 20:57:34,293 - AgilityLoyalty -INFO - Select
+2019-08-21 20:57:39,485 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 20:57:41,550 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 20:57:58,710 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 20:57:59,348 - AgilityLoyalty -INFO - API Get response
+2019-08-21 21:05:39,569 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:05:41,204 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:05:46,422 - AgilityLoyalty -INFO - Select
+2019-08-21 21:05:51,671 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 21:05:52,567 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 21:06:09,298 - AgilityLoyalty -INFO - Selecting
+2019-08-21 21:06:11,549 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 21:06:12,597 - AgilityLoyalty -INFO - API Get response
+2019-08-21 21:14:30,689 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:14:41,571 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:14:44,883 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:19:11,384 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:19:20,051 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:19:21,582 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 21:19:30,868 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 21:21:47,513 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:21:50,796 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:21:55,001 - AgilityLoyalty -INFO - Select
+2019-08-21 21:22:05,508 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:22:08,243 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 21:31:12,461 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:31:14,540 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:59:13,196 - AgilityLoyalty -INFO - Launch
+2019-08-21 21:59:14,703 - AgilityLoyalty -INFO - Enter
+2019-08-21 21:59:18,874 - AgilityLoyalty -INFO - Select
+2019-08-21 21:59:24,189 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 21:59:33,262 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 21:59:49,425 - AgilityLoyalty -INFO - Selecting
+2019-08-21 21:59:50,493 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 21:59:51,254 - AgilityLoyalty -INFO - API Get response
+2019-08-21 22:06:21,450 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:06:22,627 - AgilityLoyalty -INFO - Enter
+2019-08-21 22:06:25,592 - AgilityLoyalty -INFO - Select
+2019-08-21 22:06:30,975 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:06:44,740 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 22:07:01,002 - AgilityLoyalty -INFO - Selecting
+2019-08-21 22:07:02,130 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 22:07:02,809 - AgilityLoyalty -INFO - API Get response
+2019-08-21 22:22:24,394 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:22:39,207 - AgilityLoyalty -INFO - Enter
+2019-08-21 22:22:46,769 - AgilityLoyalty -INFO - Select
+2019-08-21 22:22:57,381 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:28:42,478 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:28:51,345 - AgilityLoyalty -INFO - Enter
+2019-08-21 22:28:57,357 - AgilityLoyalty -INFO - Select
+2019-08-21 22:29:05,246 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:30:41,997 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:30:44,404 - AgilityLoyalty -INFO - Enter
+2019-08-21 22:30:47,724 - AgilityLoyalty -INFO - Select
+2019-08-21 22:30:54,458 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:31:11,361 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 22:31:27,632 - AgilityLoyalty -INFO - Selecting
+2019-08-21 22:31:28,979 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 22:31:29,663 - AgilityLoyalty -INFO - API Get response
+2019-08-21 22:50:20,600 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:50:20,612 - AgilityLoyalty -INFO - Launch
+2019-08-21 22:50:23,130 - AgilityLoyalty -INFO - Enter
+2019-08-21 22:50:30,378 - AgilityLoyalty -INFO - Select
+2019-08-21 22:50:31,379 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:50:34,464 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 22:50:37,255 - AgilityLoyalty -INFO - Element not found within the given time
+2019-08-21 22:50:38,567 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 22:50:39,489 - AgilityLoyalty -INFO - API Get response
+2019-08-21 22:50:40,087 - AgilityLoyalty -ERROR - Failed to log in reportStream closed
+2019-08-21 22:50:51,093 - AgilityLoyalty -ERROR - Stream closed
+2019-08-21 22:50:56,688 - AgilityLoyalty -ERROR - Failed to log in reportStream closed
+2019-08-21 22:50:56,697 - AgilityLoyalty -ERROR - Stream closed
+2019-08-21 22:50:57,958 - AgilityLoyalty -ERROR - Failed to log in reportStream closed
+2019-08-21 22:50:58,769 - AgilityLoyalty -ERROR - Failed to log in reportStream closed
+2019-08-21 23:10:20,743 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:10:29,432 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:10:35,684 - AgilityLoyalty -INFO - Select
+2019-08-21 23:10:43,169 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:34:26,899 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:34:35,070 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:34:39,838 - AgilityLoyalty -INFO - Select
+2019-08-21 23:34:46,991 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:36:10,201 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:36:16,963 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:36:22,035 - AgilityLoyalty -INFO - Select
+2019-08-21 23:36:53,964 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:38:56,921 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:39:04,073 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:39:08,721 - AgilityLoyalty -INFO - Select
+2019-08-21 23:39:15,567 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:41:39,638 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:41:46,812 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:41:52,109 - AgilityLoyalty -INFO - Select
+2019-08-21 23:41:59,311 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:43:54,902 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:44:03,602 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:44:09,405 - AgilityLoyalty -INFO - Select
+2019-08-21 23:44:15,951 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:46:43,443 - AgilityLoyalty -INFO - Launch
+2019-08-21 23:46:52,940 - AgilityLoyalty -INFO - Enter
+2019-08-21 23:47:00,023 - AgilityLoyalty -INFO - Select
+2019-08-21 23:47:06,508 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 23:47:10,295 - AgilityLoyalty -INFO - Failed to select video from list due to exception An unknown server-side error occurred while processing the command. Original error: unknown error: Element <div class="cbox">...</div> is not clickable at point (205, 685). Other element would receive the click: <div class="pivot-bar-item-title">...</div>
+  (Session info: chrome=74.0.3729.186)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.10586 x86_64)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-TMMJ66L', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appiumVersion: 1.13.0, autoAcceptAlerts: true, browserName: Chrome, databaseEnabled: false, desired: {appiumVersion: 1.13.0, autoAcceptAlerts: true, browserName: Chrome, deviceName: emulator-5554, platformName: android, platformVersion: 10}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 10, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
+Session ID: a62d1790-08bf-4c9f-8c17-9a47ea55bb27
+2019-08-21 23:47:16,760 - AgilityLoyalty -INFO - Element not found within the given time
+2019-08-21 23:47:19,130 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 23:47:20,986 - AgilityLoyalty -INFO - API Get response

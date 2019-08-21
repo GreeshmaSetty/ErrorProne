@@ -54,3 +54,170 @@
 2019-08-21 14:00:14,334 [pool-1-thread-2] INFO AgilityLoyalty - Launch
 2019-08-21 14:00:18,917 [pool-1-thread-2] INFO AgilityLoyalty - Enter
 2019-08-21 14:00:19,278 [pool-1-thread-2] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:50:03,912 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 14:51:10,597 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 14:51:15,249 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 14:51:15,725 [pool-1-thread-2] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:52:18,887 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:52:20,377 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:52:20,798 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:52:27,630 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 14:52:28,215 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 14:53:01,147 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:53:05,456 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:53:05,799 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:54:58,946 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:55:00,129 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:55:00,575 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:55:08,103 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 14:55:17,554 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 14:55:18,029 [main] INFO AgilityLoyalty - Video Not Found in list
+2019-08-21 14:56:50,255 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:56:55,013 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:56:55,421 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:57:31,263 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:57:32,546 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:57:32,964 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:57:40,647 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 14:57:41,198 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 14:58:25,241 [main] INFO AgilityLoyalty - Launch
+2019-08-21 14:58:26,705 [main] INFO AgilityLoyalty - Enter
+2019-08-21 14:58:27,169 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 14:58:33,822 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 14:58:39,127 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 14:58:56,755 [main] INFO AgilityLoyalty - API uploaded response
+2019-08-21 14:58:57,754 [main] INFO AgilityLoyalty - API Get response
+2019-08-21 15:15:51,774 [main] INFO AgilityLoyalty - Launch
+2019-08-21 15:21:20,495 [main] INFO AgilityLoyalty - Launch
+2019-08-21 15:40:30,677 [main] INFO AgilityLoyalty - Launch
+2019-08-21 15:41:22,668 [main] INFO AgilityLoyalty - Enter
+2019-08-21 15:41:24,217 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 15:41:34,792 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 15:55:48,958 [main] INFO AgilityLoyalty - Launch
+2019-08-21 15:55:58,895 [main] INFO AgilityLoyalty - Enter
+2019-08-21 15:56:00,483 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 15:56:11,109 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 16:19:19,394 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 16:19:22,072 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 16:19:22,631 [pool-1-thread-2] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 16:19:31,168 [pool-1-thread-2] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 16:19:39,414 [pool-1-thread-2] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 16:19:58,707 [pool-1-thread-2] INFO AgilityLoyalty - API uploaded response
+2019-08-21 16:19:59,573 [pool-1-thread-2] INFO AgilityLoyalty - API Get response
+2019-08-21 19:51:33,591 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 19:51:42,377 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 20:57:29,814 [main] INFO AgilityLoyalty - Launch
+2019-08-21 20:57:31,653 [main] INFO AgilityLoyalty - Enter
+2019-08-21 20:57:34,293 [main] INFO AgilityLoyalty - Select
+2019-08-21 20:57:39,485 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 20:57:41,550 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 20:57:58,710 [main] INFO AgilityLoyalty - API uploaded response
+2019-08-21 20:57:59,348 [main] INFO AgilityLoyalty - API Get response
+2019-08-21 21:05:39,569 [main] INFO AgilityLoyalty - Launch
+2019-08-21 21:05:41,204 [main] INFO AgilityLoyalty - Enter
+2019-08-21 21:05:46,422 [main] INFO AgilityLoyalty - Select
+2019-08-21 21:05:51,671 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 21:05:52,567 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 21:06:09,298 [main] INFO AgilityLoyalty - Selecting
+2019-08-21 21:06:11,549 [main] INFO AgilityLoyalty - API uploaded response
+2019-08-21 21:06:12,597 [main] INFO AgilityLoyalty - API Get response
+2019-08-21 21:14:30,689 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 21:14:41,571 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 21:14:44,883 [pool-1-thread-1] INFO AgilityLoyalty - Launch
+2019-08-21 21:19:11,384 [main] INFO AgilityLoyalty - Launch
+2019-08-21 21:19:20,051 [main] INFO AgilityLoyalty - Enter
+2019-08-21 21:19:21,582 [main] INFO AgilityLoyalty - Step In Forum Launched
+2019-08-21 21:19:30,868 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 21:21:47,513 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 21:21:50,796 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 21:21:55,001 [pool-1-thread-2] INFO AgilityLoyalty - Select
+2019-08-21 21:22:05,508 [pool-1-thread-1] INFO AgilityLoyalty - Launch
+2019-08-21 21:22:08,243 [pool-1-thread-2] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 21:31:12,461 [pool-1-thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 21:31:14,540 [pool-1-thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 21:59:13,196 [main] INFO AgilityLoyalty - Launch
+2019-08-21 21:59:14,703 [main] INFO AgilityLoyalty - Enter
+2019-08-21 21:59:18,874 [main] INFO AgilityLoyalty - Select
+2019-08-21 21:59:24,189 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 21:59:33,262 [main] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 21:59:49,425 [main] INFO AgilityLoyalty - Selecting
+2019-08-21 21:59:50,493 [main] INFO AgilityLoyalty - API uploaded response
+2019-08-21 21:59:51,254 [main] INFO AgilityLoyalty - API Get response
+2019-08-21 22:06:21,450 [Thread-2] INFO AgilityLoyalty - Launch
+2019-08-21 22:06:22,627 [Thread-2] INFO AgilityLoyalty - Enter
+2019-08-21 22:06:25,592 [Thread-2] INFO AgilityLoyalty - Select
+2019-08-21 22:06:30,975 [Thread-2] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:06:44,740 [Thread-2] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 22:07:01,002 [Thread-2] INFO AgilityLoyalty - Selecting
+2019-08-21 22:07:02,130 [Thread-2] INFO AgilityLoyalty - API uploaded response
+2019-08-21 22:07:02,809 [Thread-2] INFO AgilityLoyalty - API Get response
+2019-08-21 22:22:24,394 [Thread-1] INFO AgilityLoyalty - Launch
+2019-08-21 22:22:39,207 [Thread-1] INFO AgilityLoyalty - Enter
+2019-08-21 22:22:46,769 [Thread-1] INFO AgilityLoyalty - Select
+2019-08-21 22:22:57,381 [Thread-1] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:28:42,478 [Thread-1] INFO AgilityLoyalty - Launch
+2019-08-21 22:28:51,345 [Thread-1] INFO AgilityLoyalty - Enter
+2019-08-21 22:28:57,357 [Thread-1] INFO AgilityLoyalty - Select
+2019-08-21 22:29:05,246 [Thread-1] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:30:41,997 [Thread-0] INFO AgilityLoyalty - Launch
+2019-08-21 22:30:44,404 [Thread-0] INFO AgilityLoyalty - Enter
+2019-08-21 22:30:47,724 [Thread-0] INFO AgilityLoyalty - Select
+2019-08-21 22:30:54,458 [Thread-0] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:31:11,361 [Thread-0] INFO AgilityLoyalty - Screenshot Of Video
+2019-08-21 22:31:27,632 [Thread-0] INFO AgilityLoyalty - Selecting
+2019-08-21 22:31:28,979 [Thread-0] INFO AgilityLoyalty - API uploaded response
+2019-08-21 22:31:29,663 [Thread-0] INFO AgilityLoyalty - API Get response
+2019-08-21 22:50:20,600 [testngUI] INFO AgilityLoyalty - Launch
+2019-08-21 22:50:20,612 [testngMobile] INFO AgilityLoyalty - Launch
+2019-08-21 22:50:23,130 [testngUI] INFO AgilityLoyalty - Enter
+2019-08-21 22:50:30,378 [testngUI] INFO AgilityLoyalty - Select
+2019-08-21 22:50:31,379 [testngMobile] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:50:34,464 [testngUI] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 22:50:37,255 [testngMobile] INFO AgilityLoyalty - Element not found within the given time
+2019-08-21 22:50:38,567 [testngMobile] INFO AgilityLoyalty - API uploaded response
+2019-08-21 22:50:39,489 [testngMobile] INFO AgilityLoyalty - API Get response
+2019-08-21 22:50:40,087 [testngUI] ERROR AgilityLoyalty - Failed to log in reportStream closed
+2019-08-21 22:50:51,093 [testngUI] ERROR AgilityLoyalty - Stream closed
+2019-08-21 22:50:56,688 [testngUI] ERROR AgilityLoyalty - Failed to log in reportStream closed
+2019-08-21 22:50:56,697 [testngUI] ERROR AgilityLoyalty - Stream closed
+2019-08-21 22:50:57,958 [testngUI] ERROR AgilityLoyalty - Failed to log in reportStream closed
+2019-08-21 22:50:58,769 [testngUI] ERROR AgilityLoyalty - Failed to log in reportStream closed
+2019-08-21 23:10:20,743 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:10:29,432 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:10:35,684 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:10:43,169 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:34:26,899 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:34:35,070 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:34:39,838 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:34:46,991 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:36:10,201 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:36:16,963 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:36:22,035 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:36:53,964 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:38:56,921 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:39:04,073 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:39:08,721 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:39:15,567 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:41:39,638 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:41:46,812 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:41:52,109 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:41:59,311 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:43:54,902 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:44:03,602 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:44:09,405 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:44:15,951 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:46:43,443 [main] INFO AgilityLoyalty - Launch
+2019-08-21 23:46:52,940 [main] INFO AgilityLoyalty - Enter
+2019-08-21 23:47:00,023 [main] INFO AgilityLoyalty - Select
+2019-08-21 23:47:06,508 [main] INFO AgilityLoyalty - Get Video name via API
+2019-08-21 23:47:10,295 [main] INFO AgilityLoyalty - Failed to select video from list due to exception An unknown server-side error occurred while processing the command. Original error: unknown error: Element <div class="cbox">...</div> is not clickable at point (205, 685). Other element would receive the click: <div class="pivot-bar-item-title">...</div>
+  (Session info: chrome=74.0.3729.186)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.10586 x86_64)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-TMMJ66L', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appiumVersion: 1.13.0, autoAcceptAlerts: true, browserName: Chrome, databaseEnabled: false, desired: {appiumVersion: 1.13.0, autoAcceptAlerts: true, browserName: Chrome, deviceName: emulator-5554, platformName: android, platformVersion: 10}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 10, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
+Session ID: a62d1790-08bf-4c9f-8c17-9a47ea55bb27
+2019-08-21 23:47:16,760 [main] INFO AgilityLoyalty - Element not found within the given time
+2019-08-21 23:47:19,130 [main] INFO AgilityLoyalty - API uploaded response
+2019-08-21 23:47:20,986 [main] INFO AgilityLoyalty - API Get response
