@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.path.json.JsonPath;
@@ -114,22 +115,44 @@ public class APICommon {
 		return json;
 	}
 
-	public void API_Post(String Url, String jsonBody) {
-		Headers apiheader =  getHeaders();
+	public String API_Post(File file, String Url) {
+		//Headers apiheader =  getHeaders();
+		Response response=null;
 		String sURL = refactorWithRandomizedValues(Url);
-		String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
-		try {
-			Response response = (Response) given().headers(apiheader).body(jsonBodyGiven).when().post(new URL(sURL));
+		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
+		try {			
+			response = (Response)given().multiPart("file",file)
+			           .expect().when()
+			           .post(sURL);	
 			String getStatusCode = String.valueOf(response.getStatusCode());
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
-			writeResponseToData(response, "Post");
+			//writeResponseToData(response, "Post");
 		} catch (Exception e) {
 			logger.logFail("Failed to Post due to exception " + e.getMessage());
 		}
+		return response.asString();
 	}
 	
 	public String API_Get(String Url) {
+		Headers apiheader =  getHeaders();
+		Response response = null;
+		String sURL = refactorWithRandomizedValues(Url);
+		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
+		try {
+			 response = (Response) given().headers(apiheader).when().get(new URL(sURL));
+			String getStatusCode = String.valueOf(response.getStatusCode());
+			//verifyStatusCode(statusCode, getStatusCode, response.asString());
+			//dataGenerate.writeResponse(Key, response.asString());
+			dataGenerate.writeApiData("getCall", "VideoName", response.asString());
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+		return response.asString(
+				);
+	}
+	
+	public String API_GetResponse(String Url) {
 		Headers apiheader =  getHeaders();
 		Response response = null;
 		String sURL = refactorWithRandomizedValues(Url);

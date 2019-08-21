@@ -38,3 +38,16 @@
 2019-08-19 06:07:25,795 - AgilityLoyalty -INFO - 1
 2019-08-19 06:12:17,614 - AgilityLoyalty -INFO - 1
 2019-08-19 06:14:47,970 - AgilityLoyalty -INFO - 1
+2019-08-21 13:46:22,303 - AgilityLoyalty -INFO - Failed to write response to data properties due to exception Failed to parse the JSON document
+2019-08-21 13:53:23,236 - AgilityLoyalty -INFO - Launch
+2019-08-21 13:53:52,346 - AgilityLoyalty -INFO - Launch
+2019-08-21 13:53:58,593 - AgilityLoyalty -INFO - Enter
+2019-08-21 13:53:59,053 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 13:55:04,189 - AgilityLoyalty -INFO - Launch
+2019-08-21 13:55:05,855 - AgilityLoyalty -INFO - Enter
+2019-08-21 13:55:06,336 - AgilityLoyalty -INFO - Step In Forum Launched
+2019-08-21 13:55:13,742 - AgilityLoyalty -INFO - Get Video name via API
+2019-08-21 13:55:16,786 - AgilityLoyalty -INFO - Screenshot Of Video
+2019-08-21 13:55:35,170 - AgilityLoyalty -INFO - Failed to write response to data properties due to exception Failed to parse the JSON document
+2019-08-21 13:55:35,938 - AgilityLoyalty -INFO - API uploaded response
+2019-08-21 13:55:36,847 - AgilityLoyalty -INFO - API Get response

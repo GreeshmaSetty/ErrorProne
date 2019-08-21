@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TestCase">
+      <class name="testCases.Step_IN_UI">
         <methods>
-          <include name="TC_Mob_Fetch_Movieand_Wikipedialink"/>
+          <include name="TC_UI_Fetch_Yuotube"/>
           <include name="beforeMethod"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="TC_UI_Fetch_Movieand_Wikipedialink"/>
         </methods>
-      </class> <!-- testCases.TestCase -->
+      </class> <!-- testCases.Step_IN_UI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

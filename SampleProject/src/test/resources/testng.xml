@@ -1,18 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestAutothon">
-	<test name="TestCases">
-		<method-selectors>
-			<method-selector>
-				<script language="beanshell">
-				<!-- groupToRun is a VM argument. -->
-				<![CDATA[groupNames = System.getProperty("Mode");
-				groups.containsKey(groupNames);
-				]]>
-				</script>
-			</method-selector>
-		</method-selectors>
+	<test name="TestCases" parallel="classes" thread-count="2">
 		<classes>
-			<class name="testCases.TestCase" />
+			<class name="testCases.TestCase.Step_IN_Mob" />
+			<class name="testCases.TestCase.Step_IN_UI" />
 		</classes>
 	</test>
 </suite>

@@ -30,10 +30,7 @@ public class Reporting extends BrowserConfig {
 	static Timestamp ts = new Timestamp(System.currentTimeMillis());
 	private static String Reporttimestamp = "_" + ts.getTime();
 	public static Logger l4jlogger = Logger.getLogger("AgilityLoyalty");
-	private static File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/ExecutionReport"+Reporttimestamp+".html");
-	private static String preReq = beforeTestReporting();
-	
-	
+
 	public Reporting() {
 		PropertyConfigurator.configure("Log4j.properties");
 	}
@@ -43,13 +40,9 @@ public class Reporting extends BrowserConfig {
 	public ExtentReports extent;
 	public static ExtentTest test;
 
-	public static String beforeTestReporting() {
-		System.out.println("Before TEst Reporting");
+	public void beforeTestReporting() {
 		CreateHtmlReportFile();
-		writeBasicTemplate(); 
-		writeBatchTemplate("");
-		closeReporting();
-		return Reporttimestamp;
+		writeBasicTemplate();
 	}
 
 	public void beforeTestExtentReport() {
@@ -153,9 +146,9 @@ public class Reporting extends BrowserConfig {
 
 	public void methodLevelReporting(Method methodName) {
 		try {
-			//System.out.println("Method name : " + methodName.getName());
+			System.out.println("Method name : " + methodName.getName());
 			// writeMethodLevelTemplate(methodName.getName());
-			//writeBatchTemplate(methodName.getName());
+			writeBatchTemplate(methodName.getName());
 		} catch (Exception e) {
 			l4jlogger.error("Failed while reporting due to exception " + e.getMessage());
 		}
@@ -165,7 +158,7 @@ public class Reporting extends BrowserConfig {
 		test = extent.createTest(methodName.getName(), "Sample execution");
 	}
 
-	public static void closeReporting() {
+	public void closeReporting() {
 		try {
 			writer.close();
 		} catch (IOException e) {
@@ -174,30 +167,29 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 
-	public static void CreateHtmlReportFile() {
+	public void CreateHtmlReportFile() {
 		try {
 			String name = "ExecutionReport";
-		//	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			HtmlDirectory = new File(String.valueOf("./test-output/HtmlReport"));
 			if (!HtmlDirectory.exists())
 				HtmlDirectory.mkdir();
-			fileWriter();
-			System.out.println("Created html reports");
+			createHtmlFile(name + timestamp.getTime());
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create a HTML report due to exception " + e.getMessage());
 		}
 	}
 
-	public static void fileWriter() {
+	public void createHtmlFile(String fileName) {
 		try {
-		//	File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/" + fileName + ".html");
-			writer = new FileWriter(file,true);
+			File file = new File(System.getProperty("user.dir") + "/test-output/HtmlReport/" + fileName + ".html");
+			writer = new FileWriter(file);
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create testcase file due to exception " + e.getMessage());
 		}
 	}
 
-	public static String writeBasicTemplate() {
+	public void writeBasicTemplate() {
 		try {
 			writer.write("<html><head><style>\n");
 			writer.write(styleCssTemplate());
@@ -207,10 +199,9 @@ public class Reporting extends BrowserConfig {
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
 		}
-		return Reporttimestamp;
 	}
 
-	public static String styleCssTemplate() {
+	public String styleCssTemplate() {
 		String str = "body {background-color: #ffffff;  border: 2px solid grey; border-radius: 5px}";
 		str = str + "background-color: #ffffff;  border: 2px solid grey; border-radius: 5px}";
 		str += "table {background-color: #d9d9d9; text-align: center;}";
@@ -250,18 +241,17 @@ public class Reporting extends BrowserConfig {
 	 * e.getMessage()); // TODO Auto-generated catch block
 	 * l4jlogger.error(e.getMessage()); } }
 	 */
-	public static String writeBatchTemplate(String MethodName) {
+	public void writeBatchTemplate(String MethodName) {
 		try {
 			writer.write("<tr><center><img src=\"C:\\Users\\epsilon\\Documents\\GitHub\\ErrorProne\\SampleProject\\src\\test\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
 			writer.write(
-					"<tr class=tc0><td><b>DB Column</b></td><td><b>DB Values</b></td><td><b>InputFile Coulmn</b></td><td><b>InputFile Value</b></td><td><b>Result</b></td><td><b>ScreenShots</b></td></tr></tr>\r\n");
+					"<tr class=tc0><td><b>Step Name</b></td><td><b>Description</b></td><td><b>Result</b></td><td><b>Screenshot</b></td></tr></tr>\r\n");
 		} catch (IOException e) {
 			System.out.println("Failed due to " + e.getMessage());
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
 		}
-		return MethodName;
 	}
 
 	public void writeMethodName(String MethodName) {
@@ -323,38 +313,38 @@ public class Reporting extends BrowserConfig {
 //		}
 //	}   
 
-	public void logPass(String stepName, String Screenshot) {
-		System.setProperty("org.uncommons.reportng.escape-output", "false");
-		try {
-			String userDirector1 = "..\\screenshots\\";
-			// Time calculation
-			endTime = System.currentTimeMillis();
-			NumberFormat formatter = new DecimalFormat("#0.0");
-			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
-			startTime = endTime;
-			String time = "<td><p>" + timeInSecs + "</p></td>";
-			String step = "<td><p>" + stepName + "</p></td>";
-			if (Screenshot.contains("Y")) {
-				String ImageFileName1 = takeScreenshot();
-				step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName + "</p></td>";
-			}
-			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
-			String logs = "<tr>" + time + step + result + "</tr>";
-			writer.write(logs);
-			// Extent
-			if (Screenshot.contains("Y")) {
-				String ImageFileName = takeScreenshot();
-				test.log(Status.PASS, stepName,
-						MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName).build());
-			} else
-				test.log(Status.PASS, stepName);
-			// Assert.assertTrue(true);
-			// log4j
-			l4jlogger.info(stepName);
-		} catch (IOException e1) {
-			l4jlogger.error("Failed to log in report" + e1.getMessage());
-		}
-	}
+//	public void logPass(String stepName, String Screenshot) {
+//		System.setProperty("org.uncommons.reportng.escape-output", "false");
+//		try {
+//			String userDirector1 = "..\\screenshots\\";
+//			// Time calculation
+//			endTime = System.currentTimeMillis();
+//			NumberFormat formatter = new DecimalFormat("#0.0");
+//			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+//			startTime = endTime;
+//			String time = "<td><p>" + timeInSecs + "</p></td>";
+//			String step = "<td><p>" + stepName + "</p></td>";
+//			if (Screenshot.contains("Y")) {
+//				String ImageFileName1 = takeScreenshot();
+//				step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName + "</p></td>";
+//			}
+//			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
+//			String logs = "<tr>" + time + step + result + "</tr>";
+//			writer.write(logs);
+//			// Extent
+//			if (Screenshot.contains("Y")) {
+//				String ImageFileName = takeScreenshot();
+//				test.log(Status.PASS, stepName,
+//						MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName).build());
+//			} else
+//				test.log(Status.PASS, stepName);
+//			// Assert.assertTrue(true);
+//			// log4j
+//			l4jlogger.info(stepName);
+//		} catch (IOException e1) {
+//			l4jlogger.error("Failed to log in report" + e1.getMessage());
+//		}
+//	}
 	
 	public void logFail(String stepName) {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
@@ -367,13 +357,13 @@ public class Reporting extends BrowserConfig {
 			NumberFormat formatter = new DecimalFormat("#0.0");
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
 			startTime = endTime;
-			String time = "<td><p>" + timeInSecs + "</p></td>";
+			//String time = "<td><p>" + timeInSecs + "</p></td>";
 			String step = "<td><p>" + stepName + "</p></td>";
 			String step1 = "<td><p>" + "" + "</p></td>";
-			String step2 = "<td><p>" + "" + "</p></td>";
+			//String step2 = "<td><p>" + "" + "</p></td>";
 			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
 			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
-			String logs = "<tr>" + time + step + step1 + step2 + result + scrshot + "</tr>";
+			String logs = "<tr>" + step + step1 + result + scrshot + "</tr>";
 			writer.write(logs);
 			// Assert.assertTrue(false);
 			// log4j
@@ -384,23 +374,20 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 	
-	public void logPass(String stepName1,String stepName2,String stepName3) {
-		fileWriter();
+	public void logPass(String stepName1,String stepName2) {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
 			// Time calculation
 			endTime = System.currentTimeMillis();
-			System.out.println(endTime);
 			NumberFormat formatter = new DecimalFormat("#0.0");
 			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
-			System.out.println(timeInSecs);
 			startTime = endTime;
 			String ImageFileName = takeScreenshot();
-			String time = "<td><p>" + timeInSecs + "</p></td>";
+			//String time = "<td><p>" + timeInSecs + "</p></td>";
 			String step1 = "<td><p>" + stepName1 + "</p></td>";
 			String step2 = "<td><p>" + stepName2 + "</p></td>";
-			String step3 = "<td><p>" + stepName3 + "</p></td>";
+			//String step3 = "<td><p>" + stepName3 + "</p></td>";
 			/*
 			 * if (Screenshot.contains("Y")) { String ImageFileName1 = takeScreenshot();
 			 * step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName +
@@ -409,13 +396,10 @@ public class Reporting extends BrowserConfig {
 			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
 			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
 			//String step = "<td><p>" + "Here We Are" + "</p></td>";
-			String logs = "<tr>" + time + step1 +step2+step3+ result + scrshot +"</tr>";
-			System.out.println(logs);
+			String logs = "<tr>" + step1 +step2 + result + scrshot +"</tr>";
 			writer.write(logs);
 			l4jlogger.info(stepName1);
-			closeReporting();
-		} catch (Exception e1) {
-			System.out.println("Failed log"+e1.getMessage());
+		} catch (IOException e1) {
 			l4jlogger.error("Failed to log in report" + e1.getMessage());
 		}
 	}

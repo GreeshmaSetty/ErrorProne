@@ -44,16 +44,16 @@ public static String Mode = "UI";
 		Failedflag = 0;
 	}
 
-	public void Launch(String Browser, String URLKey) {
+	public void Launch(String Mode, String URLKey) {
 		try { 
 			startTime = System.currentTimeMillis();
 			Mode = Mode.toUpperCase();
 			System.out.println(Mode);
 			if(Mode.equalsIgnoreCase("UI")) {
-				browserExecution(Browser,URLKey);
+				browserExecution("Chrome",URLKey);
 			}
 			else if(Mode.equalsIgnoreCase("MOBILE")){
-				mobileExecution(Browser,URLKey);
+				mobileExecution("Chrome",URLKey);
 			}
 		} catch (Exception e) {
 			System.out.println("Failed to launch application due to exception " + e.getMessage());
