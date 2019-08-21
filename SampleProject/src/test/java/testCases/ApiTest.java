@@ -1,40 +1,48 @@
 package testCases;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.specification.RequestSpecification;
-
 import api.APICommon;
-import configuration.BrowserConfig;
-import configuration.Global;
-import configuration.Keywords;
-import io.restassured.response.Response;
-import pages.CommonMethods;
-import utilities.Mob_Locators;
-import utilities.MyThread;
-import utilities.UI_Locators;
 
-public class ApiTest extends Global {
-	public BrowserConfig config = new BrowserConfig();
-	public CommonMethods common = new CommonMethods();
-	public Keywords actions = new Keywords();
-	public UI_Locators ulocator = new UI_Locators();
-	public Mob_Locators mlocator = new Mob_Locators();
-	public static HashMap<String, String> hashMap = new HashMap();
+public class ApiTest {
+
 	APICommon api = new APICommon();
 
-	@Test(priority = 1)
+	@Test(priority = 0)
 	public void RegistrationSuccessful()
 	{ 
-		String jsonBody = "{\"name\": \"{{RandomName}}\", \"job\": \"Programmer\"}";
-		api.API_Post("https://reqres.in/api/users", jsonBody);
+		//String jsonBody = "{\"name\": \"{{RandomName}}\", \"job\": \"Programmer\"}";
+		api.API_Get("http://54.169.34.162:5252/video");
+		
+		
+		JSONArray allDataArray = new JSONArray();
+		String[] sList = {"A","B","C"};
+		String json = "{\"team\":\"team-name\","
+				+ "\"video\":\"search-video-name\","
+				+ "\"upcoming-videos\":[";
+		   //if List not empty
+		   if (!(sList.length ==0)) {
+		       //Loop index size()
+		       for(int index = 0; index < sList.length; index++) {
+		           try {
+		              json +="\""+ sList[index]+"\"";
+		              if(index!=sList.length-1) {
+		            	  json +=",";
+		              }else {
+		            	  json+="]}";
+		              }
+		           } catch (Exception e) {
+		               e.printStackTrace();
+		           }
+		       }
+		       System.out.println(json);
+		   } else {
+		       //Do something when sList is empty
+		   }
 	}
 }

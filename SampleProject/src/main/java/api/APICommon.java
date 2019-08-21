@@ -56,23 +56,20 @@ public class APICommon {
 
 	public Headers getHeaders() {
 		Map<String, String> apiHeaders = new HashMap<String, String>() ;
-		String accessToken = getAccessToken();
+		//String accessToken = getAccessToken();
 		Headers header = new Headers();
-		String ContentType = "application/json; utf-8";
-		String Accept = "application/json";
+		String ContentType = "application/json";
+		//String Accept = "application/json";
 		//String ProgramCode = "Program-Code";
 		try {
 			apiHeaders.put("Content-Type", ContentType);
-			apiHeaders.put("Accept", Accept);
+			//apiHeaders.put("Accept", Accept);
 			//apiHeaders.put("Program-Code", ProgramCode);
 
 			List<Header> headerList = new ArrayList<Header>();
 			for(String key : apiHeaders.keySet()) {
-				if((!key.equalsIgnoreCase("URL") && !key.equals("")) &&
-						(!key.equalsIgnoreCase("VerifyWith") && !key.equals("")) )
-					headerList.add(new Header(key, dataGenerate.randomDataGenerator(apiHeaders.get(key),"getheaders")));
-			}
-			headerList.add(new Header("Authorization","OAuth "+accessToken));
+		}
+			//headerList.add(new Header("Authorization","OAuth "+accessToken));
 			header = new Headers(headerList);
 		}
 		catch (Exception e){
@@ -125,6 +122,21 @@ public class APICommon {
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
 			writeResponseToData(response, "Post");
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+	}
+	
+	public void API_Get(String Url) {
+		Headers apiheader =  getHeaders();
+		String sURL = refactorWithRandomizedValues(Url);
+		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
+		try {
+			Response response = (Response) given().headers(apiheader).when().get(new URL(sURL));
+			String getStatusCode = String.valueOf(response.getStatusCode());
+			//verifyStatusCode(statusCode, getStatusCode, response.asString());
+			//dataGenerate.writeResponse(Key, response.asString());
+			dataGenerate.writeApiData("getCall", "VideoName", response.asString());
 		} catch (Exception e) {
 			logger.logFail("Failed to Post due to exception " + e.getMessage());
 		}
