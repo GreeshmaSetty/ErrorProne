@@ -69,7 +69,7 @@ public class Step_IN_UI extends Global {
 			String[] upNextList = new String[videolist.size()];
 			for(int j=0; j<videolist.size();j++)
 	        {
-				upNextList[j]=videolist.get(j+1).getAttribute("title");
+				upNextList[j]=videolist.get(j).getAttribute("title");
 	            System.out.println(upNextList[j]);
 	        }
 			actions.jsonCreate(upNextList);
