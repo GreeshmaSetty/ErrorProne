@@ -482,7 +482,7 @@ public class Keywords extends BrowserConfig {
 			JavascriptExecutor js = (JavascriptExecutor) webDriver;
 			js.executeScript("window.scrollBy(" + min + "," + max + ")", "");
 		} catch (Exception e) {
-			logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
+			//logger.logFail("Failed to scroll the page due to exception " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

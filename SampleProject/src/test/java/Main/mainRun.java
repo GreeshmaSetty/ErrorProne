@@ -9,12 +9,24 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.testng.TestNG;
+import org.testng.annotations.Test;
 
 import utilities.MyThread;
 
 public class mainRun {
 	
 	public static void main(String[] args) {
+		//final CyclicBarrier gate = new CyclicBarrier(3);
+		mainRun mr = new mainRun();
+		 MyThread R1 = new MyThread("testngUI");
+	      R1.start();
+	      
+	      MyThread R2 = new MyThread("testngMobile");
+	      R2.start();
+		}
+	
+	@Test
+	public void main() {
 		//final CyclicBarrier gate = new CyclicBarrier(3);
 		mainRun mr = new mainRun();
 		 MyThread R1 = new MyThread("testngUI");

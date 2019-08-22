@@ -57,7 +57,7 @@ public class Step_IN_Mob extends Global {
 		common.SelectVideoFromList_Mob(mlocator.SelectVideo, videoName);
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void TC_Mob_SelectQuality() {
 		actions.mouseHover(mlocator.VideoSettings);
 		actions.waitImplicit(mlocator.VideoSettings, 5);

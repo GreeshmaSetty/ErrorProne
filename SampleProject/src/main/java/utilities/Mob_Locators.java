@@ -16,7 +16,7 @@ public class Mob_Locators {
 	
 	public String QualityList = "//div[@class='ytp-panel ytp-quality-menu']";
 	
-	public String upnext="//div[@id='items']//span[@id='video-title'][@title]";
+	public String upnext="//h4[@class='compact-media-item-headline'][text()]";
 	
 	public String SelectVideo = "//h4[@class='compact-media-item-headline'][text()='##']";
 	

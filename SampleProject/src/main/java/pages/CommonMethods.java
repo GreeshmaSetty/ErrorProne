@@ -93,7 +93,7 @@ public class CommonMethods {
 				actions.scroll(0, 100);
 				Thread.sleep(300);
 				flag++;
-				if(flag>221)
+				if(flag>250)
 					break;
 				//actions.waitForPageToLoad(30);
 			}while(findVideo== null);
@@ -110,6 +110,7 @@ public class CommonMethods {
 	}
 	
 	public void SelectVideoFromList_Mob(String Locator,String videoName) {
+		System.out.println(videoName);
 		try {
 			WebElement findVideo = null;
 			int flag = 0;
@@ -122,11 +123,19 @@ public class CommonMethods {
 				//Robot robot = new Robot();
 				//robot.keyPress(KeyEvent.VK_DOWN);
 
-				actions.scroll(0, 100);
+				//actions.scroll(0, 100);
+				actions.jsScrollToElement(new Mob_Locators().ShowMore);
 				Thread.sleep(100);
+				try {
+					findVideo = actions.getWebElement(Locator.replace("##", videoName));
+				}catch(Exception e) {
+
+				}
 				flag++;
-				if(actions.getWebElement(new Mob_Locators().ShowMore).isDisplayed())
+				if(actions.getWebElement(new Mob_Locators().ShowMore).isDisplayed()) {
+					actions.jsScrollToElement(new Mob_Locators().ShowMore);
 					actions.click(new Mob_Locators().ShowMore);
+				}
 				if(flag>500)
 					break;
 				//actions.waitForPageToLoad(30);
@@ -136,7 +145,12 @@ public class CommonMethods {
 				logger.logFail("Video Not Found in list");
 			}
 			actions.jsScrollToElement(findVideo);
+			try {
 			actions.click(findVideo);
+			}catch(Exception e) {
+				actions.scroll(0, 100);
+				actions.click(findVideo);
+			}
 			actions.waitForPageToLoad(10);
 		}catch(Exception e) {
 			logger.logFail("Failed to select video from list due to exception "+e.getMessage());
@@ -147,7 +161,7 @@ public class CommonMethods {
 		String[] upNextList = new String[videolist.size()];
 		for(int j=0; j<videolist.size();j++)
 		{
-			upNextList[j]=videolist.get(j).getAttribute("title");
+			upNextList[j]=videolist.get(j).getText();
 			System.out.println(upNextList[j]);
 		}
 		return upNextList;
