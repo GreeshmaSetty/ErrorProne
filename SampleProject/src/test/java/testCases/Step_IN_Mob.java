@@ -138,7 +138,7 @@ public class Step_IN_Mob extends Global {
 	            System.out.println(upNextList[j]);
 	        }
 			String jsonValue = actions.jsonCreate(upNextList);
-			File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody.json");
+			File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody_mobile.json");
 			Writer writer = new FileWriter(file,true);
 			writer.write(jsonValue);
 			writer.close();
