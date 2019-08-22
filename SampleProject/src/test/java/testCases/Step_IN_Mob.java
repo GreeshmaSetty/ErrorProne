@@ -72,7 +72,7 @@ public class Step_IN_Mob extends Global {
 			List<WebElement>videolist=actions.getWebElementList(mlocator.upnext);
 			String[] upNextList = common.GetUpNextVideo(videolist);
 			String jsonValue = actions.jsonCreate(upNextList);
-			File file = common.WriteToJsonFile(jsonValue);
+			File file = common.WriteToJsonFile(jsonValue, "Mobile");
 			String response = api.API_Post(file, "http://54.169.34.162:5252/upload");
 			logger.logPass("API uploaded response",response);
 			String getResponse = api.API_Get("http://54.169.34.162:5252/result/"+response);
@@ -139,7 +139,7 @@ public class Step_IN_Mob extends Global {
 	        }
 			String jsonValue = actions.jsonCreate(upNextList);
 			File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody_mobile.json");
-			Writer writer = new FileWriter(file,true);
+			Writer writer = new FileWriter(file);
 			writer.write(jsonValue);
 			writer.close();
 			

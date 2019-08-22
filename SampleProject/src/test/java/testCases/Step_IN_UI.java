@@ -63,7 +63,7 @@ public class Step_IN_UI extends Global {
 			List<WebElement>videolist=actions.getWebElementList(ulocator.upnext);
 			String[] upNextList = common.GetUpNextVideo(videolist);
 			String jsonValue = actions.jsonCreate(upNextList);
-			File file = common.WriteToJsonFile(jsonValue);
+			File file = common.WriteToJsonFile(jsonValue,"UI");
 			String response = api.API_Post(file, "http://54.169.34.162:5252/upload");
 			logger.logPass("API uploaded response",response);
 			String getResponse = api.API_Get("http://54.169.34.162:5252/result/"+response);
