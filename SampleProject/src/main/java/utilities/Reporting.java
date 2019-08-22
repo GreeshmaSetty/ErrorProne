@@ -137,7 +137,14 @@ public class Reporting extends BrowserConfig {
 		 * test.error(MarkupHelper.createLabel(result.getName() + " Test Case ERROR",
 		 * ExtentColor.PURPLE)); }
 		 */
-		extent.flush();
+		try {
+			writer.flush();
+			extent.flush();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void afterTestExtentReport() {
@@ -170,11 +177,12 @@ public class Reporting extends BrowserConfig {
 	public void CreateHtmlReportFile() {
 		try {
 			String name = "ExecutionReport";
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			//Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			HtmlDirectory = new File(String.valueOf("./test-output/HtmlReport"));
 			if (!HtmlDirectory.exists())
 				HtmlDirectory.mkdir();
-			createHtmlFile(name + timestamp.getTime());
+			createHtmlFile(name + new DataGeneration().generateRandomNumber("12"));
+			//System.out.println(name + new DataGeneration().generateRandomNumber("12"));
 		} catch (Exception e) {
 			l4jlogger.error("Failed to create a HTML report due to exception " + e.getMessage());
 		}
@@ -247,6 +255,7 @@ public class Reporting extends BrowserConfig {
 	public void writeBatchTemplate(String MethodName) {
 		try {
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
+			writer.flush();
 			} catch (IOException e) {
 			System.out.println("Failed due to " + e.getMessage());
 			// TODO Auto-generated catch block
@@ -399,6 +408,7 @@ public class Reporting extends BrowserConfig {
 			String logs = "<tr>" + step1 +step2 + result + scrshot +"</tr>";
 			writer.write(logs);
 			l4jlogger.info(stepName1);
+			writer.flush();
 		} catch (IOException e1) {
 			l4jlogger.error("Failed to log in report" + e1.getMessage());
 		}
