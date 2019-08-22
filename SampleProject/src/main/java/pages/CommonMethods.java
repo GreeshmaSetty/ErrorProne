@@ -167,11 +167,11 @@ public class CommonMethods {
 		return upNextList;
 	}
 
-	public File WriteToJsonFile(String jsonValue) {
-		File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody.json");
+	public File WriteToJsonFile(String jsonValue,String Mode) {
+		File file = new File(System.getProperty("user.dir") + "//src//main//resources//jsonBody"+Mode+".json");
 		try {
 			Writer writer;
-			writer = new FileWriter(file,true);
+			writer = new FileWriter(file);
 			writer.write(jsonValue);
 			writer.close();
 		} catch (IOException e) {

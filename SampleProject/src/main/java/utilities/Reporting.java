@@ -196,7 +196,8 @@ public class Reporting extends BrowserConfig {
 			writer.write("</style></head>\n");
 			writer.write("<body><table width=100%>");
 			writer.write("<tr><center><img src=\""+System.getProperty("user.dir")+"\\src\\test\\resources\\logo.png\" alt=\"Logo Not Found\"></center></tr>\r\n");
-			
+			writer.write("<tr class=tc0><td><b>Step Name</b></td><td><b>Description</b></td><td><b>Result</b></td><td><b>Screenshot</b></td></tr></tr>\r\n");
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
@@ -246,9 +247,7 @@ public class Reporting extends BrowserConfig {
 	public void writeBatchTemplate(String MethodName) {
 		try {
 			writer.write("<tr><th colspan=100 width=10%>" + MethodName + "</th></tr>\r\n");
-			writer.write(
-					"<tr class=tc0><td><b>Step Name</b></td><td><b>Description</b></td><td><b>Result</b></td><td><b>Screenshot</b></td></tr></tr>\r\n");
-		} catch (IOException e) {
+			} catch (IOException e) {
 			System.out.println("Failed due to " + e.getMessage());
 			// TODO Auto-generated catch block
 			l4jlogger.error(e.getMessage());
