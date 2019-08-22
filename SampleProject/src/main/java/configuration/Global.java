@@ -36,7 +36,7 @@ public class Global {
 	public void afterTest() {
 		logger.closeReporting();
 		logger.afterTestExtentReport();
-		//actions.quitBrowser();
+		actions.quitBrowser();
 	}
 
 }

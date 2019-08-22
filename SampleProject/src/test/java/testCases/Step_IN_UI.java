@@ -26,10 +26,10 @@ public class Step_IN_UI extends Global {
 
 	@Test(priority = 1)
 	public void TC_UI_Search_StepInForum() {
-		actions.waitImplicit(null, 2);
+		//actions.waitImplicit(null, 2);
 		actions.getWebElement(ulocator.search).sendKeys("step-inforum" + Keys.ENTER);
 		logger.logPass("Enter", "Step In Forum Entered");
-		//actions.waitImplicit(ulocator.step_in_channel, 5);
+		actions.waitImplicit(ulocator.step_in_channel, 5);
 		actions.getWebElement(ulocator.step_in_channel).click();
 		actions.waitImplicit(ulocator.Video, 5);
 	}
