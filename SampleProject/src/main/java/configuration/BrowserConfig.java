@@ -77,7 +77,7 @@ public static String Mode = "UI";
 			capabilities.setCapability("autoAcceptAlerts", true);
 
 			webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			//webDriver.manage().timeouts().implicitlyWait(, TimeUnit.SECONDS);
+			webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			new Keywords().getURL(URLKey);
 		}catch(Exception e) {
 			System.out.println("Failed to launch mobile "+e.getMessage());
@@ -220,6 +220,7 @@ public static String Mode = "UI";
 			chromeDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\chromedriver.exe";
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, chromeDriverPath);
 			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Chrome Failed during driver initialization " + e.getMessage());

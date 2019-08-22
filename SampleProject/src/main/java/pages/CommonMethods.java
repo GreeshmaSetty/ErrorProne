@@ -97,11 +97,11 @@ public class CommonMethods {
 					break;
 				//actions.waitForPageToLoad(30);
 			}while(findVideo== null);
-			logger.logPass("Screenshot Of Video", "Located video");
 			if(findVideo==null) {
 				logger.logFail("Video Not Found in list");
 			}
 			actions.jsScrollToElement(findVideo);
+			logger.logPass("Screenshot Of Video", "Located video");
 			actions.click(findVideo);
 			actions.waitForPageToLoad(10);
 		}catch(Exception e) {
@@ -140,11 +140,11 @@ public class CommonMethods {
 					break;
 				//actions.waitForPageToLoad(30);
 			}while(findVideo== null);
-			logger.logPass("Screenshot Of Video", "Located video");
 			if(findVideo==null) {
 				logger.logFail("Video Not Found in list");
 			}
 			actions.jsScrollToElement(findVideo);
+			logger.logPass("Screenshot Of Video", "Located video");
 			try {
 			actions.click(findVideo);
 			}catch(Exception e) {
