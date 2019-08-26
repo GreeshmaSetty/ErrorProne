@@ -56,7 +56,7 @@ public static String Mode = "UI";
 				mobileExecution("Chrome",URLKey);
 			}
 		} catch (Exception e) {
-			System.out.println("Failed to launch application due to exception " + e.getMessage());
+			System.out.println("Failed to launch application dfue to exception " + e.getMessage());
 		}
 
 	}
