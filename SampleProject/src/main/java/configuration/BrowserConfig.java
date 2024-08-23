@@ -3,10 +3,11 @@ package configuration;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import javax.swing.JOptionPane;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,9 +19,13 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.google.common.collect.ImmutableMap;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.WebDriver;
@@ -33,7 +38,8 @@ public class BrowserConfig {
 	public static long endTime;
 	public static int Failedflag = 0;
 	static ReadPropertiesFile read = new ReadPropertiesFile();
-	
+	static String chromeDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\chromedriver.exe";
+	static String chromeDriverMobPath = System.getProperty("user.dir")+"\\Utils\\Drivers\\chromedriver_124.exe";
 public static String Mode = "UI";
 
 	public int getFailedFlagCount() {
@@ -49,6 +55,7 @@ public static String Mode = "UI";
 			startTime = System.currentTimeMillis();
 			Mode = Mode.toUpperCase();
 			System.out.println(Mode);
+			
 			if(Mode.equalsIgnoreCase("UI")) {
 				browserExecution("Chrome",URLKey);
 			}
@@ -63,19 +70,34 @@ public static String Mode = "UI";
 
 	private void mobileExecution(String BrowserName, String URLKey) {
 		try {	
-
+			
 			try {
 				String[] command = {"cmd.exe", "/C", "Start", System.getProperty("user.dir")+"/openDevice.bat"};
 				Process process =  Runtime.getRuntime().exec(command);           
 			} catch (Exception ex) {
+				System.out.println("Mobile already open");
 			} 
+			// Set DesiredCapabilities
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.13.0");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.0");
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
-			capabilities.setCapability("browserName", BrowserName);
+
+			// Set Browser and Chromedriver Capabilities
+			capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserName);
+			capabilities.setCapability("chromedriverExecutable", chromeDriverMobPath); // Replace with your path
+
+			// Set Auto Accept Alerts Capability
 			capabilities.setCapability("autoAcceptAlerts", true);
 
+			// Create ChromeOptions and set W3C mode
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.setExperimentalOption("w3c", false);
+
+			// Merge ChromeOptions with DesiredCapabilities
+			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+
+			// Initialize AndroidDriver
 			webDriver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			new Keywords().getURL(URLKey);
@@ -215,9 +237,8 @@ public static String Mode = "UI";
 	private WebDriver getChromeDriver() {
 
 		WebDriver driver = null;
-		String chromeDriverPath = null;
 		try {
-			chromeDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\chromedriver.exe";
+			//WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, chromeDriverPath);
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

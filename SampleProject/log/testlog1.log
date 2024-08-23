@@ -367,3 +367,32 @@ Session ID: a26621c7-a726-4436-af58-6bb09d06cb96
 2019-08-22 01:15:20,855 [main] INFO AgilityLoyalty - Screenshot Of Video
 2019-08-22 01:16:28,376 [main] INFO AgilityLoyalty - API uploaded response
 2019-08-22 01:16:37,712 [main] INFO AgilityLoyalty - API Get response
+2024-08-22 12:17:05,979 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 12:17:27,052 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 12:17:31,365 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:07:34,179 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:07:38,330 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:33:45,169 [TestNG] INFO AgilityLoyalty - Enter
+2024-08-22 16:33:45,223 [TestNG] INFO AgilityLoyalty - Enter
+2024-08-22 16:33:45,284 [TestNG] INFO AgilityLoyalty - Failed to Post due to exception Connection timed out: connect
+2024-08-22 16:33:45,655 [TestNG] INFO AgilityLoyalty - Failed to Post due to exception Connection timed out: connect
+2024-08-22 16:33:50,643 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:33:50,659 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:33:59,555 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:33:59,594 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:34:11,731 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:34:16,098 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:34:20,651 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-22 16:34:24,898 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-23 11:32:51,115 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-23 11:32:55,155 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-23 12:16:38,166 [TestNG] INFO AgilityLoyalty - Launch
+2024-08-23 12:16:38,517 [TestNG] INFO AgilityLoyalty - Launch
+2024-08-23 12:22:40,216 [TestNG] INFO AgilityLoyalty - Launch
+2024-08-23 12:22:51,040 [TestNG] INFO AgilityLoyalty - Launch
+2024-08-23 12:22:56,696 [TestNG] INFO AgilityLoyalty - Enter
+2024-08-23 12:23:20,209 [TestNG] INFO AgilityLoyalty - Failed to Post due to exception Connection timed out: connect
+2024-08-23 12:23:30,524 [TestNG] INFO AgilityLoyalty - Element not found within the given time
+2024-08-23 12:23:46,685 [TestNG] INFO AgilityLoyalty - Failed to Post due to exception Connection timed out: connect
+2024-08-23 12:24:01,768 [TestNG] ERROR AgilityLoyalty - Stream closed
+2024-08-23 12:24:05,931 [TestNG] ERROR AgilityLoyalty - Stream closed
