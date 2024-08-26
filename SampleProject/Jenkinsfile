@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run tests using Maven
-                sh 'mvn test'
+                sh 'mvn test -DsuiteXmlFile=src/test/resources/testng.xml'
             }
         }
         stage('Package') {
