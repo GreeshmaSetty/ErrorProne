@@ -3,7 +3,7 @@
 # Testautothon 2024 (STeP-IN Summit 2024)
 
 
-This repository contains the testautothon step-in 2019 summit challenge solution.
+This repository contains the testautothon step-in 2024 summit challenge solution.
 
 
 ## Team Members:
