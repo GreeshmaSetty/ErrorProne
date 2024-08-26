@@ -32,10 +32,16 @@ pipeline {
     }
     post {
         always {
-            // Archive the build artifacts
-            archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
-            // Publish JUnit test results
+           archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
             junit 'target/surefire-reports/*.xml'
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: false,
+                keepAll: true,
+                reportDir: 'target/site', // Directory where your HTML report is located
+                reportFiles: 'index.html', // Main HTML file to display
+                reportName: 'HTML Report'
+            ])
         }
         success {
             // Actions to take on success
