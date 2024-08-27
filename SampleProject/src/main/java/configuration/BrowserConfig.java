@@ -68,7 +68,7 @@ public static String Mode = "UI";
 
 	}
 	
-	 public mobileExecution(String BrowserName, String URLKey) {
+	 public void mobileExecution(String BrowserName, String URLKey) {
 	        DesiredCapabilities capabilities = new DesiredCapabilities();
 	        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
@@ -86,7 +86,7 @@ public static String Mode = "UI";
 	            }
 	        }
 	    }
-	}
+	
 
 	private void mobileExecution_web(String BrowserName, String URLKey) {
 		try {	
