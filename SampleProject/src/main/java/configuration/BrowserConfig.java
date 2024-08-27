@@ -69,15 +69,22 @@ public static String Mode = "UI";
 	}
 	
 	 public void mobileExecution(String BrowserName, String URLKey) {
+		 
+		 try {
+				String[] command = {"cmd.exe", "/C", "Start", System.getProperty("user.dir")+"/openDevice.bat"};
+				Process process =  Runtime.getRuntime().exec(command);           
+			} catch (Exception ex) {
+				System.out.println("Mobile already open");
+			} 
 	        DesiredCapabilities capabilities = new DesiredCapabilities();
 	        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-	        capabilities.setCapability(MobileCapabilityType.APP, "/path/to/your/app.apk"); // Path to your APK file
+	        capabilities.setCapability(MobileCapabilityType.APP, "/path/to/your/apptest.apk"); // Path to your APK file
 	        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
 	        AndroidDriver<AndroidElement> driver = null;
 	        try {
-	            driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), capabilities);
+	            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        } finally {
