@@ -1,17 +1,17 @@
 ![](logo.png)
 
-# Testautothon 2019 (STeP-IN Summit 2019)
+# Testautothon 2024 (STeP-IN Summit 2024)
 
 
-This repository contains the testautothon step-in 2019 summit challenge solution.
+This repository contains the testautothon step-in 2024 summit challenge solution.
 
 
 ## Team Members:
 - [Jyothi V Sai]()
 - [HariCharan G]()
 - [Greeshma Shetty]()
-- [Baalaksha]()
-- [Raghuveer]()
+- [Santhosh Narayana]()
+- [Atib Hawaldhar]()
 
 <u><b>Scenario to be automated</b></u>
 
