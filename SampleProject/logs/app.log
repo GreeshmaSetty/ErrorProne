@@ -1,0 +1,13 @@
+2024-08-26 15:31:38 INFO  TestAutothon:417 - Launch
+2024-08-26 15:31:41 INFO  TestAutothon:417 - Enter
+2024-08-26 15:32:12 INFO  TestAutothon:383 - Element not found within the given time
+2024-08-26 15:32:48 INFO  TestAutothon:383 - Failed to Post due to exception Connection timed out: connect
+2024-08-26 15:32:49 INFO  TestAutothon:383 - Failed to scroll the page due to exception javascript error: {"status":60,"value":"[object HTMLButtonElement] has no size and location"}
+  (Session info: chrome=128.0.6613.85)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '10.216.83.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3df628f979cd746c2c1bef93887ad069
+2024-08-26 15:32:54 INFO  TestAutothon:383 - Element not found within the given time
+2024-08-26 15:33:26 INFO  TestAutothon:383 - Failed to Post due to exception Connection timed out: connect

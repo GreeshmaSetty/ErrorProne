@@ -9,8 +9,8 @@ import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
@@ -29,10 +29,11 @@ public class Reporting extends BrowserConfig {
 	protected static String extendReportPath;
 	static Timestamp ts = new Timestamp(System.currentTimeMillis());
 	private static String Reporttimestamp = "_" + ts.getTime();
-	public static Logger l4jlogger = Logger.getLogger("AgilityLoyalty");
+	//public static Logger l4jlogger = Logger.getLogger("AgilityLoyalty");
+    public static Logger l4jlogger = (Logger) LogManager.getLogger("TestAutothon");
 
 	public Reporting() {
-		PropertyConfigurator.configure("Log4j.properties");
+		//PropertyConfigurator.configure("Log4j.properties");
 	}
 
 	// Extent
@@ -359,6 +360,7 @@ public class Reporting extends BrowserConfig {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
+			String ImageFileName1 = takeScreenshot();
 			// String userDirector = System.getProperty("user.dir") +
 			// "/test-output/screenshots/";
 			String ImageFileName = takeScreenshot();
@@ -371,11 +373,13 @@ public class Reporting extends BrowserConfig {
 			String step1 = "<td><p>" + "" + "</p></td>";
 			//String step2 = "<td><p>" + "" + "</p></td>";
 			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
-			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
+			String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
 			String logs = "<tr>" + step + step1 + result + scrshot + "</tr>";
 			writer.write(logs);
 			// Assert.assertTrue(false);
 			// log4j
+			test.log(Status.FAIL, stepName,
+					MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName).build());
 			l4jlogger.info(stepName);
 		} catch (IOException e) {
 			l4jlogger.error("Failed due log in report due to exception " + e.getMessage());
@@ -387,6 +391,7 @@ public class Reporting extends BrowserConfig {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
 			String userDirector1 = "..\\screenshots\\";
+			String ImageFileName1 = takeScreenshot();
 			// Time calculation
 			endTime = System.currentTimeMillis();
 			NumberFormat formatter = new DecimalFormat("#0.0");
@@ -402,8 +407,10 @@ public class Reporting extends BrowserConfig {
 			 * step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName +
 			 * "</p></td>"; }
 			 */
+			test.log(Status.PASS, stepName1,
+					MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName1).build());
 			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
-			String scrshot = "<td><a href=" + userDirector1 + ImageFileName + "><img src=" + userDirector1 + ImageFileName + " height=\"80\"></img></a></td>";
+			String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
 			//String step = "<td><p>" + "Here We Are" + "</p></td>";
 			String logs = "<tr>" + step1 +step2 + result + scrshot +"</tr>";
 			writer.write(logs);

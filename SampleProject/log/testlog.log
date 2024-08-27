@@ -396,3 +396,29 @@ Session ID: a26621c7-a726-4436-af58-6bb09d06cb96
 2024-08-23 12:23:46,685 - AgilityLoyalty -INFO - Failed to Post due to exception Connection timed out: connect
 2024-08-23 12:24:01,768 - AgilityLoyalty -ERROR - Stream closed
 2024-08-23 12:24:05,931 - AgilityLoyalty -ERROR - Stream closed
+2024-08-26 15:03:39,550 - AgilityLoyalty -INFO - Launch
+2024-08-26 15:03:41,251 - AgilityLoyalty -INFO - Enter
+2024-08-26 15:04:11,708 - AgilityLoyalty -INFO - Element not found within the given time
+2024-08-26 15:04:44,420 - AgilityLoyalty -INFO - Failed to Post due to exception Connection timed out: connect
+2024-08-26 15:04:44,789 - AgilityLoyalty -INFO - Failed to scroll the page due to exception javascript error: {"status":60,"value":"[object HTMLButtonElement] has no size and location"}
+  (Session info: chrome=128.0.6613.85)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '10.216.83.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53478}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d82c00fc858dc3be11e9874834817ccf
+2024-08-26 15:04:51,231 - AgilityLoyalty -INFO - Element not found within the given time
+2024-08-26 15:05:24,270 - AgilityLoyalty -INFO - Failed to Post due to exception Connection timed out: connect
+2024-08-26 15:09:08,706 - AgilityLoyalty -INFO - Launch
+2024-08-26 15:09:10,731 - AgilityLoyalty -INFO - Enter
+2024-08-26 15:09:41,236 - AgilityLoyalty -INFO - Element not found within the given time
+2024-08-26 15:10:14,392 - AgilityLoyalty -INFO - Failed to Post due to exception Connection timed out: connect
+2024-08-26 15:10:16,809 - AgilityLoyalty -INFO - Failed to scroll the page due to exception javascript error: {"status":60,"value":"[object HTMLButtonElement] has no size and location"}
+  (Session info: chrome=128.0.6613.85)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '10.216.83.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50368}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 12ef058bce04f83f9fc4847b3f86b3b0
+2024-08-26 15:10:22,735 - AgilityLoyalty -INFO - Element not found within the given time
+2024-08-26 15:10:56,733 - AgilityLoyalty -INFO - Failed to Post due to exception Connection timed out: connect

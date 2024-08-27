@@ -67,21 +67,41 @@ public static String Mode = "UI";
 		}
 
 	}
+	
+	 public mobileExecution(String BrowserName, String URLKey) {
+	        DesiredCapabilities capabilities = new DesiredCapabilities();
+	        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+	        capabilities.setCapability(MobileCapabilityType.APP, "/path/to/your/app.apk"); // Path to your APK file
+	        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
-	private void mobileExecution(String BrowserName, String URLKey) {
+	        AndroidDriver<AndroidElement> driver = null;
+	        try {
+	            driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), capabilities);
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        } finally {
+	            if (driver != null) {
+	                driver.quit();
+	            }
+	        }
+	    }
+	}
+
+	private void mobileExecution_web(String BrowserName, String URLKey) {
 		try {	
 			
 			try {
-				String[] command = {"cmd.exe", "/C", "Start", System.getProperty("user.dir")+"/openDevice.bat"};
-				Process process =  Runtime.getRuntime().exec(command);           
+				//String[] command = {"cmd.exe", "/C", "Start", System.getProperty("user.dir")+"/openDevice.bat"};
+				//Process process =  Runtime.getRuntime().exec(command);           
 			} catch (Exception ex) {
 				System.out.println("Mobile already open");
 			} 
 			// Set DesiredCapabilities
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.0");
-			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AECY9XQ8NRKN7PLR");
 
 			// Set Browser and Chromedriver Capabilities
 			capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserName);
