@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">5</td><td class="num">123,047</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">testCases.Step_IN_UI</td><td><a href="#m0">TC_UI_GetUpNextListAndPost</a></td><td rowspan="1">1724666579643</td><td rowspan="1">26599</td></tr><tr class="failedeven"><td><a href="#m1">TC_UI_GetVideoNameViaApi</a></td><td rowspan="1">1724666543199</td><td rowspan="1">24847</td></tr><tr class="failedeven"><td><a href="#m2">TC_UI_Search_StepInForum</a></td><td rowspan="1">1724666499384</td><td rowspan="1">37759</td></tr><tr class="failedeven"><td><a href="#m3">TC_UI_SelectQuality</a></td><td rowspan="1">1724666568092</td><td rowspan="1">11514</td></tr><tr class="failedeven"><td><a href="#m4">TC_UI_VideoLink</a></td><td rowspan="1">1724666537714</td><td rowspan="1">5142</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.Step_IN_UI</td><td><a href="#m5">TC_UI_Launch_Youtube</a></td><td rowspan="1">1724666484297</td><td rowspan="1">14293</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">testCases.Step_IN_UI#TC_UI_GetUpNextListAndPost</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at api.APICommon.API_Post(APICommon.java:134)
-	at testCases.Step_IN_UI.TC_UI_GetUpNextListAndPost(Step_IN_UI.java:68)
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">25,023</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">testCases.Step_IN_Mob</td><td><a href="#m0">TC_Mob_GetUpNextListAndPost</a></td><td rowspan="1">1724774176717</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m1">TC_Mob_GetVideoNameViaApi</a></td><td rowspan="1">1724774153893</td><td rowspan="1">22781</td></tr><tr class="failedeven"><td><a href="#m2">TC_Mob_Launch_Youtube</a></td><td rowspan="1">1724774152032</td><td rowspan="1">1208</td></tr><tr class="failedeven"><td><a href="#m3">TC_Mob_Search_StepInForum</a></td><td rowspan="1">1724774153685</td><td rowspan="1">11</td></tr><tr class="failedeven"><td><a href="#m4">TC_Mob_VideoLink</a></td><td rowspan="1">1724774153815</td><td rowspan="1">2</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">testCases.Step_IN_Mob#TC_Mob_GetUpNextListAndPost</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logFail(Reporting.java:363)
+	at configuration.Keywords.getWebElementList(Keywords.java:119)
+	at testCases.Step_IN_Mob.TC_Mob_GetUpNextListAndPost(Step_IN_Mob.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -26,9 +28,11 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">testCases.Step_IN_UI#TC_UI_GetVideoNameViaApi</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at api.APICommon.API_Get(APICommon.java:151)
-	at testCases.Step_IN_UI.TC_UI_GetVideoNameViaApi(Step_IN_UI.java:47)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">testCases.Step_IN_Mob#TC_Mob_GetVideoNameViaApi</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logFail(Reporting.java:363)
+	at api.APICommon.API_Get(APICommon.java:149)
+	at testCases.Step_IN_Mob.TC_Mob_GetVideoNameViaApi(Step_IN_Mob.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,8 +57,10 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">testCases.Step_IN_UI#TC_UI_Search_StepInForum</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at testCases.Step_IN_UI.TC_UI_Search_StepInForum(Step_IN_UI.java:33)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">testCases.Step_IN_Mob#TC_Mob_Launch_Youtube</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logPass(Reporting.java:394)
+	at testCases.Step_IN_Mob.TC_Mob_Launch_Youtube(Step_IN_Mob.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -79,28 +85,9 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">testCases.Step_IN_UI#TC_UI_SelectQuality</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=128.0.6613.85)
-Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T13:42:21&apos;
-System info: host: &apos;WKWZTKKJU8QLOIL&apos;, ip: &apos;10.216.83.224&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3df628f979cd746c2c1bef93887ad069
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">testCases.Step_IN_Mob#TC_Mob_Search_StepInForum</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
 	at configuration.Keywords.click(Keywords.java:198)
-	at testCases.Step_IN_UI.TC_UI_SelectQuality(Step_IN_UI.java:56)
+	at testCases.Step_IN_Mob.TC_Mob_Search_StepInForum(Step_IN_Mob.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,8 +112,8 @@ Session ID: 3df628f979cd746c2c1bef93887ad069
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">testCases.Step_IN_UI#TC_UI_VideoLink</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at testCases.Step_IN_UI.TC_UI_VideoLink(Step_IN_UI.java:39)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">testCases.Step_IN_Mob#TC_Mob_VideoLink</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at testCases.Step_IN_Mob.TC_Mob_VideoLink(Step_IN_Mob.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,4 +138,4 @@ Session ID: 3df628f979cd746c2c1bef93887ad069
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">testCases.Step_IN_UI#TC_UI_Launch_Youtube</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

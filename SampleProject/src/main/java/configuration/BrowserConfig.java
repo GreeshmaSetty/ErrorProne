@@ -76,22 +76,18 @@ public static String Mode = "UI";
 			} catch (Exception ex) {
 				System.out.println("Mobile already open");
 			} 
+		 	String apkPath = System.getProperty("user.dir") + "\\Utils\\APK\\apptest.apk";
 	        DesiredCapabilities capabilities = new DesiredCapabilities();
 	        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 	        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-	        capabilities.setCapability(MobileCapabilityType.APP, "/path/to/your/apptest.apk"); // Path to your APK file
+	        capabilities.setCapability(MobileCapabilityType.APP, apkPath); // Path to your APK file
 	        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
-	        AndroidDriver<AndroidElement> driver = null;
 	        try {
-	            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	            webDriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	        } catch (Exception e) {
 	            e.printStackTrace();
-	        } finally {
-	            if (driver != null) {
-	                driver.quit();
-	            }
-	        }
+	        } 
 	    }
 	
 

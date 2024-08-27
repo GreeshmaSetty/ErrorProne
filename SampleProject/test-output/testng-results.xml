@@ -1,52 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="6" passed="1" failed="5" skipped="0">
+<testng-results total="5" passed="0" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-26T10:01:24Z" name="Default suite" finished-at="2024-08-26T10:03:27Z" duration-ms="123047">
+  <suite started-at="2024-08-27T15:55:51Z" name="Default suite" finished-at="2024-08-27T15:56:16Z" duration-ms="25023">
     <groups>
     </groups>
-    <test started-at="2024-08-26T10:01:24Z" name="Default test" finished-at="2024-08-26T10:03:27Z" duration-ms="123047">
-      <class name="testCases.Step_IN_UI">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:24Z" name="beforeTest" finished-at="2024-08-26T15:31:24Z" duration-ms="147" status="PASS">
+    <test started-at="2024-08-27T15:55:51Z" name="Default test" finished-at="2024-08-27T15:56:16Z" duration-ms="25023">
+      <class name="testCases.Step_IN_Mob">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:51Z" name="beforeTest" finished-at="2024-08-27T21:25:52Z" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:24Z" name="beforeMethod" finished-at="2024-08-26T15:31:24Z" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:52Z" name="beforeMethod" finished-at="2024-08-27T21:25:52Z" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Launch_Youtube()]]>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Launch_Youtube()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_UI_Launch_Youtube()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:24Z" name="TC_UI_Launch_Youtube" finished-at="2024-08-26T15:31:38Z" duration-ms="14293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_Launch_Youtube -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:38Z" name="afterMethod" finished-at="2024-08-26T15:31:39Z" duration-ms="794" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_Launch_Youtube status=SUCCESS method=Step_IN_UI.TC_UI_Launch_Youtube()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Launch_Youtube()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:39Z" name="TC_UI_Search_StepInForum" finished-at="2024-08-26T15:32:17Z" duration-ms="37759" status="FAIL">
+        <test-method signature="TC_Mob_Launch_Youtube()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:52Z" name="TC_Mob_Launch_Youtube" finished-at="2024-08-27T21:25:53Z" duration-ms="1208" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at testCases.Step_IN_UI.TC_UI_Search_StepInForum(Step_IN_UI.java:33)
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logPass(Reporting.java:394)
+	at testCases.Step_IN_Mob.TC_Mob_Launch_Youtube(Step_IN_Mob.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,256 +58,40 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_UI_Search_StepInForum -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:31:39Z" name="beforeMethod" finished-at="2024-08-26T15:31:39Z" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_Mob_Launch_Youtube -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="afterMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="440" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Search_StepInForum()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:17Z" name="afterMethod" finished-at="2024-08-26T15:32:17Z" duration-ms="550" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_Search_StepInForum status=FAILURE method=Step_IN_UI.TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
+                <![CDATA[[TestResult name=TC_Mob_Launch_Youtube status=FAILURE method=Step_IN_Mob.TC_Mob_Launch_Youtube()[pri:0, instance:testCases.Step_IN_Mob@16414e40] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Search_StepInForum()]]>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Launch_Youtube()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:17Z" name="beforeMethod" finished-at="2024-08-26T15:32:17Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="beforeMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_VideoLink()]]>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Search_StepInForum()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_UI_VideoLink()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:17Z" name="TC_UI_VideoLink" finished-at="2024-08-26T15:32:22Z" duration-ms="5142" status="FAIL">
+        <test-method signature="TC_Mob_Search_StepInForum()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="TC_Mob_Search_StepInForum" finished-at="2024-08-27T21:25:53Z" duration-ms="11" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at testCases.Step_IN_UI.TC_UI_VideoLink(Step_IN_UI.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_VideoLink -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:22Z" name="afterMethod" finished-at="2024-08-26T15:32:23Z" duration-ms="343" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_VideoLink status=FAILURE method=Step_IN_UI.TC_UI_VideoLink()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_VideoLink()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="TC_UI_GetVideoNameViaApi()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:23Z" name="TC_UI_GetVideoNameViaApi" finished-at="2024-08-26T15:32:48Z" duration-ms="24847" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at api.APICommon.API_Get(APICommon.java:151)
-	at testCases.Step_IN_UI.TC_UI_GetVideoNameViaApi(Step_IN_UI.java:47)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_GetVideoNameViaApi -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:23Z" name="beforeMethod" finished-at="2024-08-26T15:32:23Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_GetVideoNameViaApi()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:48Z" name="afterMethod" finished-at="2024-08-26T15:32:48Z" duration-ms="40" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_GetVideoNameViaApi status=FAILURE method=Step_IN_UI.TC_UI_GetVideoNameViaApi()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_GetVideoNameViaApi()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="TC_UI_SelectQuality()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:48Z" name="TC_UI_SelectQuality" finished-at="2024-08-26T15:32:59Z" duration-ms="11514" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=128.0.6613.85)
-Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
-System info: host: 'WKWZTKKJU8QLOIL', ip: '10.216.83.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3df628f979cd746c2c1bef93887ad069]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=128.0.6613.85)
-Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
-System info: host: 'WKWZTKKJU8QLOIL', ip: '10.216.83.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3df628f979cd746c2c1bef93887ad069
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
 	at configuration.Keywords.click(Keywords.java:198)
-	at testCases.Step_IN_UI.TC_UI_SelectQuality(Step_IN_UI.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_SelectQuality -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:48Z" name="beforeMethod" finished-at="2024-08-26T15:32:48Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_SelectQuality()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:59Z" name="afterMethod" finished-at="2024-08-26T15:32:59Z" duration-ms="23" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_SelectQuality status=FAILURE method=Step_IN_UI.TC_UI_SelectQuality()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_SelectQuality()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="TC_UI_GetUpNextListAndPost()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:59Z" name="TC_UI_GetUpNextListAndPost" finished-at="2024-08-26T15:33:26Z" duration-ms="26599" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at api.APICommon.API_Post(APICommon.java:134)
-	at testCases.Step_IN_UI.TC_UI_GetUpNextListAndPost(Step_IN_UI.java:68)
+	at testCases.Step_IN_Mob.TC_Mob_Search_StepInForum(Step_IN_Mob.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -355,39 +121,220 @@ Session ID: 3df628f979cd746c2c1bef93887ad069
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_UI_GetUpNextListAndPost -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:32:59Z" name="beforeMethod" finished-at="2024-08-26T15:32:59Z" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_Mob_Search_StepInForum -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="afterMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="113" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_GetUpNextListAndPost()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:33:26Z" name="afterMethod" finished-at="2024-08-26T15:33:26Z" duration-ms="38" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_GetUpNextListAndPost status=FAILURE method=Step_IN_UI.TC_UI_GetUpNextListAndPost()[pri:0, instance:testCases.Step_IN_UI@1b835480] output={null}]]]>
+                <![CDATA[[TestResult name=TC_Mob_Search_StepInForum status=FAILURE method=Step_IN_Mob.TC_Mob_Search_StepInForum()[pri:0, instance:testCases.Step_IN_Mob@16414e40] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testCases.Step_IN_UI.TC_UI_GetUpNextListAndPost()]]>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Search_StepInForum()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_UI@1b835480]" started-at="2024-08-26T15:33:26Z" name="afterTest" finished-at="2024-08-26T15:33:27Z" duration-ms="892" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="beforeMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_VideoLink()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_Mob_VideoLink()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="TC_Mob_VideoLink" finished-at="2024-08-27T21:25:53Z" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at testCases.Step_IN_Mob.TC_Mob_VideoLink(Step_IN_Mob.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Mob_VideoLink -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="afterMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="72" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Mob_VideoLink status=FAILURE method=Step_IN_Mob.TC_Mob_VideoLink()[pri:0, instance:testCases.Step_IN_Mob@16414e40] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_VideoLink()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="beforeMethod" finished-at="2024-08-27T21:25:53Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetVideoNameViaApi()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_Mob_GetVideoNameViaApi()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:25:53Z" name="TC_Mob_GetVideoNameViaApi" finished-at="2024-08-27T21:26:16Z" duration-ms="22781" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logFail(Reporting.java:363)
+	at api.APICommon.API_Get(APICommon.java:149)
+	at testCases.Step_IN_Mob.TC_Mob_GetVideoNameViaApi(Step_IN_Mob.java:55)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Mob_GetVideoNameViaApi -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:26:16Z" name="afterMethod" finished-at="2024-08-27T21:26:16Z" duration-ms="41" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Mob_GetVideoNameViaApi status=FAILURE method=Step_IN_Mob.TC_Mob_GetVideoNameViaApi()[pri:0, instance:testCases.Step_IN_Mob@16414e40] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetVideoNameViaApi()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:26:16Z" name="beforeMethod" finished-at="2024-08-27T21:26:16Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetUpNextListAndPost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_Mob_GetUpNextListAndPost()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:26:16Z" name="TC_Mob_GetUpNextListAndPost" finished-at="2024-08-27T21:26:16Z" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at utilities.Reporting.takeScreenshot(Reporting.java:519)
+	at utilities.Reporting.logFail(Reporting.java:363)
+	at configuration.Keywords.getWebElementList(Keywords.java:119)
+	at testCases.Step_IN_Mob.TC_Mob_GetUpNextListAndPost(Step_IN_Mob.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Mob_GetUpNextListAndPost -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:26:16Z" name="afterMethod" finished-at="2024-08-27T21:26:16Z" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Mob_GetUpNextListAndPost status=FAILURE method=Step_IN_Mob.TC_Mob_GetUpNextListAndPost()[pri:0, instance:testCases.Step_IN_Mob@16414e40] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetUpNextListAndPost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_Mob@16414e40]" started-at="2024-08-27T21:26:16Z" name="afterTest" finished-at="2024-08-27T21:26:16Z" duration-ms="45" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- testCases.Step_IN_UI -->
+      </class> <!-- testCases.Step_IN_Mob -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

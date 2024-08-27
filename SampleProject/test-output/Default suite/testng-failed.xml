@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.Step_IN_UI">
+      <class name="testCases.Step_IN_Mob">
         <methods>
-          <include name="TC_UI_GetVideoNameViaApi"/>
+          <include name="TC_Mob_GetUpNextListAndPost"/>
+          <include name="TC_Mob_Launch_Youtube"/>
           <include name="beforeMethod"/>
-          <include name="TC_UI_Search_StepInForum"/>
+          <include name="TC_Mob_VideoLink"/>
+          <include name="TC_Mob_GetVideoNameViaApi"/>
           <include name="afterTest"/>
-          <include name="TC_UI_GetUpNextListAndPost"/>
-          <include name="TC_UI_VideoLink"/>
+          <include name="TC_Mob_Search_StepInForum"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="TC_UI_SelectQuality"/>
         </methods>
-      </class> <!-- testCases.Step_IN_UI -->
+      </class> <!-- testCases.Step_IN_Mob -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
