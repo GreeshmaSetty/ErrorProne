@@ -80,7 +80,7 @@ public static String Mode = "UI";
 			// Set DesiredCapabilities
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.0");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.0");
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
 
 			// Set Browser and Chromedriver Capabilities
