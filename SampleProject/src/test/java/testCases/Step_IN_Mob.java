@@ -42,23 +42,35 @@ public class Step_IN_Mob extends Global {
 		logger.logPass("Navigation", "Navigated to Details Page");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void TC_Mob_GetProducts() {
 		//User changed value
 		//int prodCount = actions.getWebElementListWithoutExcel(mlocator.productCount).size();
+		try {
 		int prodCount = 2;
 		for(int i=1; i<=prodCount; i++) {
-			String ProductValue = mlocator.ProductsList.replace("##", String.valueOf(prodCount));
+			String ProductValue = mlocator.ProductsList.replace("##", String.valueOf(i));
 			List<WebElement> prodDetails = actions.getWebElementListWithoutExcel(ProductValue);
 			String[] productList =  common.GetAllProductDetails(prodDetails);
 			String jsonBody = actions.jsonCreateMob(productList);
 			logger.logInfo("Send Request : "+prodCount+" : "+jsonBody);
 			String Url = "http://ec2-54-254-162-245.ap-southeast-1.compute.amazonaws.com:9000/items/";
 			String response = api.API_Post(jsonBody, Url);
+			String sent_name = actions.getResponseValueStr(response, "name");
 			logger.logInfo("Send Response : "+prodCount+" : "+response);
 			String obtained_id = actions.getResponseValue(response, "id");
 			String get_resposne = api.API_Get(Url+obtained_id);
 			logger.logInfo("Received Response : "+prodCount+" : "+get_resposne);
+			String obtained_name = actions.getResponseValueStr(get_resposne, "name");
+			if(obtained_name.contains(sent_name)) {
+				logger.logPass("Validated Name : ", obtained_name);
+			}else {
+				logger.logFail("Name validation Failed : "+sent_name);
+			}
+		}
+		logger.logPass("Products fetched" , "Post and Get are working as expecetd");
+		}catch(Exception e) {
+			logger.logFail("Products fetched failed" + e.getMessage());
 		}
 	}
 }

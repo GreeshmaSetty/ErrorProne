@@ -168,6 +168,11 @@ public class APICommon {
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
 			dataGenerate.writeApiData("getCall", "VideoName", response.asString());
+			if(response.getStatusCode() ==200) {
+				logger.logPass("Status Code : ", "200");
+			}else {
+				logger.logFail("Status Code is not 200 but it is : ");
+			}
 		} catch (Exception e) {
 			logger.logFail("Failed to Post due to exception " + e.getMessage());
 		}

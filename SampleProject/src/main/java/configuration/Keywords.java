@@ -879,6 +879,15 @@ public String getResponseValue(String response, String id) {
 	return returnValue;
 }
 
+public String getResponseValueStr(String response, String id) {
+	JSONObject jsonObject = new JSONObject(response);
+	String returnValue = jsonObject.getString(id);
+	//String returnValue = String.valueOf(intValue);
+	return returnValue;
+}
+
+
+
 public String dateformat (String datetime)
 {
 	String originalDateTime = datetime;
