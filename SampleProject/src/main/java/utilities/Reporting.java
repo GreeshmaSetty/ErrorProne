@@ -57,7 +57,7 @@ public class Reporting extends BrowserConfig {
 			File fileReport = new File(Reportpath);
 			if (!fileReport.exists())
 				fileReport.mkdir();
-			extendReportPath = System.getProperty("user.dir") + "\\Reports\\Reports" + Reporttimestamp;
+			extendReportPath = System.getProperty("user.dir") + "\\Reports";
 			File file = new File(extendReportPath);
 			if (!file.exists()) {
 				file.mkdir();
@@ -68,7 +68,7 @@ public class Reporting extends BrowserConfig {
 			}
 			
 			htmlReporter = new ExtentHtmlReporter(
-					extendReportPath + "\\ExtentReport\\ExtentReport" + Reporttimestamp + ".html");
+					extendReportPath + "\\ExtentReport\\ExtentReport.html");
 			// Custom CSS for JSON styling
 						String css = ".json-pre { " +
 			                    "  font-family: monospace; " +
