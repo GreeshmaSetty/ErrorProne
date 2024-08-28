@@ -5,6 +5,8 @@ import java.io.FileWriter;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
+
+import org.json.JSONObject;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -27,25 +29,37 @@ public class Step_IN_Mob extends Global {
 
 	
 	@Test(priority = 0)
-	public void TC_Mob_Launch_Youtube() {
+	public void TC_Mob_Launch() {
 		common.Launch("Mobile", "https://www.youtube.com/");
 		logger.logPass("Launch", "Step In Forum Launched");
 		
 	}
 
 	@Test(priority = 1)
-	public void TC_Mob_Search_StepInForum() {
-		actions.waitExplicit(mlocator.LoginBtn, 60);
-		actions.click(mlocator.LoginBtn);
-		logger.logPass("Click", "Click on Login button");
-		actions.click(mlocator.OkBtn);
-		//actions.getWebElement(mlocator.search).sendKeys("step-inforum" + Keys.ENTER);
-		logger.logPass("Click", "Click on OK button");
-		//actions.waitImplicit(mlocator.step_in_channel, 5);
-		//actions.getWebElement(mlocator.step_in_channel).click();
-		//actions.waitImplicit(mlocator.Video, 5);
+	public void TC_Mob_GoToDetailPage() {
+		actions.waitExplicit(mlocator.getProd_Btn, 60);
+		actions.click(mlocator.getProd_Btn);
+		logger.logPass("Click", "Click on Get Products button");
+		actions.waitExplicit(mlocator.ProductsList, 10);
+		logger.logPass("Navigation", "Navigated to Details Page");
 	}
 
-	
-
+	@Test(priority = 2)
+	public void TC_Mob_GetProducts() {
+		//User changed value
+		//int prodCount = actions.getWebElementListWithoutExcel(mlocator.productCount).size();
+		int prodCount = 2;
+		for(int i=1; i<=prodCount; i++) {
+			String ProductValue = mlocator.ProductsList.replace("##", String.valueOf(prodCount));
+			List<WebElement> prodDetails = actions.getWebElementListWithoutExcel(ProductValue);
+			String[] productList =  common.GetAllProductDetails(prodDetails);
+			String jsonBody = actions.jsonCreateMob(productList);
+			String Url = "http://ec2-54-254-162-245.ap-southeast-1.compute.amazonaws.com:9000/items/";
+			String response = api.API_Post(jsonBody, Url);
+			logger.logInfo("Response : "+prodCount+" : "+response);
+			String obtained_id = actions.getResponseValue(response, "id");
+			String get_resposne = api.API_Get(Url+obtained_id);
+			logger.logInfo("Response : "+prodCount+" : "+get_resposne);
+		}
+	}
 }

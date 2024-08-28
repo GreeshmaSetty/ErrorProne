@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.testng.Assert;
+import org.json.JSONObject;
 import org.json.simple.JSONArray;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -832,4 +833,30 @@ public class Keywords extends BrowserConfig {
 		}
 		return json;
 	}
+
+public String jsonCreateMob(String[] list) {
+	JSONArray NewsDataArray = new JSONArray();
+	String[] sList = list;
+	String json = "{\r\n" + 
+			" \r\n" + 
+			"  \"name\": \"name_string\",\r\n" + 
+			"  \"description\": \"desc_string\",\r\n" + 
+			"  \"price\": price_string,\r\n" + 
+			"  \"item_type\": \"Electronics\",\r\n" + 
+			"  \"team_name\": \"Epsilon1\"\r\n" + 
+			"}";
+	json = json.replace("name_string", list[0]);
+	json = json.replace("desc_string", list[1]);
+	json = json.replace("price_string", list[2].substring(1));
+		System.out.println(json);
+	
+	return json;
+}
+
+public String getResponseValue(String response, String id) {
+	JSONObject jsonObject = new JSONObject(response);
+	int intValue = jsonObject.getInt(id);
+	String returnValue = String.valueOf(intValue);
+	return returnValue;
+}
 }

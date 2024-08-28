@@ -25,3 +25,85 @@ Session ID: 3df628f979cd746c2c1bef93887ad069
 2024-08-28 00:52:39 INFO  TestAutothon:417 - Launch
 2024-08-28 00:52:44 INFO  TestAutothon:417 - Click
 2024-08-28 00:52:45 INFO  TestAutothon:417 - Click
+2024-08-28 10:01:42 INFO  TestAutothon:417 - Launch
+2024-08-28 10:01:47 INFO  TestAutothon:417 - Click
+2024-08-28 10:08:42 INFO  TestAutothon:417 - Launch
+2024-08-28 10:08:51 INFO  TestAutothon:417 - Click
+2024-08-28 10:10:50 INFO  TestAutothon:417 - Launch
+2024-08-28 10:10:55 INFO  TestAutothon:417 - Click
+2024-08-28 10:14:40 INFO  TestAutothon:417 - Launch
+2024-08-28 10:14:46 INFO  TestAutothon:417 - Click
+2024-08-28 10:16:15 INFO  TestAutothon:417 - Launch
+2024-08-28 10:16:19 INFO  TestAutothon:417 - Click
+2024-08-28 10:32:56 INFO  TestAutothon:417 - Launch
+2024-08-28 10:33:00 INFO  TestAutothon:417 - Click
+2024-08-28 10:34:40 INFO  TestAutothon:417 - Launch
+2024-08-28 10:34:44 INFO  TestAutothon:417 - Click
+2024-08-28 10:36:16 INFO  TestAutothon:417 - Launch
+2024-08-28 10:36:20 INFO  TestAutothon:417 - Click
+2024-08-28 10:44:06 INFO  TestAutothon:417 - Launch
+2024-08-28 10:44:10 INFO  TestAutothon:417 - Click
+2024-08-28 10:55:57 INFO  TestAutothon:417 - Launch
+2024-08-28 10:56:02 INFO  TestAutothon:417 - Click
+2024-08-28 10:56:39 INFO  TestAutothon:417 - Launch
+2024-08-28 10:56:43 INFO  TestAutothon:417 - Click
+2024-08-28 10:58:10 INFO  TestAutothon:417 - Launch
+2024-08-28 10:58:14 INFO  TestAutothon:417 - Click
+2024-08-28 11:01:25 INFO  TestAutothon:417 - Launch
+2024-08-28 11:01:29 INFO  TestAutothon:417 - Click
+2024-08-28 11:02:52 INFO  TestAutothon:417 - Launch
+2024-08-28 11:02:56 INFO  TestAutothon:417 - Click
+2024-08-28 11:03:48 INFO  TestAutothon:417 - Launch
+2024-08-28 11:03:52 INFO  TestAutothon:417 - Click
+2024-08-28 11:04:11 INFO  TestAutothon:383 - Failed to get product details from list due to exception Cached elements 'By.xpath: //androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]//android.widget.TextView[@text]' do not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '172.20.10.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\gresetty\git\Error..., appPackage: com.dharma.stepin, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\gresetty\git\Error..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 34, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1232, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: b2951f45-a22c-472c-b640-f921b883977c
+2024-08-28 11:04:47 INFO  TestAutothon:417 - Launch
+2024-08-28 11:04:51 INFO  TestAutothon:417 - Click
+2024-08-28 11:16:44 INFO  TestAutothon:417 - Launch
+2024-08-28 11:16:48 INFO  TestAutothon:417 - Click
+2024-08-28 11:16:49 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:19:27 INFO  TestAutothon:417 - Launch
+2024-08-28 11:19:31 INFO  TestAutothon:417 - Click
+2024-08-28 11:19:32 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:22:03 INFO  TestAutothon:417 - Launch
+2024-08-28 11:22:06 INFO  TestAutothon:417 - Click
+2024-08-28 11:22:07 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:22:08 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:22:51 INFO  TestAutothon:417 - Launch
+2024-08-28 11:22:57 INFO  TestAutothon:417 - Click
+2024-08-28 11:22:58 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:22:59 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:23:00 INFO  TestAutothon:383 - Error while finding the Element list due to exception org.eclipse.wst.xml.xpath2.processor.XPathParserException: JFlex lexer error: Unknown character at line 1 col 116: #
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '172.20.10.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\gresetty\git\Error..., appPackage: com.dharma.stepin, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\gresetty\git\Error..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 34, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1232, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 2fd8f96f-afe8-4650-ba13-c3c86fcd4060
+*** Element info: {Using=xpath, value=//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[##]//android.widget.TextView[@text]}
+2024-08-28 11:23:45 INFO  TestAutothon:417 - Launch
+2024-08-28 11:23:49 INFO  TestAutothon:417 - Click
+2024-08-28 11:24:06 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:24:17 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:25:01 INFO  TestAutothon:417 - Launch
+2024-08-28 11:25:05 INFO  TestAutothon:417 - Click
+2024-08-28 11:25:06 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:25:06 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:25:09 INFO  TestAutothon:417 - Get Response value: 
+2024-08-28 11:33:44 INFO  TestAutothon:417 - Launch
+2024-08-28 11:33:48 INFO  TestAutothon:417 - Click
+2024-08-28 11:33:48 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:33:49 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:34:38 INFO  TestAutothon:417 - Launch
+2024-08-28 11:34:42 INFO  TestAutothon:417 - Click
+2024-08-28 11:34:57 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:35:06 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:35:43 INFO  TestAutothon:417 - Launch
+2024-08-28 11:35:47 INFO  TestAutothon:417 - Click
+2024-08-28 11:35:48 INFO  TestAutothon:383 - Wait Explicit failed due to null
+2024-08-28 11:35:48 INFO  TestAutothon:417 - Navigation

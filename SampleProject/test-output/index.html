@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\gresetty\AppData\Local\Temp\testng-eclipse--915009301\testng-customsuite.xml</span>
+                    <span>C:\Users\gresetty\AppData\Local\Temp\testng-eclipse-1373416613\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_Launch_Youtube">TC_Mob_Launch_Youtube</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_GetProducts">TC_Mob_GetProducts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_Search_StepInForum">TC_Mob_Search_StepInForum</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_GoToDetailPage">TC_Mob_GoToDetailPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_Launch">TC_Mob_Launch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -129,16 +134,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_Mob_Launch_Youtube">
-                  </a> <!-- TC_Mob_Launch_Youtube -->
-                  <span class="method-name">TC_Mob_Launch_Youtube</span>
+                  <a name="TC_Mob_GetProducts">
+                  </a> <!-- TC_Mob_GetProducts -->
+                  <span class="method-name">TC_Mob_GetProducts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_Mob_Search_StepInForum">
-                  </a> <!-- TC_Mob_Search_StepInForum -->
-                  <span class="method-name">TC_Mob_Search_StepInForum</span>
+                  <a name="TC_Mob_GoToDetailPage">
+                  </a> <!-- TC_Mob_GoToDetailPage -->
+                  <span class="method-name">TC_Mob_GoToDetailPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_Mob_Launch">
+                  </a> <!-- TC_Mob_Launch -->
+                  <span class="method-name">TC_Mob_Launch</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +158,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\gresetty\AppData\Local\Temp\testng-eclipse--915009301\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\gresetty\AppData\Local\Temp\testng-eclipse-1373416613\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,20 +207,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_Mob_Launch_Youtube')
+data.setCell(0, 1, 'TC_Mob_Launch')
 data.setCell(0, 2, 'testCases.Step_IN_Mob')
-data.setCell(0, 3, 32303);
+data.setCell(0, 3, 17038);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_Mob_Search_StepInForum')
+data.setCell(1, 1, 'TC_Mob_GoToDetailPage')
 data.setCell(1, 2, 'testCases.Step_IN_Mob')
-data.setCell(1, 3, 5741);
+data.setCell(1, 3, 5171);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_Mob_GetProducts')
+data.setCell(2, 2, 'testCases.Step_IN_Mob')
+data.setCell(2, 3, 2764);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -240,34 +256,44 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_Launch_Youtube())</span>
-                <span class="method-start">180 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_Launch())</span>
+                <span class="method-start">103 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_Mob_Launch_Youtube</span>
-                <span class="method-start">186 ms</span>
+                <span class="method-name">TC_Mob_Launch</span>
+                <span class="method-start">105 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_Mob_Launch_Youtube status=SUCCESS method=Step_IN_Mob.TC_Mob_Launch_Youtube()[pri...)</span>
-                <span class="method-start">32491 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Mob.TC_Mob_Launch()[pri:0, instance:tes...)</span>
+                <span class="method-start">17145 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_Search_StepInForum())</span>
-                <span class="method-start">32945 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_GoToDetailPage())</span>
+                <span class="method-start">17391 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_Mob_Search_StepInForum</span>
-                <span class="method-start">32945 ms</span>
+                <span class="method-name">TC_Mob_GoToDetailPage</span>
+                <span class="method-start">17391 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_Mob_Search_StepInForum status=SUCCESS method=Step_IN_Mob.TC_Mob_Search_StepInFor...)</span>
-                <span class="method-start">38688 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_GoToDetailPage status=SUCCESS method=Step_IN_Mob.TC_Mob_GoToDetailPage()[pri...)</span>
+                <span class="method-start">22562 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_GetProducts())</span>
+                <span class="method-start">22610 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_Mob_GetProducts</span>
+                <span class="method-start">22610 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_GetProducts status=SUCCESS method=Step_IN_Mob.TC_Mob_GetProducts()[pri:0, in...)</span>
+                <span class="method-start">25375 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">afterTest</span>
-                <span class="method-start">38767 ms</span>
+                <span class="method-start">25413 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -134,6 +134,29 @@ public class APICommon {
 		return response.asString();
 	}
 	
+	public String API_Post(String jsonBody, String Url) {
+	    Response response = null;
+	    String sURL = refactorWithRandomizedValues(Url);
+	   // String refactoredJsonBody = refactorWithRandomizedValues(jsonBody).trim();
+
+	    try {            
+	        response = (Response) given()
+	            .header("Content-Type", "application/json")  // Set content type to JSON
+	            .body(jsonBody)                   // Pass the JSON body
+	            .expect().when()
+	            .post(sURL);                                // Send the POST request
+	        
+	        String getStatusCode = String.valueOf(response.getStatusCode());
+	        //verifyStatusCode(statusCode, getStatusCode, response.asString());
+	        //dataGenerate.writeResponse(Key, response.asString());
+	        //writeResponseToData(response, "Post");
+	    } catch (Exception e) {
+	        logger.logFail("Failed to Post due to exception " + e.getMessage());
+	    }
+	    return response.asString();
+	}
+
+	
 	public String API_Get(String Url) {
 		Headers apiheader =  getHeaders();
 		Response response = null;

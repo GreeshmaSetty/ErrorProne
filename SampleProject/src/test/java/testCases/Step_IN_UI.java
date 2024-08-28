@@ -20,7 +20,7 @@ public class Step_IN_UI extends Global {
 
 	@Test(priority = 0)
 	public void TC_UI_Launch_Youtube() {
-		common.Launch("UI", "https://www.youtube.com/");
+		common.Launch("UI", "https://www.indianexpress.com");
 		logger.logPass("Launch", "Step In Forum Launched");
 	}
 
@@ -59,16 +59,6 @@ public class Step_IN_UI extends Global {
 		actions.select("360");			
 	}
 
-	@Test(priority = 5)
-	public void TC_UI_GetUpNextListAndPost() {
-			List<WebElement>videolist=actions.getWebElementList(ulocator.upnext);
-			String[] upNextList = common.GetUpNextVideo(videolist);
-			String jsonValue = actions.jsonCreate(upNextList);
-			File file = common.WriteToJsonFile(jsonValue,"UI");
-			String response = api.API_Post(file, "http://54.169.34.162:5252/upload");
-			logger.logPass("API uploaded response",response);
-			String getResponse = api.API_Get("http://54.169.34.162:5252/result/"+response);
-			logger.logPass("API Get response",getResponse);
-	}
+	
 
 }

@@ -49,8 +49,8 @@ public class Step_IN_Parallel extends Global {
 		}
 		else if(Mode.equals("Mobile")) {
 			try {
-				mob.TC_Mob_Launch_Youtube();
-				mob.TC_Mob_Search_StepInForum();
+				mob.TC_Mob_Launch();
+				//mob.TC_Mob_Sear();
 				
 			}catch(Exception e) {
 				System.out.println(e.getMessage());

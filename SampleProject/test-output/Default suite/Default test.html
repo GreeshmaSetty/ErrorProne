@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 28 00:52:06 IST 2024</td>
+<td>Started on:</td><td>Wed Aug 28 11:35:26 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38912 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25443 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,112 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testCases.Step_IN_Mob.afterTest()'><b>afterTest</b><br>Test class: testCases.Step_IN_Mob</td>
-<td><div><pre>org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
-Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T13:42:21&apos;
-System info: host: &apos;WKWZTKKJU8QLOIL&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\gresetty\git\Error..., appPackage: com.dayforce.wallet, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\gresetty\git\Error..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 34, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1232, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 8f165dc4-8dd7-4fd1-a649-1745202a65a1
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:463)
-	at configuration.Keywords.quitBrowser(Keywords.java:39)
-	at configuration.Global.afterTest(Global.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1014)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1820355723", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1820355723'><pre>org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
-Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T13:42:21&apos;
-System info: host: &apos;WKWZTKKJU8QLOIL&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\gresetty\git\Error..., appPackage: com.dayforce.wallet, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\gresetty\git\Error..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 34, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1232, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 8f165dc4-8dd7-4fd1-a649-1745202a65a1
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:463)
-	at configuration.Keywords.quitBrowser(Keywords.java:39)
-	at configuration.Global.afterTest(Global.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1014)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -181,15 +75,20 @@ Session ID: 8f165dc4-8dd7-4fd1-a649-1745202a65a1
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.Step_IN_Mob.TC_Mob_Launch_Youtube()'><b>TC_Mob_Launch_Youtube</b><br>Test class: testCases.Step_IN_Mob</td>
+<td title='testCases.Step_IN_Mob.TC_Mob_GetProducts()'><b>TC_Mob_GetProducts</b><br>Test class: testCases.Step_IN_Mob</td>
 <td></td>
-<td>32</td>
-<td>testCases.Step_IN_Mob@1b835480</td></tr>
+<td>2</td>
+<td>testCases.Step_IN_Mob@6fb365ed</td></tr>
 <tr>
-<td title='testCases.Step_IN_Mob.TC_Mob_Search_StepInForum()'><b>TC_Mob_Search_StepInForum</b><br>Test class: testCases.Step_IN_Mob</td>
+<td title='testCases.Step_IN_Mob.TC_Mob_GoToDetailPage()'><b>TC_Mob_GoToDetailPage</b><br>Test class: testCases.Step_IN_Mob</td>
 <td></td>
 <td>5</td>
-<td>testCases.Step_IN_Mob@1b835480</td></tr>
+<td>testCases.Step_IN_Mob@6fb365ed</td></tr>
+<tr>
+<td title='testCases.Step_IN_Mob.TC_Mob_Launch()'><b>TC_Mob_Launch</b><br>Test class: testCases.Step_IN_Mob</td>
+<td></td>
+<td>17</td>
+<td>testCases.Step_IN_Mob@6fb365ed</td></tr>
 </table><p>
 </body>
 </html>

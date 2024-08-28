@@ -407,7 +407,7 @@ public class Reporting extends BrowserConfig {
 			 * step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName +
 			 * "</p></td>"; }
 			 */
-			test.log(Status.PASS, stepName1,
+			test.log(Status.PASS, stepName1+stepName2,
 					MediaEntityBuilder.createScreenCaptureFromPath(userDirector1 + ImageFileName1).build());
 			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
 			String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
