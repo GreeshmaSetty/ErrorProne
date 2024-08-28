@@ -5,6 +5,8 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -858,5 +860,26 @@ public String getResponseValue(String response, String id) {
 	int intValue = jsonObject.getInt(id);
 	String returnValue = String.valueOf(intValue);
 	return returnValue;
+}
+
+public String dateformat (String datetime)
+{
+	String originalDateTime = datetime;
+    
+    // Extract the date part
+    String datePart = originalDateTime.split("T")[0];
+    
+    // Parse the date part to a LocalDate object
+    LocalDate date = LocalDate.parse(datePart);
+    
+    // Define the desired format
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+    
+    // Format the date
+    String formattedDate = date.format(formatter);
+    
+    // Output the formatted date
+  return formattedDate;  // Output: 27082024
+ 
 }
 }

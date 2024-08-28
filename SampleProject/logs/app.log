@@ -107,3 +107,9 @@ Session ID: 2fd8f96f-afe8-4650-ba13-c3c86fcd4060
 2024-08-28 11:35:47 INFO  TestAutothon:417 - Click
 2024-08-28 11:35:48 INFO  TestAutothon:383 - Wait Explicit failed due to null
 2024-08-28 11:35:48 INFO  TestAutothon:417 - Navigation
+2024-08-28 11:46:32 INFO  TestAutothon:417 - Launch
+2024-08-28 11:52:04 INFO  TestAutothon:417 - Launch
+2024-08-28 11:54:07 INFO  TestAutothon:417 - Clicking on alert button DontAllow
+2024-08-28 11:54:47 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 11:54:53 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 11:55:04 INFO  TestAutothon:417 - Navigating to the tab Politics
