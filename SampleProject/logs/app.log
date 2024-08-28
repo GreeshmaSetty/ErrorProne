@@ -210,3 +210,15 @@ Session ID: 8b4214d015174743be79eb58ba491d15
 2024-08-28 12:41:51 INFO  TestAutothon:417 - Click
 2024-08-28 12:41:52 INFO  TestAutothon:417 - Navigation
 2024-08-28 12:41:56 INFO  TestAutothon:417 - Products fetched
+2024-08-28 12:46:24 INFO  TestAutothon:417 - Launch
+2024-08-28 12:46:29 INFO  TestAutothon:417 - Launch
+2024-08-28 12:46:36 INFO  TestAutothon:383 - Failed to load page in 30 due to exception Method is not implemented
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\gresetty\git\Error..., appPackage: com.dharma.stepin, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\gresetty\git\Error..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: android}, deviceApiLevel: 34, deviceManufacturer: Google, deviceModel: sdk_gphone64_x86_64, deviceName: emulator-5554, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1232, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: adf1a7cb-e92f-4e62-a845-091187075b4f
+2024-08-28 12:46:37 INFO  TestAutothon:417 - Click
+2024-08-28 12:46:39 INFO  TestAutothon:417 - Navigation
+2024-08-28 12:46:40 INFO  TestAutothon:383 - Given element to JS click is null. Verify the Locator given
+2024-08-28 12:49:40 INFO  TestAutothon:417 - Launch

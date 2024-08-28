@@ -2,31 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [TestAutothon]">
   <parameter name="Mode" value="Mobile"/>
-  <test parallel="tests" name="MobileMode(failed)">
-    <parameter name="Mode" value="Mobile"/>
-    <classes>
-      <class name="testCases.Step_IN_Mob">
-        <methods>
-          <include name="TC_Mob_GetUpNextListAndPost"/>
-          <include name="beforeMethod"/>
-          <include name="TC_Mob_VideoLink"/>
-          <include name="TC_Mob_GetVideoNameViaApi"/>
-          <include name="afterTest"/>
-          <include name="TC_Mob_Search_StepInForum"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testCases.Step_IN_Mob -->
-      <class name="testCases.Step_IN_UI">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testCases.Step_IN_UI -->
-    </classes>
-  </test> <!-- MobileMode(failed) -->
   <test parallel="tests" name="UIMode(failed)">
     <parameter name="Mode" value="UI"/>
     <classes>
@@ -40,15 +15,11 @@
       </class> <!-- testCases.Step_IN_Mob -->
       <class name="testCases.Step_IN_UI">
         <methods>
-          <include name="TC_UI_GetVideoNameViaApi"/>
           <include name="beforeMethod"/>
           <include name="TC_UI_Search_StepInForum"/>
           <include name="afterTest"/>
-          <include name="TC_UI_GetUpNextListAndPost"/>
-          <include name="TC_UI_VideoLink"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="TC_UI_SelectQuality"/>
         </methods>
       </class> <!-- testCases.Step_IN_UI -->
     </classes>

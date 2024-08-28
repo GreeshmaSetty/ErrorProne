@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [TestAutothon]">
+  <parameter name="Mode" value="Mobile"/>
+  <test parallel="tests" name="UIMode(failed)">
+    <parameter name="Mode" value="UI"/>
     <classes>
-      <class name="testCases.Step_IN_Sequential">
+      <class name="testCases.Step_IN_Mob">
         <methods>
           <include name="beforeMethod"/>
           <include name="afterTest"/>
-          <include name="TC_Mob_GoToDetailPage"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testCases.Step_IN_Sequential -->
+      </class> <!-- testCases.Step_IN_Mob -->
+      <class name="testCases.Step_IN_UI">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="TC_UI_Search_StepInForum"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases.Step_IN_UI -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- UIMode(failed) -->
+</suite> <!-- Failed suite [TestAutothon] -->

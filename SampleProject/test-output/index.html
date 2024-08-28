@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-TestAutothon" class="navigator-link">
+              <span class="suite-name border-failed">TestAutothon</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\gresetty\AppData\Local\Temp\testng-eclipse--1091200595\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-TestAutothon" class="navigator-link ">
+                    <span>C:\Users\gresetty\git\ErrorProne\SampleProject\src\test\resources\testNgSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-TestAutothon" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-TestAutothon" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-TestAutothon" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-TestAutothon" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-TestAutothon" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-TestAutothon" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,41 +90,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestAutothon" class="hide-methods failed suite-TestAutothon"> (hide)</a> <!-- hide-methods failed suite-TestAutothon -->
+                      <a href="#" panel-name="suite-TestAutothon" class="show-methods failed suite-TestAutothon"> (show)</a> <!-- show-methods failed suite-TestAutothon -->
+                    </span>
+                    <div class="method-list-content failed suite-TestAutothon">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestAutothon" title="testCases.Step_IN_UI" class="method navigator-link" hash-for-method="TC_UI_Search_StepInForum">TC_UI_Search_StepInForum</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestAutothon -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-TestAutothon" class="hide-methods passed suite-TestAutothon"> (hide)</a> <!-- hide-methods passed suite-TestAutothon -->
+                      <a href="#" panel-name="suite-TestAutothon" class="show-methods passed suite-TestAutothon"> (show)</a> <!-- show-methods passed suite-TestAutothon -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-TestAutothon">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Sequential" class="method navigator-link" hash-for-method="TC_Mob_GetProducts">TC_Mob_GetProducts</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestAutothon" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_GetProducts">TC_Mob_GetProducts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Sequential" class="method navigator-link" hash-for-method="TC_Mob_GoToDetailPage">TC_Mob_GoToDetailPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestAutothon" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_GoToDetailPage">TC_Mob_GoToDetailPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Sequential" class="method navigator-link" hash-for-method="TC_Mob_Launch">TC_Mob_Launch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestAutothon" title="testCases.Step_IN_Mob" class="method navigator-link" hash-for-method="TC_Mob_Launch">TC_Mob_Launch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Sequential" class="method navigator-link" hash-for-method="TC_UI_Launch_IndianExpress">TC_UI_Launch_IndianExpress</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestAutothon" title="testCases.Step_IN_UI" class="method navigator-link" hash-for-method="TC_UI_Launch_IndianExpress">TC_UI_Launch_IndianExpress</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testCases.Step_IN_Sequential" class="method navigator-link" hash-for-method="TC_UI_Search_StepInForum">TC_UI_Search_StepInForum</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-TestAutothon -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -135,11 +144,35 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-TestAutothon" class="panel TestAutothon">
+          <div class="suite-TestAutothon-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Step_IN_UI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_UI_Search_StepInForum">
+                  </a> <!-- TC_UI_Search_StepInForum -->
+                  <span class="method-name">TC_UI_Search_StepInForum</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at configuration.Keywords.click(Keywords.java:201)
+	at testCases.Step_IN_UI.TC_UI_Search_StepInForum(Step_IN_UI.java:39)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestAutothon-class-failed -->
+          <div class="suite-TestAutothon-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.Step_IN_Sequential</span>
+              <span class="class-name">testCases.Step_IN_Mob</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -163,6 +196,14 @@
                   <span class="method-name">TC_Mob_Launch</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestAutothon-class-passed -->
+          <div class="suite-TestAutothon-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Step_IN_UI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="TC_UI_Launch_IndianExpress">
@@ -170,62 +211,65 @@
                   <span class="method-name">TC_UI_Launch_IndianExpress</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_UI_Search_StepInForum">
-                  </a> <!-- TC_UI_Search_StepInForum -->
-                  <span class="method-name">TC_UI_Search_StepInForum</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-TestAutothon-class-passed -->
+        </div> <!-- panel TestAutothon -->
+        <div panel-name="test-xml-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\gresetty\AppData\Local\Temp\testng-eclipse--1091200595\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\gresetty\git\ErrorProne\SampleProject\src\test\resources\testNgSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
-  &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;TestAutothon&quot;&gt;
+  &lt;test name=&quot;UIMode&quot;&gt;
+    &lt;parameter name=&quot;Mode&quot; value=&quot;UI&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.Step_IN_Sequential&quot;/&gt;
+      &lt;class name=&quot;testCases.Step_IN_UI&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- UIMode --&gt;
+  &lt;test name=&quot;MobileMode&quot;&gt;
+    &lt;parameter name=&quot;Mode&quot; value=&quot;Mobile&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Step_IN_Mob&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- MobileMode --&gt;
+&lt;/suite&gt; &lt;!-- TestAutothon --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for TestAutothon</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">UIMode (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">MobileMode (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for TestAutothon</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for TestAutothon</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_TestAutothon');
+function tableData_TestAutothon() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -233,123 +277,160 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_UI_Search_StepInForum')
-data.setCell(0, 2, 'testCases.Step_IN_Sequential')
-data.setCell(0, 3, 63110);
+data.setCell(0, 1, 'TC_UI_Launch_IndianExpress')
+data.setCell(0, 2, 'testCases.Step_IN_UI')
+data.setCell(0, 3, 38353);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC_Mob_Launch')
-data.setCell(1, 2, 'testCases.Step_IN_Sequential')
-data.setCell(1, 3, 30723);
+data.setCell(1, 2, 'testCases.Step_IN_Mob')
+data.setCell(1, 3, 26463);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_UI_Launch_IndianExpress')
-data.setCell(2, 2, 'testCases.Step_IN_Sequential')
-data.setCell(2, 3, 11231);
+data.setCell(2, 1, 'TC_Mob_GoToDetailPage')
+data.setCell(2, 2, 'testCases.Step_IN_Mob')
+data.setCell(2, 3, 13729);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_Mob_GoToDetailPage')
-data.setCell(3, 2, 'testCases.Step_IN_Sequential')
-data.setCell(3, 3, 6629);
+data.setCell(3, 1, 'TC_Mob_GetProducts')
+data.setCell(3, 2, 'testCases.Step_IN_Mob')
+data.setCell(3, 3, 4598);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_Mob_GetProducts')
-data.setCell(4, 2, 'testCases.Step_IN_Sequential')
-data.setCell(4, 3, 3482);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(4, 1, 'TC_UI_Search_StepInForum')
+data.setCell(4, 2, 'testCases.Step_IN_UI')
+data.setCell(4, 3, 4011);
+window.suiteTableData['TestAutothon']= { tableData: data, tableDiv: 'times-div-TestAutothon'}
 return data;
 }
               </script>
               <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <div id="times-div-TestAutothon">
+              </div> <!-- times-div-TestAutothon -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for TestAutothon</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-TestAutothon" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.Step_IN_Sequential</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.Step_IN_UI</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_Mob</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Sequential.TC_UI_Launch_IndianExpress())</span>
-                <span class="method-start">125 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_Launch())</span>
+                <span class="method-start">183 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">TC_UI_Launch_IndianExpress</span>
-                <span class="method-start">128 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_UI_Launch_IndianExpress status=SUCCESS method=Step_IN_Sequential.TC_UI_Launch_In...)</span>
-                <span class="method-start">11360 ms</span>
-              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_UI</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Sequential.TC_UI_Search_StepInForum())</span>
-                <span class="method-start">12061 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_UI.TC_UI_Launch_IndianExpress())</span>
+                <span class="method-start">183 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">TC_UI_Search_StepInForum</span>
-                <span class="method-start">12062 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_UI_Search_StepInForum status=SUCCESS method=Step_IN_Sequential.TC_UI_Search_Step...)</span>
-                <span class="method-start">75173 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Sequential.TC_Mob_Launch())</span>
-                <span class="method-start">75591 ms</span>
-              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_Mob</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_Mob_Launch</span>
-                <span class="method-start">75592 ms</span>
+                <span class="method-start">186 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_UI</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC_UI_Launch_IndianExpress</span>
+                <span class="method-start">186 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_Mob</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Sequential.TC_Mob_Launch()[pri:0, insta...)</span>
-                <span class="method-start">106332 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Mob.TC_Mob_Launch()[pri:0, instance:tes...)</span>
+                <span class="method-start">26651 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Sequential.TC_Mob_GoToDetailPage())</span>
-                <span class="method-start">106634 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_GoToDetailPage())</span>
+                <span class="method-start">28175 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC_Mob_GoToDetailPage</span>
-                <span class="method-start">106635 ms</span>
+                <span class="method-start">28176 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_UI</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_Mob_GoToDetailPage status=SUCCESS method=Step_IN_Sequential.TC_Mob_GoToDetailPag...)</span>
-                <span class="method-start">113275 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_UI_Launch_IndianExpress status=SUCCESS method=Step_IN_UI.TC_UI_Launch_IndianExpr...)</span>
+                <span class="method-start">38542 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void testCases.Step_IN_Sequential.TC_Mob_GetProducts())</span>
-                <span class="method-start">113700 ms</span>
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_UI.TC_UI_Search_StepInForum())</span>
+                <span class="method-start">38705 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_UI_Search_StepInForum</span>
+                <span class="method-start">38706 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_Mob</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_GoToDetailPage status=SUCCESS method=Step_IN_Mob.TC_Mob_GoToDetailPage()[pri...)</span>
+                <span class="method-start">41907 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void testCases.Step_IN_Mob.TC_Mob_GetProducts())</span>
+                <span class="method-start">42009 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC_Mob_GetProducts</span>
-                <span class="method-start">113700 ms</span>
+                <span class="method-start">42010 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_UI</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=TC_Mob_GetProducts status=SUCCESS method=Step_IN_Sequential.TC_Mob_GetProducts()[pr...)</span>
-                <span class="method-start">117187 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_UI_Search_StepInForum status=FAILURE method=Step_IN_UI.TC_UI_Search_StepInForum(...)</span>
+                <span class="method-start">42721 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">117319 ms</span>
+                <span class="method-start">42798 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Step_IN_Mob</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_Mob_GetProducts status=SUCCESS method=Step_IN_Mob.TC_Mob_GetProducts()[pri:0, in...)</span>
+                <span class="method-start">46610 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">46613 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
