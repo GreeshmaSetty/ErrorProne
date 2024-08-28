@@ -1,5 +1,6 @@
 package configuration;
 
+import java.io.FileInputStream;
 import java.lang.reflect.Method;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;

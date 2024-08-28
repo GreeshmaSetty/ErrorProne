@@ -30,7 +30,7 @@ public class Step_IN_Mob extends Global {
 	@Test(priority = 0)
 	public void TC_Mob_Launch() {
 		config.webDriver=null;
-		common.Launch("Mobile", "");
+		common.Launch("Mobile","", "");
 		logger.logPass("Launch", "Step In Forum Launched");
 	}
 

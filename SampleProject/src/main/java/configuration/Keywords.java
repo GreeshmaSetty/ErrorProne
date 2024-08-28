@@ -29,13 +29,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.DataGeneration;
 import utilities.DataProperty;
 import utilities.Excel;
+import utilities.Mob_Locators;
 import utilities.Reporting;
+import utilities.UI_Locators;
 
 public class Keywords extends BrowserConfig {
 
 	public Reporting logger = new Reporting();
 	public DataGeneration dataGenerate = new DataGeneration();
 	public DataProperty dataProp = new DataProperty();
+	public UI_Locators ulocator = new UI_Locators();
+	public Mob_Locators mlocator = new Mob_Locators();
 
 	public void quitBrowser() {
 		if(webDriver!=null) {
@@ -845,7 +849,7 @@ public String jsonCreateMob(String[] list) {
 			"  \"description\": \"desc_string\",\r\n" + 
 			"  \"price\": price_string,\r\n" + 
 			"  \"item_type\": \"Electronics\",\r\n" + 
-			"  \"team_name\": \"Epsilon1\"\r\n" + 
+			"  \"team_name\": \""+ mlocator.CompanyName+"\"\r\n" + 
 			"}";
 	json = json.replace("name_string", list[0]);
 	json = json.replace("desc_string", list[1]);

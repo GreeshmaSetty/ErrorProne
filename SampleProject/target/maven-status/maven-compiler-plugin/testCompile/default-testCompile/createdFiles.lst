@@ -1,4 +1,6 @@
-testCases\Step_IN_Mob.class
+Main\configRun$2.class
 Main\mainRun.class
-testCases\ApiTest.class
+Main\configRun$1.class
+Main\configRun.class
 testCases\Step_IN_UI.class
+testCases\Step_IN_Sequential.class

@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
@@ -53,14 +54,14 @@ public static String Mode = "UI";
 		Failedflag = 0;
 	}
 
-	public void Launch(String Mode, String URLKey) {
+	public void Launch(String Browser, String Mode, String URLKey) {
 		try { 
 			startTime = System.currentTimeMillis();
 			Mode = Mode.toUpperCase();
 			System.out.println(Mode);
 			
 			if(Mode.equalsIgnoreCase("UI")) {
-				browserExecution("Chrome",URLKey);
+				browserExecution(Browser,URLKey);
 			}
 			else if(Mode.equalsIgnoreCase("MOBILE")){
 				mobileExecution("Chrome",URLKey);
@@ -223,10 +224,11 @@ public static String Mode = "UI";
 
 		WebDriver driver = null;
 		try {
-			String EdgeDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\MicrosoftWebDriver.exe";
+			String EdgeDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\msedgedriver.exe";
 			System.setProperty(EdgeDriverService.EDGE_DRIVER_EXE_PROPERTY, EdgeDriverPath);
 			driver = new EdgeDriver();
 			System.out.println("launching Microsoft Edge browser");
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Edge Failed during driver initialization " + e.getMessage());
@@ -241,9 +243,10 @@ public static String Mode = "UI";
 		try {
 			geckoDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\geckodriver.exe";
 			System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY, geckoDriverPath);
-
-			driver = new FirefoxDriver();
-
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary("C:\\Users\\gresetty\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+			driver = new FirefoxDriver(options);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		} catch (Exception e) {
 			System.out.println("FF Failed during driver initialization " + e.getMessage());
 		}

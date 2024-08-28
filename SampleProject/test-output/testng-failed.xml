@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [TestAutothon]">
-  <test name="TestCases(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testCases.Step_IN_UI">
+      <class name="testCases.Step_IN_Sequential">
         <methods>
           <include name="beforeMethod"/>
-          <include name="TC_UI_Search_StepInForum"/>
+          <include name="afterTest"/>
+          <include name="TC_API_Validation"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- testCases.Step_IN_UI -->
-      <class name="testCases.Step_IN_Mob">
-        <methods>
-          <include name="TC_Mob_GetProducts"/>
-          <include name="beforeMethod"/>
-          <include name="TC_Mob_GoToDetailPage"/>
-          <include name="TC_Mob_Launch"/>
-        </methods>
-      </class> <!-- testCases.Step_IN_Mob -->
+      </class> <!-- testCases.Step_IN_Sequential -->
     </classes>
-  </test> <!-- TestCases(failed) -->
-</suite> <!-- Failed suite [TestAutothon] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

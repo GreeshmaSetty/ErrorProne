@@ -1,79 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="5" passed="5" failed="0" skipped="0">
+<testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T09:03:10Z" name="Default suite" finished-at="2024-08-28T09:04:45Z" duration-ms="94828">
+  <suite started-at="2024-08-28T21:11:22Z" name="Default suite" finished-at="2024-08-28T21:13:01Z" duration-ms="98996">
     <groups>
     </groups>
-    <test started-at="2024-08-28T09:03:10Z" name="Default test" finished-at="2024-08-28T09:04:45Z" duration-ms="94828">
+    <test started-at="2024-08-28T21:11:22Z" name="Default test" finished-at="2024-08-28T21:13:01Z" duration-ms="98996">
       <class name="testCases.Step_IN_Sequential">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:10Z" name="beforeTest" finished-at="2024-08-28T14:33:10Z" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:41:22Z" name="beforeTest" finished-at="2024-08-29T02:41:22Z" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:10Z" name="beforeMethod" finished-at="2024-08-28T14:33:10Z" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_UI_Launch_IndianExpress()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_UI_Launch_IndianExpress()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:10Z" name="TC_UI_Launch_IndianExpress" finished-at="2024-08-28T14:33:23Z" duration-ms="13228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_Launch_IndianExpress -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:23Z" name="afterMethod" finished-at="2024-08-28T14:33:24Z" duration-ms="618" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_Launch_IndianExpress status=SUCCESS method=Step_IN_Sequential.TC_UI_Launch_IndianExpress()[pri:0, instance:testCases.Step_IN_Sequential@16414e40] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_UI_Launch_IndianExpress()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:24Z" name="beforeMethod" finished-at="2024-08-28T14:33:24Z" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_UI_Search_StepInForum()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:33:24Z" name="TC_UI_Search_StepInForum" finished-at="2024-08-28T14:34:14Z" duration-ms="49787" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_UI_Search_StepInForum -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:14Z" name="afterMethod" finished-at="2024-08-28T14:34:14Z" duration-ms="337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_UI_Search_StepInForum status=SUCCESS method=Step_IN_Sequential.TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_Sequential@16414e40] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_UI_Search_StepInForum()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:14Z" name="beforeMethod" finished-at="2024-08-28T14:34:14Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:41:22Z" name="beforeMethod" finished-at="2024-08-29T02:41:22Z" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:14Z" name="TC_Mob_Launch" finished-at="2024-08-28T14:34:34Z" duration-ms="19497" status="PASS">
+        <test-method signature="TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:41:22Z" name="TC_Mob_Launch" finished-at="2024-08-29T02:42:37Z" duration-ms="75170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Mob_Launch -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:34Z" name="afterMethod" finished-at="2024-08-28T14:34:34Z" duration-ms="73" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:42:37Z" name="afterMethod" finished-at="2024-08-29T02:42:38Z" duration-ms="784" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Sequential.TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Sequential@16414e40] output={null}]]]>
+                <![CDATA[[TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Sequential.TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Sequential@5a709816] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -104,69 +42,38 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:34Z" name="beforeMethod" finished-at="2024-08-28T14:34:34Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:42:38Z" name="beforeMethod" finished-at="2024-08-29T02:42:38Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_Mob_GoToDetailPage()]]>
+                <![CDATA[public void testCases.Step_IN_Sequential.MobileNavigate()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_Mob_GoToDetailPage()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:34Z" name="TC_Mob_GoToDetailPage" finished-at="2024-08-28T14:34:39Z" duration-ms="5364" status="PASS">
+        <test-method signature="MobileNavigate()[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:42:38Z" name="MobileNavigate" finished-at="2024-08-29T02:43:01Z" duration-ms="22659" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Mob_GoToDetailPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:39Z" name="afterMethod" finished-at="2024-08-28T14:34:39Z" duration-ms="287" status="PASS">
+        </test-method> <!-- MobileNavigate -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:43:01Z" name="afterMethod" finished-at="2024-08-29T02:43:01Z" duration-ms="127" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_Mob_GoToDetailPage status=SUCCESS method=Step_IN_Sequential.TC_Mob_GoToDetailPage()[pri:0, instance:testCases.Step_IN_Sequential@16414e40] output={null}]]]>
+                <![CDATA[[TestResult name=MobileNavigate status=SUCCESS method=Step_IN_Sequential.MobileNavigate()[pri:0, instance:testCases.Step_IN_Sequential@5a709816] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_Mob_GoToDetailPage()]]>
+                <![CDATA[public void testCases.Step_IN_Sequential.MobileNavigate()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="TC_Mob_GetProducts()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:39Z" name="TC_Mob_GetProducts" finished-at="2024-08-28T14:34:45Z" duration-ms="5404" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_Mob_GetProducts -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:39Z" name="beforeMethod" finished-at="2024-08-28T14:34:39Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_Mob_GetProducts()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:45Z" name="afterMethod" finished-at="2024-08-28T14:34:45Z" duration-ms="51" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_Mob_GetProducts status=SUCCESS method=Step_IN_Sequential.TC_Mob_GetProducts()[pri:0, instance:testCases.Step_IN_Sequential@16414e40] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Sequential.TC_Mob_GetProducts()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_Sequential@16414e40]" started-at="2024-08-28T14:34:45Z" name="afterTest" finished-at="2024-08-28T14:34:45Z" duration-ms="53" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_Sequential@5a709816]" started-at="2024-08-29T02:43:01Z" name="afterTest" finished-at="2024-08-29T02:43:01Z" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

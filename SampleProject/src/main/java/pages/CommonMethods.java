@@ -8,17 +8,22 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
+import org.json.simple.JSONArray;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import api.APICommon;
 import configuration.BrowserConfig;
 import configuration.Keywords;
 import io.appium.java_client.PerformsTouchActions;
@@ -27,6 +32,7 @@ import io.appium.java_client.android.AndroidElement;
 import utilities.DataGeneration;
 import utilities.Mob_Locators;
 import utilities.Reporting;
+import utilities.TestData;
 import utilities.UI_Locators;
 
 public class CommonMethods {
@@ -37,11 +43,13 @@ public class CommonMethods {
 	public BrowserConfig config = new BrowserConfig();
 	public UI_Locators locator = new UI_Locators();
 	public static HashMap<String, String> imdbmap = new HashMap();
+	TestData td = new TestData();
+	APICommon api = new APICommon();
 
-	public void Launch(String browserName, String Url) {
+	public void Launch(String browserName,String Mode, String Url) {
 		try {
 			if (config.webDriver == null)
-				config.Launch(browserName, Url);
+				config.Launch(browserName,Mode,Url);
 			else
 				actions.getURL(Url);
 			//logger.logPass("Launched", "N");
@@ -136,20 +144,112 @@ public class CommonMethods {
 		return file;
 	}
 
-	/*
-	 * public void get_DirectorandCompare(String moviename, String Wikipedialink) {
-	 * try { Launch("Chrome", Wikipedialink); String Wiki_Directorname =
-	 * actions.getWebElement(locator.directed_By).getText(); String Imdb_link =
-	 * actions.getWebElement(locator.wiki_imdblink).getAttribute("href");
-	 * Launch("Chrome", Imdb_link);
-	 * actions.waitExplicit(locator.imdblink_directed_By, 30); String
-	 * Imdb_Directorname =
-	 * actions.getWebElement(locator.imdblink_directed_By).getText();
-	 * System.out.println(moviename+"Dir1:" + Wiki_Directorname + "Dir2:" +
-	 * Imdb_Directorname); if(Wiki_Directorname.equals(Imdb_Directorname)) {
-	 * System.out.println(moviename+"Pass"); //logger.logPass(moviename,
-	 * Wiki_Directorname, Imdb_link, Imdb_Directorname); }
-	 * //Assert.assertEquals(Wiki_Directorname, Imdb_Directorname); } catch
-	 * (Exception e) { System.out.println(e.getMessage()); } }
-	 */
+	public void validateBrokenLinks(String Flag) {
+		try {
+			boolean failedflag = false;
+			// Get all the links on the page
+			if(Flag.toUpperCase().contains("Y")) {
+				List<WebElement> links = config.webDriver.findElements(By.tagName("a"));
+
+				logger.logInfo("Total links found: " + links.size());
+
+				// Iterate over each link and validate it
+				for (WebElement link : links) {
+					String linkURL = link.getAttribute("href");
+					if (linkURL != null && !linkURL.isEmpty()) {
+						try {
+							System.out.println("Validating broken links for : "+linkURL);
+							// Create a URL object and open a connection
+							URL urlLink = new URL(linkURL);
+							HttpURLConnection httpURLConnection = (HttpURLConnection) urlLink.openConnection();
+							httpURLConnection.setConnectTimeout(5000);
+							httpURLConnection.connect();
+
+							// Check the response code
+							if (httpURLConnection.getResponseCode() >= 400) {
+								logger.logFail(linkURL + " is a broken link. Response Code: " + httpURLConnection.getResponseCode());
+								failedflag = true;
+							}
+
+							// Disconnect the connection
+							httpURLConnection.disconnect();
+
+						} catch (IOException e) {
+							System.out.println(linkURL + " is a broken link. Exception: " + e.getMessage());
+						}
+					} else {
+						System.out.println("Link is either not configured or is empty.");
+					}
+				}
+				if(!failedflag) {
+					logger.logPass("Broken Link Validation : ", "No Broken Link Found on the Page");
+				}
+			}
+
+		}catch(Exception e) {
+
+		}
+	}
+	
+	public void validatevalues (String value1, String value2) {
+		if(value1.contentEquals(value2)) {
+			logger.logPass("Value Matched. Actual : "+value1+" Expected : "+value2 );
+		}else {
+			logger.logFail("Value Not Matched. Actual : "+value1+" Expected : "+value2 );
+		}
+	}
+	
+	
+	public void validateDifferentStatusCodes(String statusCode) {
+		if(statusCode.contains("422")) {
+				JSONArray NewsDataArray = new JSONArray();
+				String json = "{\r\n" + 
+						" \r\n" + 
+						"  \"name\": \"This is the news\",\r\n" + 
+						"  \"description\": \"String data in place of Int\",\r\n" + 
+						"  \"price\": \"string format\",\r\n" + 
+						"  \"item_type\": \"Epsilon1\"\r\n" + 
+						"}";
+				
+			logger.logInfo("Send Request : "+""+" : "+json);
+			String Url = td.ApiUrlData;
+			String statusCodeObtained = api.API_PostStatusCode(json, Url);
+			
+			validatevalues(statusCode, statusCodeObtained);
+			
+		}if(statusCode.contains("405")) {
+			JSONArray NewsDataArray = new JSONArray();
+			String json = "{\r\n" + 
+					" \r\n" + 
+					"  \"name\": \"This is the news\",\r\n" + 
+					"  \"description\": \"String data \",\r\n" + 
+					"  \"price\": 1234,\r\n" + 
+					"  \"item_type\": \"Epsilon1\"\r\n" + 
+					"}";
+			
+		logger.logInfo("Send Request : "+""+" : "+json);
+		String Url = td.ApiUrlData;
+		String statusCodeObtained = api.API_PutStatusCode(json, Url);
+		
+		validatevalues(statusCode, statusCodeObtained);
+		
+	}if(statusCode.contains("500")) {
+		JSONArray NewsDataArray = new JSONArray();
+		String json = "{\r\n" + 
+				" \r\n" + 
+				"  \"LineHeader\": \"This is the news\",\r\n" + 
+				"  \"LineDescription\": \"String data in place of Int\",\r\n" + 
+				"  \"price\": 1234,\r\n" + 
+				"  \"item_type\": \"Epsilon1\"\r\n" + 
+				"}";
+		
+	logger.logInfo("Send Request : "+""+" : "+json);
+	String Url = td.ApiUrlData;
+	String statusCodeObtained = api.API_PostStatusCode(json, Url);
+	
+	validatevalues(statusCode, statusCodeObtained);
+	
+}
+		
+	}
 }

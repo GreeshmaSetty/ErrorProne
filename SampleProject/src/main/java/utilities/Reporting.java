@@ -66,8 +66,34 @@ public class Reporting extends BrowserConfig {
 			if (!file1.exists()) {
 				file1.mkdir();
 			}
+			
 			htmlReporter = new ExtentHtmlReporter(
 					extendReportPath + "\\ExtentReport\\ExtentReport" + Reporttimestamp + ".html");
+			// Custom CSS for JSON styling
+						String css = ".json-pre { " +
+			                    "  font-family: monospace; " +
+			                    "  background-color: #25383C; " +
+			                    "  border: 1px solid #ccc; " +
+			                    "  padding: 10px; " +
+			                    "  margin: 0; " +
+			                    "  overflow-x: auto; " +
+			                    "  white-space: pre-wrap; " +
+			                    "  word-break: break-word; " +
+			                    "  max-height: 300px; " +
+			                    "  overflow-y: auto; " +
+			                    "} " +
+			                    ".json-key { color: Cyan; font-weight: bold; } " +
+			                    ".json-value { color: navy; } " +
+			                    ".json-string { color: orange; } " +
+			                    ".json-number { color: darkgreen; }"+
+			                    ".json-boolean { color: purple; font-weight: bold; }"
+			                    ;
+ 
+						// Inject custom CSS
+						htmlReporter.config().setCSS(css);
+			
+			//htmlReporter = new ExtentHtmlReporter(
+				//	extendReportPath + "\\ExtentReport\\ExtentReport" + Reporttimestamp + ".html");
 			htmlReporter.loadXMLConfig(new File(System.getProperty("user.dir") + "/Reporting.xml"));
 			extent = new ExtentReports();
 			extent.attachReporter(htmlReporter);
@@ -387,6 +413,36 @@ public class Reporting extends BrowserConfig {
 		}
 	}
 	
+	public void logFailNoSS(String stepName) {
+		System.setProperty("org.uncommons.reportng.escape-output", "false");
+		try {
+			//String userDirector1 = "..\\screenshots\\";
+			//String ImageFileName1 = takeScreenshot();
+			// String userDirector = System.getProperty("user.dir") +
+			// "/test-output/screenshots/";
+			//String ImageFileName = takeScreenshot();
+			endTime = System.currentTimeMillis();
+			NumberFormat formatter = new DecimalFormat("#0.0");
+			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+			startTime = endTime;
+			//String time = "<td><p>" + timeInSecs + "</p></td>";
+			String step = "<td><p>" + stepName + "</p></td>";
+			String step1 = "<td><p>" + "" + "</p></td>";
+			//String step2 = "<td><p>" + "" + "</p></td>";
+			String result = "<td bgcolor=#ff0000>" + "Fail" + "</a></td>";
+			//String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
+			String logs = "<tr>" + step + step1 + result + "" + "</tr>";
+			writer.write(logs);
+			// Assert.assertTrue(false);
+			// log4j
+			test.log(Status.FAIL, stepName);
+			l4jlogger.info(stepName);
+		} catch (IOException e) {
+			l4jlogger.error("Failed due log in report due to exception " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
 	public void logPass(String stepName1,String stepName2) {
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		try {
@@ -413,6 +469,39 @@ public class Reporting extends BrowserConfig {
 			String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
 			//String step = "<td><p>" + "Here We Are" + "</p></td>";
 			String logs = "<tr>" + step1 +step2 + result + scrshot +"</tr>";
+			writer.write(logs);
+			l4jlogger.info(stepName1);
+			writer.flush();
+		} catch (IOException e1) {
+			l4jlogger.error("Failed to log in report" + e1.getMessage());
+		}
+	}
+	
+	public void logPass(String stepName1) {
+		System.setProperty("org.uncommons.reportng.escape-output", "false");
+		try {
+			//String userDirector1 = "..\\screenshots\\";
+			//String ImageFileName1 = takeScreenshot();
+			// Time calculation
+			endTime = System.currentTimeMillis();
+			NumberFormat formatter = new DecimalFormat("#0.0");
+			String timeInSecs = formatter.format((endTime - startTime) / 1000d);
+			startTime = endTime;
+			//String ImageFileName = takeScreenshot();
+			//String time = "<td><p>" + timeInSecs + "</p></td>";
+			String step1 = "<td><p>" + stepName1 + "</p></td>";
+			//String step2 = "<td><p>" + stepName2 + "</p></td>";
+			//String step3 = "<td><p>" + stepName3 + "</p></td>";
+			/*
+			 * if (Screenshot.contains("Y")) { String ImageFileName1 = takeScreenshot();
+			 * step = "<td><p><a href=" + userDirector1 + ImageFileName1 + ">" + stepName +
+			 * "</p></td>"; }
+			 */
+			test.log(Status.PASS, stepName1);
+			String result = "<td bgcolor=#00cc00>" + "Pass" + "</a></td>";
+			//String scrshot = "<td><a href=" + userDirector1 + ImageFileName1 + "><img src=" + userDirector1 + ImageFileName1 + " height=\"80\"></img></a></td>";
+			//String step = "<td><p>" + "Here We Are" + "</p></td>";
+			String logs = "<tr>" + step1  + result + "" +"</tr>";
 			writer.write(logs);
 			l4jlogger.info(stepName1);
 			writer.flush();
@@ -532,5 +621,27 @@ public class Reporting extends BrowserConfig {
 			e.printStackTrace();
 		}
 		return ImageFileName;
+	}
+
+	public static String formatJson(String json) {
+		json = json.replaceAll("\\{", "{<br>&nbsp;&nbsp;")
+	               .replaceAll("}", "<br>}")
+	               .replaceAll(",", ",&nbsp;&nbsp;")
+	               .replaceAll(":", ": ")
+	               // Matches JSON keys and wraps them in <span class='json-key'>
+	               .replaceAll("\"([^\"]+)\":\\s*\"([^\"]*)\"", "<span class='json-key'>\"$1\"</span>: <span class='json-string'>\"$2\"</span>")
+	               // Matches numeric values
+	               .replaceAll("\"([^\"]+)\":\\s*(\\d+)", "<span class='json-key'>\"$1\"</span>: <span class='json-number'>$2</span>")
+	               // Matches null values
+	               .replaceAll("\"([^\"]+)\":\\s*null", "<span class='json-key'>\"$1\"</span>: <span class='json-value'>null</span>")
+	               // Matches boolean true values
+	               .replaceAll("\"([^\"]+)\":\\s*true", "<span class='json-key'>\"$1\"</span>: <span class='json-boolean'>true</span>")
+	               // Matches boolean false values
+	               .replaceAll("\"([^\"]+)\":\\s*false", "<span class='json-key'>\"$1\"</span>: <span class='json-boolean'>false</span>")
+             .replaceAll("\"(\\w+)\":\\s*\"([^\"]*)\"", "<span class='json-key'>\"$1\"</span>: <span class='json-string'>\"$2\"</span>")
+             .replaceAll("\"(\\w+)\":\\s*(\\d+)", "<span class='json-key'>\"$1\"</span>: <span class='json-number'>$2</span>")
+             .replaceAll("\"(\\w+)\":\\s*(true|false)", "<span class='json-key'>\"$1\"</span>: <span class='json-boolean'>$2</span>")
+             .replaceAll("\"(\\w+)\":\\s*(null)", "<span class='json-key'>\"$1\"</span>: <span class='json-null'>$2</span>");
+  return json;
 	}
 }

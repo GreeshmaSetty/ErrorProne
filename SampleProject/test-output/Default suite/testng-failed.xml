@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="afterTest"/>
-          <include name="TC_Mob_GoToDetailPage"/>
+          <include name="TC_API_Validation"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
         </methods>

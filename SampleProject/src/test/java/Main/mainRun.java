@@ -15,6 +15,9 @@ import utilities.MyThread;
 
 public class mainRun {
 	
+	 private static final String CONFIG_FILE = System.getProperty("user.dir")+"\\Run.properties";
+	   
+	
 	public static void main(String[] args) {
 		//final CyclicBarrier gate = new CyclicBarrier(3);
 		mainRun mr = new mainRun();
