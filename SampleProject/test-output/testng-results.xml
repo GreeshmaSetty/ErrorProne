@@ -1,114 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="3" passed="3" failed="0" skipped="0">
+<testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T06:05:26Z" name="Default suite" finished-at="2024-08-28T06:05:51Z" duration-ms="25443">
+  <suite started-at="2024-08-28T06:49:14Z" name="Default suite" finished-at="2024-08-28T06:50:10Z" duration-ms="55910">
     <groups>
     </groups>
-    <test started-at="2024-08-28T06:05:26Z" name="Default test" finished-at="2024-08-28T06:05:51Z" duration-ms="25443">
-      <class name="testCases.Step_IN_Mob">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:26Z" name="beforeTest" finished-at="2024-08-28T11:35:26Z" duration-ms="99" status="PASS">
+    <test started-at="2024-08-28T06:49:14Z" name="Default test" finished-at="2024-08-28T06:50:10Z" duration-ms="55910">
+      <class name="testCases.Step_IN_UI">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:14Z" name="beforeTest" finished-at="2024-08-28T12:19:14Z" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:26Z" name="beforeMethod" finished-at="2024-08-28T11:35:26Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:14Z" name="beforeMethod" finished-at="2024-08-28T12:19:14Z" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Launch()]]>
+                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Launch_IndianExpress()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:26Z" name="TC_Mob_Launch" finished-at="2024-08-28T11:35:43Z" duration-ms="17038" status="PASS">
+        <test-method signature="TC_UI_Launch_IndianExpress()[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:14Z" name="TC_UI_Launch_IndianExpress" finished-at="2024-08-28T12:19:28Z" duration-ms="13949" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Mob_Launch -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:43Z" name="afterMethod" finished-at="2024-08-28T11:35:43Z" duration-ms="245" status="PASS">
+        </test-method> <!-- TC_UI_Launch_IndianExpress -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:28Z" name="afterMethod" finished-at="2024-08-28T12:19:28Z" duration-ms="278" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_Mob_Launch status=SUCCESS method=Step_IN_Mob.TC_Mob_Launch()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed] output={null}]]]>
+                <![CDATA[[TestResult name=TC_UI_Launch_IndianExpress status=SUCCESS method=Step_IN_UI.TC_UI_Launch_IndianExpress()[pri:0, instance:testCases.Step_IN_UI@3549bca9] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_Launch()]]>
+                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Launch_IndianExpress()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:43Z" name="beforeMethod" finished-at="2024-08-28T11:35:43Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:28Z" name="beforeMethod" finished-at="2024-08-28T12:19:28Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GoToDetailPage()]]>
+                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Search_StepInForum()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_Mob_GoToDetailPage()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:43Z" name="TC_Mob_GoToDetailPage" finished-at="2024-08-28T11:35:48Z" duration-ms="5171" status="PASS">
+        <test-method signature="TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:19:28Z" name="TC_UI_Search_StepInForum" finished-at="2024-08-28T12:20:10Z" duration-ms="41442" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Mob_GoToDetailPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:48Z" name="afterMethod" finished-at="2024-08-28T11:35:48Z" duration-ms="47" status="PASS">
+        </test-method> <!-- TC_UI_Search_StepInForum -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:20:10Z" name="afterMethod" finished-at="2024-08-28T12:20:10Z" duration-ms="38" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_Mob_GoToDetailPage status=SUCCESS method=Step_IN_Mob.TC_Mob_GoToDetailPage()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed] output={null}]]]>
+                <![CDATA[[TestResult name=TC_UI_Search_StepInForum status=SUCCESS method=Step_IN_UI.TC_UI_Search_StepInForum()[pri:0, instance:testCases.Step_IN_UI@3549bca9] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GoToDetailPage()]]>
+                <![CDATA[public void testCases.Step_IN_UI.TC_UI_Search_StepInForum()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="TC_Mob_GetProducts()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:48Z" name="TC_Mob_GetProducts" finished-at="2024-08-28T11:35:51Z" duration-ms="2764" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_Mob_GetProducts -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:48Z" name="beforeMethod" finished-at="2024-08-28T11:35:48Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetProducts()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:51Z" name="afterMethod" finished-at="2024-08-28T11:35:51Z" duration-ms="37" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_Mob_GetProducts status=SUCCESS method=Step_IN_Mob.TC_Mob_GetProducts()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void testCases.Step_IN_Mob.TC_Mob_GetProducts()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_Mob@6fb365ed]" started-at="2024-08-28T11:35:51Z" name="afterTest" finished-at="2024-08-28T11:35:51Z" duration-ms="28" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Step_IN_UI@3549bca9]" started-at="2024-08-28T12:20:10Z" name="afterTest" finished-at="2024-08-28T12:20:10Z" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- testCases.Step_IN_Mob -->
+      </class> <!-- testCases.Step_IN_UI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -44,21 +44,33 @@ public class Step_IN_UI extends Global {
 		logger.logPass("Navigating to the tab Politics", "");
 		actions.waitForPageToLoad(10);
 		
-		actions.click(ulocator.carouselItem1);
-		actions.click(ulocator.firstLink);
-		logger.logPass("Navigating to the first link ", "");
-		String header[] = new String[10];
-		String newLink[] = new String[10];
-		String datetime[] = new String[10];
-		newLink[0] =actions.webDriver.getCurrentUrl().toString();
-		header[0]  =actions.webDriver.getTitle();
-		String date1 =actions.getWebElement(ulocator.DateTimeContent).getAttribute("content");
-		//dateformat = 
-		actions.getWebElement(ulocator.search).sendKeys("step-inforum" + Keys.ENTER);
-		logger.logPass("Enter", "Step In Forum Entered");
-		actions.waitImplicit(ulocator.step_in_channel, 5);
-		actions.getWebElement(ulocator.step_in_channel).click();
-		actions.waitImplicit(ulocator.Video, 5);
+
+		String carousel[] = {ulocator.carouselItem1,ulocator.carouselItem2,ulocator.carouselItem3};
+		String links[] = {ulocator.firstLink,ulocator.secondLink,ulocator.thirdLink};
+		for (int i = 0; i < links.length; i++) {
+			actions.click(carousel[i]);
+			actions.click(links[i]);
+			logger.logPass("Click on the link : "+i, "");
+			String newLink =actions.webDriver.getCurrentUrl().toString();
+			String header  =actions.webDriver.getTitle();
+			String date1 =actions.getWebElement(ulocator.DateTimeContent).getAttribute("content");
+			String datetime =actions.dateformat(date1);
+			logger.logPass("Navigating to the first link "+ newLink+" "+ header +" "+ datetime,"" ); 
+			actions.webDriver.navigate().back();
+			actions.waitForPageToLoad(10);
+			
+			String jsonBody = actions.jsonCreateUI(newLink,header,datetime);
+			logger.logInfo("Send Request : "+""+" : "+jsonBody);
+			String Url = "http://ec2-54-254-162-245.ap-southeast-1.compute.amazonaws.com:9000/items/";
+			String response = api.API_Post(jsonBody, Url);
+			logger.logInfo("Send Response : "+""+" : "+response);
+			String obtained_id = actions.getResponseValue(response, "id");
+			String get_resposne = api.API_Get(Url+obtained_id);
+			logger.logInfo("Received Response : "+""+" : "+get_resposne);
+			logger.logPass("All 3 loops passed", "");
+
+		}
+		
 	}
  
 //	@Test(priority = 2)

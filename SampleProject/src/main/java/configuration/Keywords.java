@@ -855,6 +855,23 @@ public String jsonCreateMob(String[] list) {
 	return json;
 }
 
+public String jsonCreateUI(String link, String header,String date) {
+	JSONArray NewsDataArray = new JSONArray();
+	String json = "{\r\n" + 
+			" \r\n" + 
+			"  \"name\": \"news_link\",\r\n" + 
+			"  \"description\": \"Head_line\",\r\n" + 
+			"  \"price\": date_format,\r\n" + 
+			"  \"item_type\": \"Epsilon1\"\r\n" + 
+			"}";
+	json = json.replace("news_link", link);
+	json = json.replace("Head_line", header);
+	json = json.replace("date_format", date);
+		System.out.println(json);
+	
+	return json;
+}
+
 public String getResponseValue(String response, String id) {
 	JSONObject jsonObject = new JSONObject(response);
 	int intValue = jsonObject.getInt(id);
