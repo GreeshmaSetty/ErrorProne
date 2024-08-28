@@ -27,9 +27,13 @@ public class Step_IN_Mob extends Global {
 	public Mob_Locators mlocator = new Mob_Locators();
 	public APICommon api = new APICommon();
 
-
-
 	@Test(priority = 0)
+	public void TC_Mob_Launch() {
+		common.Launch("Mobile", "");
+		logger.logPass("Launch", "Step In Forum Launched");
+	}
+
+	@Test(priority = 1)
 	public void TC_Mob_GoToDetailPage() {
 		actions.waitExplicit(mlocator.getProd_Btn, 60);
 		actions.click(mlocator.getProd_Btn);
@@ -38,7 +42,7 @@ public class Step_IN_Mob extends Global {
 		logger.logPass("Navigation", "Navigated to Details Page");
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void TC_Mob_GetProducts() {
 		//User changed value
 		//int prodCount = actions.getWebElementListWithoutExcel(mlocator.productCount).size();

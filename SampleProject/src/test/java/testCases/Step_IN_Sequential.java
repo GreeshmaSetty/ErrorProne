@@ -57,7 +57,7 @@ public class Step_IN_Sequential extends Global {
 				String header  =actions.webDriver.getTitle();
 				String date1 =actions.getWebElement(ulocator.DateTimeContent).getAttribute("content");
 				String datetime =actions.dateformat(date1);
-				logger.logPass("Navigating to the first link "+ newLink+" "+ header +" "+ datetime,"" ); 
+				logger.logPass("Navigating to the link "+ newLink+" "+ header +" "+ datetime,"" ); 
 				actions.webDriver.navigate().back();
 				actions.waitForPageToLoad(10);
 
@@ -78,6 +78,13 @@ public class Step_IN_Sequential extends Global {
 	}
 	
 	@Test(priority = 2)
+	public void TC_Mob_Launch() {
+		config.webDriver=null;
+		common.Launch("Mobile", "");
+		logger.logPass("Launch", "Step In Forum Launched");
+	}
+	
+	@Test(priority = 3)
 	public void TC_Mob_GoToDetailPage() {
 		actions.waitExplicit(mlocator.getProd_Btn, 60);
 		actions.click(mlocator.getProd_Btn);
@@ -86,7 +93,7 @@ public class Step_IN_Sequential extends Global {
 		logger.logPass("Navigation", "Navigated to Details Page");
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 4)
 	public void TC_Mob_GetProducts() {
 		//User changed value
 		//int prodCount = actions.getWebElementListWithoutExcel(mlocator.productCount).size();
