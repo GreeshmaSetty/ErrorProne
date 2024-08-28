@@ -67,9 +67,17 @@ public class Step_IN_Sequential extends Global {
 				String response = api.API_Post(jsonBody, Url);
 				logger.logInfo("Send Response : "+""+" : "+response);
 				String obtained_id = actions.getResponseValue(response, "id");
+				
 				String get_resposne = api.API_Get(Url+obtained_id);
+				String obtained_name = actions.getResponseValueStr(get_resposne, "name");
 				logger.logInfo("Received Response : "+""+" : "+get_resposne);
 
+				//Validation 
+				if(obtained_name.contains(newLink)) {
+					logger.logPass("Validated Name : ", obtained_name);
+				}else {
+					logger.logFail("Name validation Failed : "+newLink);
+				}
 			}
 			logger.logPass("All 3 Items in Carousel passed", "");
 		}catch(Exception e) {
@@ -113,13 +121,15 @@ public class Step_IN_Sequential extends Global {
 			String get_resposne = api.API_Get(Url+obtained_id);
 			logger.logInfo("Received Response : "+prodCount+" : "+get_resposne);
 			String obtained_name = actions.getResponseValueStr(get_resposne, "name");
+			
+			//Validation
 			if(obtained_name.contains(sent_name)) {
 				logger.logPass("Validated Name : ", obtained_name);
 			}else {
 				logger.logFail("Name validation Failed : "+sent_name);
 			}
 		}
-		logger.logPass("Products fetched" , "Post and Get are working as expecetd");
+		logger.logPass("Products are fetched " , "Post and Get are working as expecetd");
 		}catch(Exception e) {
 			logger.logFail("Products fetched failed" + e.getMessage());
 		}

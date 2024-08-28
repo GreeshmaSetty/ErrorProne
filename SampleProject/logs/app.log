@@ -312,3 +312,130 @@ Session ID: adf1a7cb-e92f-4e62-a845-091187075b4f
 2024-08-28 14:10:24 INFO  TestAutothon:417 - Status Code : 
 2024-08-28 14:10:25 INFO  TestAutothon:417 - Validated Name : 
 2024-08-28 14:10:25 INFO  TestAutothon:417 - Products fetched
+2024-08-28 14:20:11 INFO  TestAutothon:417 - Launch
+2024-08-28 14:20:17 INFO  TestAutothon:417 - Clicking on alert button DontAllow
+2024-08-28 14:20:17 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:20:20 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:20:28 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:20:35 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:20:36 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:20:40 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:20:41 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:20:42 INFO  TestAutothon:383 - All 3 Items in Carousel failedelement click intercepted: Element <li class="swiper-slide slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 431px;">...</li> is not clickable at point (97, 347). Other element would receive the click: <iframe id="google_ads_iframe_/1050432/www.indianexpress.com/IE_ROS_OTH_HP_SKIN_LHS_0" name="google_ads_iframe_/1050432/www.indianexpress.com/IE_ROS_OTH_HP_SKIN_LHS_0" title="3rd party ad content" width="160" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="8" style="border: 0px; vertical-align: bottom;"></iframe>
+  (Session info: chrome=128.0.6613.85)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WKWZTKKJU8QLOIL', ip: '192.168.179.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\gresetty\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: abbb10884f130d2a1be71f8229ec9803
+2024-08-28 14:21:50 INFO  TestAutothon:417 - Launch
+2024-08-28 14:21:57 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:22:00 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:22:03 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:22:15 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:22:16 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:22:21 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:22:22 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:22:25 INFO  TestAutothon:417 - Click on the link : 1
+2024-08-28 14:22:26 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/kavitha-bail-delhi-excise-policy-case-9535947/ Decode Politics: As K Kavitha gets bail, a look at the case against her, what SC said | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:22:32 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:22:33 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:22:38 INFO  TestAutothon:417 - Click on the link : 2
+2024-08-28 14:22:39 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/student-bengal-march-nabanna-chhatra-samaj-kolkata-rape-murder-9534822/ New student outfit in Bengal set to lead ‘March to Nabanna’ today, police deem it ‘illegal’: What is Chhatra Samaj? | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:22:41 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:22:42 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:22:45 INFO  TestAutothon:417 - All 3 Items in Carousel passed
+2024-08-28 14:23:05 INFO  TestAutothon:417 - Launch
+2024-08-28 14:23:10 INFO  TestAutothon:417 - Click
+2024-08-28 14:23:11 INFO  TestAutothon:417 - Navigation
+2024-08-28 14:23:13 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:23:13 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:23:15 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:23:15 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:23:16 INFO  TestAutothon:417 - Products are fetched 
+2024-08-28 14:23:54 INFO  TestAutothon:417 - Launch
+2024-08-28 14:24:01 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:24:03 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:24:05 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:24:08 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:24:08 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:24:11 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:24:11 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:24:15 INFO  TestAutothon:417 - Click on the link : 1
+2024-08-28 14:24:15 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/kavitha-bail-delhi-excise-policy-case-9535947/ Decode Politics: As K Kavitha gets bail, a look at the case against her, what SC said | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:24:20 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:24:20 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:25:06 INFO  TestAutothon:417 - Launch
+2024-08-28 14:25:13 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:25:16 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:25:20 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:25:27 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:25:27 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:25:33 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:25:34 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:25:35 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:25:41 INFO  TestAutothon:417 - Click on the link : 1
+2024-08-28 14:25:42 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/kavitha-bail-delhi-excise-policy-case-9535947/ Decode Politics: As K Kavitha gets bail, a look at the case against her, what SC said | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:25:46 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:25:47 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:25:48 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:25:51 INFO  TestAutothon:417 - Click on the link : 2
+2024-08-28 14:25:52 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/student-bengal-march-nabanna-chhatra-samaj-kolkata-rape-murder-9534822/ New student outfit in Bengal set to lead ‘March to Nabanna’ today, police deem it ‘illegal’: What is Chhatra Samaj? | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:25:53 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:25:54 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:25:55 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:27:35 INFO  TestAutothon:417 - Launch
+2024-08-28 14:27:39 INFO  TestAutothon:417 - Click
+2024-08-28 14:27:40 INFO  TestAutothon:417 - Navigation
+2024-08-28 14:27:43 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:27:43 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:27:45 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:27:45 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:27:46 INFO  TestAutothon:417 - Products fetched
+2024-08-28 14:28:27 INFO  TestAutothon:417 - Launch
+2024-08-28 14:28:33 INFO  TestAutothon:417 - Clicking on alert button DontAllow
+2024-08-28 14:28:34 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:28:38 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:28:41 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:29:15 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:29:16 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:29:37 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:29:38 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:29:39 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:29:41 INFO  TestAutothon:417 - Click on the link : 1
+2024-08-28 14:29:42 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/kavitha-bail-delhi-excise-policy-case-9535947/ Decode Politics: As K Kavitha gets bail, a look at the case against her, what SC said | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:29:46 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:29:47 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:29:49 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:29:53 INFO  TestAutothon:417 - Click on the link : 2
+2024-08-28 14:29:55 INFO  TestAutothon:417 - Navigating to the first link https://indianexpress.com/article/political-pulse/student-bengal-march-nabanna-chhatra-samaj-kolkata-rape-murder-9534822/ New student outfit in Bengal set to lead ‘March to Nabanna’ today, police deem it ‘illegal’: What is Chhatra Samaj? | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:29:59 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:29:59 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:30:00 INFO  TestAutothon:417 - All 3 loops passed
+2024-08-28 14:32:25 INFO  TestAutothon:417 - Launch
+2024-08-28 14:33:23 INFO  TestAutothon:417 - Launch
+2024-08-28 14:33:29 INFO  TestAutothon:417 - Clicking on alert button DontAllow
+2024-08-28 14:33:30 INFO  TestAutothon:417 - Navigating to the India Sub Menu
+2024-08-28 14:33:32 INFO  TestAutothon:417 - Window is switched to India News: Latest News India, Today Breaking News Headlines from India and Updates in Bharat | The Indian Express
+2024-08-28 14:33:36 INFO  TestAutothon:417 - Navigating to the tab Politics
+2024-08-28 14:33:39 INFO  TestAutothon:417 - Click on the link : 0
+2024-08-28 14:33:39 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/jjp-ties-up-bhim-army-parties-formidable-dalit-vote-haryana-9535896/ JJP ties up with Bhim Army as all parties eye the formidable Dalit vote in Haryana | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:33:46 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:33:46 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:33:52 INFO  TestAutothon:417 - Click on the link : 1
+2024-08-28 14:33:52 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/kavitha-bail-delhi-excise-policy-case-9535947/ Decode Politics: As K Kavitha gets bail, a look at the case against her, what SC said | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:33:57 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:33:58 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:34:09 INFO  TestAutothon:417 - Click on the link : 2
+2024-08-28 14:34:09 INFO  TestAutothon:417 - Navigating to the link https://indianexpress.com/article/political-pulse/student-bengal-march-nabanna-chhatra-samaj-kolkata-rape-murder-9534822/ New student outfit in Bengal set to lead ‘March to Nabanna’ today, police deem it ‘illegal’: What is Chhatra Samaj? | Political Pulse News - The Indian Express 27082024
+2024-08-28 14:34:12 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:34:13 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:34:14 INFO  TestAutothon:417 - All 3 Items in Carousel passed
+2024-08-28 14:34:34 INFO  TestAutothon:417 - Launch
+2024-08-28 14:34:38 INFO  TestAutothon:417 - Click
+2024-08-28 14:34:39 INFO  TestAutothon:417 - Navigation
+2024-08-28 14:34:41 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:34:42 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:34:43 INFO  TestAutothon:417 - Status Code : 
+2024-08-28 14:34:44 INFO  TestAutothon:417 - Validated Name : 
+2024-08-28 14:34:45 INFO  TestAutothon:417 - Products are fetched 

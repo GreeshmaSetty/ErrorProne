@@ -2,7 +2,8 @@
 <suite name="TestAutothon">
 	<test name="TestCases">
 		<classes>
-			<class name="testCases.Step_IN_Sequential" />
+			<class name="testCases.Step_IN_UI" />
+			<class name="testCases.Step_IN_Mob" />
 		</classes>
 	</test>
 </suite>

@@ -66,6 +66,16 @@ public class Step_IN_UI extends Global {
 			logger.logInfo("Send Response : "+""+" : "+response);
 			String obtained_id = actions.getResponseValue(response, "id");
 			String get_resposne = api.API_Get(Url+obtained_id);
+			String obtained_name = actions.getResponseValueStr(get_resposne, "name");
+			logger.logInfo("Received Response : "+""+" : "+get_resposne);
+
+			//Validation 
+			if(obtained_name.contains(newLink)) {
+				logger.logPass("Validated Name : ", obtained_name);
+			}else {
+				logger.logFail("Name validation Failed : "+newLink);
+			}
+			
 			logger.logInfo("Received Response : "+""+" : "+get_resposne);
 			logger.logPass("All 3 loops passed", "");
 
