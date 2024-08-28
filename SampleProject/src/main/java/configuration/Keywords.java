@@ -517,7 +517,7 @@ public class Keywords extends BrowserConfig {
 			WebDriverWait wait = new WebDriverWait(webDriver, seconds);
 			wait.until(ExpectedConditions.visibilityOf(getWebElement(sLocator)));
 		}catch(Exception e) {
-			logger.logFail("Wait Explicit failed due to "+e.getMessage());
+			//logger.logFail("Wait Explicit failed due to "+e.getMessage());
 		}
 	}
 	

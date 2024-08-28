@@ -54,12 +54,13 @@ public class Step_IN_Mob extends Global {
 			List<WebElement> prodDetails = actions.getWebElementListWithoutExcel(ProductValue);
 			String[] productList =  common.GetAllProductDetails(prodDetails);
 			String jsonBody = actions.jsonCreateMob(productList);
+			logger.logInfo("Send Request : "+prodCount+" : "+jsonBody);
 			String Url = "http://ec2-54-254-162-245.ap-southeast-1.compute.amazonaws.com:9000/items/";
 			String response = api.API_Post(jsonBody, Url);
-			logger.logInfo("Response : "+prodCount+" : "+response);
+			logger.logInfo("Send Response : "+prodCount+" : "+response);
 			String obtained_id = actions.getResponseValue(response, "id");
 			String get_resposne = api.API_Get(Url+obtained_id);
-			logger.logInfo("Response : "+prodCount+" : "+get_resposne);
+			logger.logInfo("Received Response : "+prodCount+" : "+get_resposne);
 		}
 	}
 }
