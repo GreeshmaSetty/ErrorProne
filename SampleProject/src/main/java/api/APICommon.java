@@ -71,7 +71,7 @@ public class APICommon {
 
 			List<Header> headerList = new ArrayList<Header>();
 			for(String key : apiHeaders.keySet()) {
-		}
+			}
 			//headerList.add(new Header("Authorization","OAuth "+accessToken));
 			header = new Headers(headerList);
 		}
@@ -122,8 +122,8 @@ public class APICommon {
 		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
 		try {			
 			response = (Response)given().multiPart("file",file)
-			           .expect().when()
-			           .post(sURL);	
+					.expect().when()
+					.post(sURL);	
 			String getStatusCode = String.valueOf(response.getStatusCode());
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
@@ -133,37 +133,80 @@ public class APICommon {
 		}
 		return response.asString();
 	}
-	
-	public String API_Post(String jsonBody, String Url) {
-	    Response response = null;
-	    String sURL = refactorWithRandomizedValues(Url);
-	   // String refactoredJsonBody = refactorWithRandomizedValues(jsonBody).trim();
 
-	    try {            
-	        response = (Response) given()
-	            .header("Content-Type", "application/json")  // Set content type to JSON
-	            .body(jsonBody)                   // Pass the JSON body
-	            .expect().when()
-	            .post(sURL);                                // Send the POST request
-	        
-	        String getStatusCode = String.valueOf(response.getStatusCode());
-	        //verifyStatusCode(statusCode, getStatusCode, response.asString());
-	        //dataGenerate.writeResponse(Key, response.asString());
-	        //writeResponseToData(response, "Post");
-	    } catch (Exception e) {
-	        logger.logFail("Failed to Post due to exception " + e.getMessage());
-	    }
-	    return response.asString();
+	public String API_Post(String jsonBody, String Url) {
+		Response response = null;
+		String sURL = refactorWithRandomizedValues(Url);
+		 String refactoredJsonBody = refactorWithRandomizedValues(jsonBody).trim();
+
+		try {            
+			response = (Response) given()
+					.header("Content-Type", "application/json")  // Set content type to JSON
+					.body(jsonBody)                   // Pass the JSON body
+					.expect().when()
+					.post(sURL);                                // Send the POST request
+
+			String getStatusCode = String.valueOf(response.getStatusCode());
+			//String beautifyJson = Reporting.formatJson(response.asString());
+			//logger.logPass("URL = "+API_Url+"/"+sURL+" <br> Created Json Body is : <br>'<div class='json-pre'>" + beautifyJson + "</div></pre>'", "N");
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+		return response.asString();
+	}
+	
+	public String API_PostStatusCode(String jsonBody, String Url) {
+		String getStatusCode = null;
+		Response response = null;
+		String sURL = refactorWithRandomizedValues(Url);
+		 String refactoredJsonBody = refactorWithRandomizedValues(jsonBody).trim();
+
+		try {            
+			response = (Response) given()
+					.header("Content-Type", "application/json")  // Set content type to JSON
+					.body(jsonBody)                   // Pass the JSON body
+					.expect().when()
+					.post(sURL);                                // Send the POST request
+			logger.logInfo("Response Obtained : " + response.asString());
+			 getStatusCode = String.valueOf(response.getStatusCode());
+			//String beautifyJson = Reporting.formatJson(response.asString());
+			//logger.logPass("URL = "+API_Url+"/"+sURL+" <br> Created Json Body is : <br>'<div class='json-pre'>" + beautifyJson + "</div></pre>'", "N");
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+		return getStatusCode;
+	}
+	
+	public String API_PutStatusCode(String jsonBody, String Url) {
+		String getStatusCode = null;
+		Response response = null;
+		String sURL = refactorWithRandomizedValues(Url);
+		 String refactoredJsonBody = refactorWithRandomizedValues(jsonBody).trim();
+
+		try {            
+			response = (Response) given()
+					.header("Content-Type", "application/json")  // Set content type to JSON
+					.body(jsonBody)                   // Pass the JSON body
+					.expect().when()
+					.put(sURL);                                // Send the POST request
+			logger.logInfo("Response Obtained : " + response.asString());
+			 getStatusCode = String.valueOf(response.getStatusCode());
+			//String beautifyJson = Reporting.formatJson(response.asString());
+			//logger.logPass("URL = "+API_Url+"/"+sURL+" <br> Created Json Body is : <br>'<div class='json-pre'>" + beautifyJson + "</div></pre>'", "N");
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+		return getStatusCode;
 	}
 
-	
+
 	public String API_Get(String Url) {
 		Headers apiheader =  getHeaders();
 		Response response = null;
 		String sURL = refactorWithRandomizedValues(Url);
 		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
 		try {
-			 response = (Response) given().headers(apiheader).when().get(new URL(sURL));
+			response = (Response) given().headers(apiheader).when().get(new URL(sURL));
 			String getStatusCode = String.valueOf(response.getStatusCode());
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
@@ -179,14 +222,14 @@ public class APICommon {
 		return response.asString(
 				);
 	}
-	
+
 	public String API_GetResponse(String Url) {
 		Headers apiheader =  getHeaders();
 		Response response = null;
 		String sURL = refactorWithRandomizedValues(Url);
 		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
 		try {
-			 response = (Response) given().headers(apiheader).when().get(new URL(sURL));
+			response = (Response) given().headers(apiheader).when().get(new URL(sURL));
 			String getStatusCode = String.valueOf(response.getStatusCode());
 			//verifyStatusCode(statusCode, getStatusCode, response.asString());
 			//dataGenerate.writeResponse(Key, response.asString());
@@ -259,7 +302,7 @@ public class APICommon {
 			logger.logFail("Failed to Get " + e.getMessage());
 		}
 	}
-	
+
 	public void API_Delete(String dataKey, String statusCode) {
 		logger.logInfo("API Get Method for "+dataKey);
 		// Data key 
@@ -331,7 +374,7 @@ public class APICommon {
 			logger.logFail("API_Verify failed due to exception : " + e.getMessage(),"N");;
 		}
 	}
-*/
+	 */
 	public Map<Object,Object> convertSimpleJsonToMap(String jsonStr) {
 		String[] temp = new String[2];
 		Map<Object,Object> resultMap = new HashMap<Object,Object>();
@@ -446,43 +489,25 @@ public class APICommon {
 			logger.logFail("Failed to verify value due to exception "+e.getMessage());
 		}
 	}
-}
 
-	/*
-	 * public void verifyAttributes(String dataKey, String methodName) { XSSFSheet
-	 * ExcelWSheet; String SheetName = ""; Object[] header = null; Object[]
-	 * dataForHeader = null; String Key = dataKey; if (dataKey.contains(".")) {
-	 * SheetName = dataKey.split("\\.")[0]; Key = dataKey.split("\\.")[1];
-	 * ExcelWSheet = Excel.getDataWorkBook().getSheet(SheetName); try {
-	 * 
-	 * for (CellRangeAddress range : ExcelWSheet.getMergedRegions()) { int
-	 * firstRowValue = range.getFirstRow(); int firstColumn =
-	 * range.getFirstColumn(); int lastRowValue = range.getLastRow(); if
-	 * (firstColumn == 0 && Key.equalsIgnoreCase(Excel.getCellData(ExcelWSheet,
-	 * firstRowValue, 0))) { int columnNumber = ExcelWSheet.getRow(firstRowValue +
-	 * 2).getLastCellNum(); header =new Object[columnNumber]; dataForHeader =new
-	 * Object[columnNumber]; { for(int j = firstColumn ,k=0; j < columnNumber; j++)
-	 * { String attribute = null; String attributevalue = null; try {
-	 * attribute=Excel.getCellData(ExcelWSheet, firstRowValue + 2, j).trim(); if
-	 * (attribute != null && !attribute.equals("")) { attributevalue =
-	 * Excel.getCellData(ExcelWSheet, firstRowValue + 3,j).trim();
-	 * 
-	 * header[k]=dataGenerate.randomDataGenerator("get("+Key+"."+attribute+")",
-	 * methodName);
-	 * dataForHeader[k]=dataGenerate.randomDataGenerator(attributevalue,
-	 * methodName); k++; } } catch (Exception e) { logger.logFail(
-	 * attribute+" Data is not present in data properties ", "N"); } }break; } } }
-	 * Object [] headerList=actions.removeNullValues(header);
-	 * Arrays.sort(headerList); Object []
-	 * dataForHeaderList=actions.removeNullValues(dataForHeader);
-	 * Arrays.sort(dataForHeaderList); if(Arrays.equals(headerList,
-	 * dataForHeaderList)){
-	 * logger.logPass("Verification passed Expected : "+Arrays.toString(headerList)
-	 * +" Actual: "+Arrays.toString(dataForHeaderList), "N"); } else{
-	 * logger.logFail("Verification failed Expected : "+Arrays.toString(headerList)
-	 * +" Actual : "+Arrays.toString(dataForHeaderList), "N"); } }catch (Exception
-	 * e) {
-	 * logger.logFail("Failed to Verify attributes due to error "+e.getMessage()); }
-	 * 
-	 * } }
-	 */
+	public String API_Postnew(File file, String Url) {
+		//Headers apiheader =  getHeaders();
+		Response response=null;
+		String sURL = refactorWithRandomizedValues(Url);
+		//String jsonBodyGiven = refactorWithRandomizedValues(jsonBody).trim();
+		try {			
+			response = (Response)given().multiPart("file",file)
+					.expect().when()
+					.post(sURL);	
+			String getStatusCode = String.valueOf(response.getStatusCode());
+			//verifyStatusCode(statusCode, getStatusCode, response.asString());
+			//dataGenerate.writeResponse(Key, response.asString());
+			//writeResponseToData(response, "Post");
+			String beautifyJson = Reporting.formatJson(response.asString());
+			logger.logPass("URL = "+API_Url+"/"+sURL+" <br> Created Json Body is : <br>'<div class='json-pre'>" + beautifyJson + "</div></pre>'", "N");
+		} catch (Exception e) {
+			logger.logFail("Failed to Post due to exception " + e.getMessage());
+		}
+		return response.asString();
+	}
+}
