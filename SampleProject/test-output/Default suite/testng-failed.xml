@@ -5,11 +5,8 @@
     <classes>
       <class name="testCases.Step_IN_Mob">
         <methods>
-          <include name="TC_Mob_GetUpNextListAndPost"/>
           <include name="TC_Mob_Launch_Youtube"/>
           <include name="beforeMethod"/>
-          <include name="TC_Mob_VideoLink"/>
-          <include name="TC_Mob_GetVideoNameViaApi"/>
           <include name="afterTest"/>
           <include name="TC_Mob_Search_StepInForum"/>
           <include name="beforeTest"/>

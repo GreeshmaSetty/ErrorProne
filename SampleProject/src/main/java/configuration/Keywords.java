@@ -509,8 +509,17 @@ public class Keywords extends BrowserConfig {
 		}
 		return arrayString;
 	}
-
-
+	
+	public void waitExplicit(String sLocator, int seconds) 
+	{
+		try {
+			WebDriverWait wait = new WebDriverWait(webDriver, seconds);
+			wait.until(ExpectedConditions.visibilityOf(getWebElement(sLocator)));
+		}catch(Exception e) {
+			logger.logFail("Wait Explicit failed due to "+e.getMessage());
+		}
+	}
+	
 	public void waitImplicit(String sLocator, int seconds) {
 		try {
 			if (sLocator == null) {

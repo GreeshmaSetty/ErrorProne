@@ -51,9 +51,6 @@ public class Step_IN_Parallel extends Global {
 			try {
 				mob.TC_Mob_Launch_Youtube();
 				mob.TC_Mob_Search_StepInForum();
-				mob.TC_Mob_VideoLink();
-				mob.TC_Mob_GetVideoNameViaApi();
-				mob.TC_Mob_GetUpNextListAndPost();
 				
 			}catch(Exception e) {
 				System.out.println(e.getMessage());

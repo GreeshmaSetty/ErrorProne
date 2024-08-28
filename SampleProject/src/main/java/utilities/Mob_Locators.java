@@ -2,9 +2,9 @@ package utilities;
 
 public class Mob_Locators {
 
-	public String searchBtn = "//div[@class='mobile-topbar-header-content non-search-mode cbox']//button[@aria-label='Search YouTube']//c3-icon";
+	public String LoginBtn = "//android.widget.Button[@resource-id=\"com.dayforce.wallet:id/start_up_secondary_button\"]";
 
-	public  String search = "//input[@class='searchbox-input title']";
+	public  String OkBtn = "//android.widget.Button[@resource-id=\"android:id/button1\"]";
 
 	public  String step_in_channel = "//h4[contains(text(),'STeP-IN Forum')]";
 

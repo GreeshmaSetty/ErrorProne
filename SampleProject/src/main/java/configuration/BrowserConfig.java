@@ -4,6 +4,8 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import javax.swing.JOptionPane;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -17,6 +19,7 @@ import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.google.common.collect.ImmutableMap;
@@ -85,6 +88,8 @@ public static String Mode = "UI";
 
 	        try {
 	            webDriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	            String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
+	            System.out.println("Session id : "+sessionId);
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        } 
