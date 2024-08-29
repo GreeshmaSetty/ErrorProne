@@ -49,7 +49,7 @@ public class configRun {
         // Browser Selection
         JLabel lblBrowserDesc = new JLabel("Select the browser to be used for testing.", SwingConstants.CENTER);
         JLabel lblBrowser = new JLabel("Browser:");
-        String[] browsers = {"Chrome", "Firefox", "Edge"};
+        String[] browsers = {"Chrome", "Firefox", "Edge","Incog_Chrome","Incog_firefox"};
         JComboBox<String> cmbBrowser = new JComboBox<>(browsers);
         cmbBrowser.setSelectedItem(properties.getProperty("Browser", "Chrome"));
 
@@ -130,7 +130,7 @@ public class configRun {
                     Process process = Runtime.getRuntime().exec(batFilePath);
                     process.waitFor(); // Wait for the process to complete
 
-                    JOptionPane.showMessageDialog(frame, "Test execution completed.");
+                    JOptionPane.showMessageDialog(frame, "Test execution starting..");
                 } catch (IOException | InterruptedException ex) {
                     JOptionPane.showMessageDialog(frame, "Error running the test script.", "Error", JOptionPane.ERROR_MESSAGE);
                 }

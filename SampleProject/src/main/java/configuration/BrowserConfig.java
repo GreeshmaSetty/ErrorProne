@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverService;
@@ -150,9 +151,29 @@ public static String Mode = "UI";
 				}
 				break;
 			}
+			case "INCOG_CHROME": {
+				try {
+					webDriver = getIncognitoChromeDriver();
+					webDriver.manage().window().maximize();
+					new Keywords().getURL(URLKey);
+				} catch (Exception e) {
+					System.out.println("Exception while launching a ChromeDriver " + e.getMessage());
+				}
+				break;
+			}
 			case "FIREFOX": {
 				try {
 					webDriver = getFireFoxDriver();
+					webDriver.manage().window().maximize();
+					new Keywords().getURL(URLKey);
+				} catch (Exception e) {
+					System.out.println("Exception while Launching a FFDriver " + e.getMessage());
+				}
+				break;
+			}
+			case "INCOG_FIREFOX": {
+				try {
+					webDriver = getFireFoxDriverIncog();
 					webDriver.manage().window().maximize();
 					new Keywords().getURL(URLKey);
 				} catch (Exception e) {
@@ -172,6 +193,16 @@ public static String Mode = "UI";
 				break;
 			}
 			case "EDGE": {
+				try {
+					webDriver = getEdgeDriver();
+					webDriver.manage().window().maximize();
+					new Keywords().getURL(URLKey);
+				} catch (Exception e) {
+					System.out.println("Exception while Launching a EdgeDriver " + e.getMessage());
+				}
+				break;
+			}
+			case "INCOG_EDGE": {
 				try {
 					webDriver = getEdgeDriver();
 					webDriver.manage().window().maximize();
@@ -236,7 +267,7 @@ public static String Mode = "UI";
 
 		return driver;
 	}
-
+	
 	private WebDriver getFireFoxDriver() {
 		WebDriver driver = null;
 		String geckoDriverPath = null;
@@ -253,6 +284,24 @@ public static String Mode = "UI";
 		return driver;
 	}
 
+	private WebDriver getFireFoxDriverIncog() {
+		WebDriver driver = null;
+		String geckoDriverPath = null;
+		try {
+			geckoDriverPath = System.getProperty("user.dir") + "\\Utils\\Drivers\\geckodriver.exe";
+			System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY, geckoDriverPath);
+			FirefoxOptions options = new FirefoxOptions();
+			options.setBinary("C:\\Users\\gresetty\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+			options.addArguments("-private");
+			driver = new FirefoxDriver(options);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			System.out.println("FF Failed during driver initialization " + e.getMessage());
+		}
+		return driver;
+	}
+
+	
 	private WebDriver getHtmlUnitDriver() {
 
 		WebDriver driver = null;
@@ -281,6 +330,26 @@ public static String Mode = "UI";
 
 		return driver;
 	}
+	
+	private WebDriver getIncognitoChromeDriver() {
+
+		WebDriver driver = null;
+		try {
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, chromeDriverPath);
+			 ChromeOptions options = new ChromeOptions();
+		     options.addArguments("--incognito");
+			driver = new ChromeDriver(options);
+		
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Chrome Failed during driver initialization " + e.getMessage());
+		}
+
+		return driver;
+	}
+
 
 	private WebDriver getIEDriver() {
 		WebDriver driver = null;
